@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Chowall</string>
+
+
+    <string name="chowall_content">장벽을 넘어\n여행의 한계를 초월하다</string>
+
+    <string name="restrictions_question">님이 여행 시 겪는 제약을 선택해주세요.</string>
+    <string name="restrictions_answer1">전동 휠체어 사용자 및 동행자</string>
+    <string name="restrictions_answer2">수동 휠체어 사용자 및 동행자</string>
+    <string name="restrictions_answer3">거동이 불편한 노인/임산부 및 동행자</string>
+    <string name="restrictions_answer4">유아차 사용자 및 동행자</string>
+    <string name="restrictions_answer5">제약 없음</string>
+    <string name="restrictions_btn_signup">회원가입</string>
+
+    <string name="btn_login">로그인</string>
+</resources>
