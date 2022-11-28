@@ -128,7 +128,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tv_content_login"
+        android:id="@+id/tv_slogan_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:bufferType="spannable"

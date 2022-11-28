@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setContentColor() {
-        content = binding.tvContentLogin
+        content = binding.tvSloganLogin
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))

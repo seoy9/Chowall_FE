@@ -52,7 +52,7 @@ class RestrictionsActivity : AppCompatActivity() {
     }
 
     private fun setContentColor() {
-        content = binding.tvContentRest
+        content = binding.tvSloganRest
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
