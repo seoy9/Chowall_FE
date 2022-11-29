@@ -7,6 +7,34 @@
     tools:context=".RestrictionsActivity">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.020408163" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.048590865" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41666666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5833333" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -179,16 +207,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/img_logo_rest"
-            android:layout_width="240px"
-            android:layout_height="86.56px"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/chowall_logo"
-            tools:layout_editor_absoluteX="210dp"
-            tools:layout_editor_absoluteY="20dp" />
-
     </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_logo_rest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        app:layout_constraintEnd_toStartOf="@+id/guideline67"
+        app:layout_constraintStart_toStartOf="@+id/guideline66"
+        app:layout_constraintTop_toTopOf="@+id/guideline39"
+        app:srcCompat="@drawable/chowall_logo" />
 
     <TextView
         android:id="@+id/tv_slogan_rest"
@@ -325,10 +355,8 @@
         android:layout_height="0dp"
         android:fontFamily="@font/opensans_bold"
         android:text="@string/restrictions_btn_signup"
-        android:autoSizeMaxTextSize="18sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline_btn_bottom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"

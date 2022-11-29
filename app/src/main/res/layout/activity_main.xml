@@ -7,6 +7,34 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.020408163"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.048590865"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41666666"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5833333"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -249,16 +277,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/img_logo_main"
-            android:layout_width="240px"
-            android:layout_height="86.56px"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/chowall_logo"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="17dp" />
-
     </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_logo_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline69"
+        app:layout_constraintEnd_toStartOf="@+id/guideline71"
+        app:layout_constraintStart_toStartOf="@+id/guideline70"
+        app:layout_constraintTop_toTopOf="@+id/guideline68"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/chowall_logo" />
 
     <TextView
         android:id="@+id/tv_slogan_main"

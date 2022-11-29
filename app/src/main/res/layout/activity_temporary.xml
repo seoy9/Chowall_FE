@@ -7,6 +7,35 @@
     tools:context=".TemporaryActivity">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.020408163" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.048590865" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41666666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5833333" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,16 +54,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/img_logo_temp"
-            android:layout_width="240px"
-            android:layout_height="86.56px"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/chowall_logo"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="17dp" />
-
     </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_logo_temp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline77"
+        app:layout_constraintEnd_toStartOf="@+id/guideline79"
+        app:layout_constraintStart_toStartOf="@+id/guideline78"
+        app:layout_constraintTop_toTopOf="@+id/guideline76"
+        app:srcCompat="@drawable/chowall_logo" />
 
     <Button
         android:id="@+id/btn_res"

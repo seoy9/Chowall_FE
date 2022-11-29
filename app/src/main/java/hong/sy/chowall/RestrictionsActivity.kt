@@ -1,20 +1,14 @@
 package hong.sy.chowall
 
-import android.app.Activity
-import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.util.DisplayMetrics
 import android.view.MenuItem
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.graphics.drawable.toDrawable
 import androidx.core.widget.TextViewCompat
 import hong.sy.chowall.databinding.ActivityRestrictionsBinding
-import java.lang.reflect.Modifier
 
 class RestrictionsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRestrictionsBinding
