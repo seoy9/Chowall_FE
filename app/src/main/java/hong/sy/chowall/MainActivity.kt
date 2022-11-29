@@ -3,12 +3,17 @@ package hong.sy.chowall
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toolbar
 import hong.sy.chowall.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var content: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setToolbar()
-
-        setBtnClickListener()
+        setContentColor()
     }
 
     private fun setToolbar() {
@@ -28,15 +32,13 @@ class MainActivity : AppCompatActivity() {
         ab.setDisplayShowTitleEnabled(false)
     }
 
-    private fun setBtnClickListener() {
-        binding.btnRes.setOnClickListener {
-            val intent = Intent(this, RestrictionsActivity::class.java)
-            startActivity(intent)
-        }
+    private fun setContentColor() {
+        content = binding.tvSloganMain
+        val textData = content.text.toString()
+        val builder = SpannableStringBuilder(textData)
+        val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
+        builder.setSpan(colorMainSpan, textData.length-4, textData.length-2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
+        content.text = builder
     }
 }

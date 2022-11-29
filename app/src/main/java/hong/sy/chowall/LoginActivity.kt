@@ -1,5 +1,6 @@
 package hong.sy.chowall
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -7,6 +8,7 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.core.widget.TextViewCompat
 import hong.sy.chowall.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -20,8 +22,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setToolbar()
-
         setContentColor()
+        setButtonClickListener()
     }
 
     private fun setToolbar() {
@@ -53,5 +55,12 @@ class LoginActivity : AppCompatActivity() {
         builder.setSpan(colorMainSpan, textData.length-4, textData.length-2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder
+    }
+
+    private fun setButtonClickListener() {
+        binding.btnLoginLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
