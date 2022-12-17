@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_home"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/nav_home"
+        android:title="홈" />
+    <item
+        android:id="@+id/nav_want_list"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/nav_want_list"
+        android:title="찜한 목록" />
+    <item
+        android:id="@+id/nav_course_list"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/nav_course_list"
+        android:title="코스 목록" />
+    <item
+        android:id="@+id/nav_recommend_list"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/nav_recommend_list"
+        android:title="예약 목록" />
+    <item
+        android:id="@+id/nav_mypage"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/nav_mypage"
+        android:title="마이페이지" />
+</menu>
