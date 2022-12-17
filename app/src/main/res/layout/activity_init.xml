@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/init_background"
+    android:fitsSystemWindows="true"
+    tools:context=".InitActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38128438" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46298818" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57192658" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63184269" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2666667" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72872222" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23611111" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76388889" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81703797" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88784792" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05555556" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94444444" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/regisTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90418868" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/regisBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93278501" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/regisLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23194444" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/regisRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76805556" />
+
+    <ImageView
+        android:id="@+id/img_logo_init"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/logoBottom"
+        app:layout_constraintEnd_toStartOf="@+id/logoRight"
+        app:layout_constraintStart_toStartOf="@+id/logoLeft"
+        app:layout_constraintTop_toTopOf="@+id/logoTop"
+        app:srcCompat="@drawable/chowall_logo_init" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/opensans_bold"
+        android:gravity="center"
+        android:text="@string/init"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textBottom"
+        app:layout_constraintEnd_toStartOf="@+id/textRight"
+        app:layout_constraintStart_toStartOf="@+id/textLeft"
+        app:layout_constraintTop_toTopOf="@+id/textTop" />
+
+    <Button
+        android:id="@+id/btn_login_init"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_round"
+        android:fontFamily="@font/opensans_bold"
+        android:text="@string/btn_login"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginBottom"
+        app:layout_constraintEnd_toStartOf="@+id/loginRight"
+        app:layout_constraintStart_toStartOf="@+id/loginLeft"
+        app:layout_constraintTop_toTopOf="@+id/loginTop" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:bufferType="spannable"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/opensans_bold"
+        android:gravity="center"
+        android:text="@string/init_register"
+        app:layout_constraintBottom_toTopOf="@+id/regisBottom"
+        app:layout_constraintEnd_toStartOf="@+id/regisRight"
+        app:layout_constraintStart_toStartOf="@+id/regisLeft"
+        app:layout_constraintTop_toTopOf="@+id/regisTop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

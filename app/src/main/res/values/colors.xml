@@ -16,4 +16,6 @@
     <color name="hintColor">#888888</color>
 
     <color name="bottom_nav">#F5F5F5</color>
+
+    <color name="button_init">#99FFFFFF</color>
 </resources>

@@ -4,6 +4,11 @@
 
     <string name="chowall_slogan">장벽을 넘어\n여행의 한계를 초월하다</string>
 
+    <string name="init">지금 초월과 함께\n자유로운 여행을 시작하세요!</string>
+    <string name="init_register">계정이 없으신가요? 회원가입</string>
+
+    <string name="regis">회원 정보</string>
+
     <string name="restrictions_question">님이 여행 시 겪는 제약을 선택해주세요.</string>
     <string name="restrictions_answer1">전동 휠체어 사용자 및 동행자</string>
     <string name="restrictions_answer2">수동 휠체어 사용자 및 동행자</string>
@@ -13,6 +18,7 @@
     <string name="restrictions_btn_signup">회원가입</string>
 
     <string name="btn_login">로그인</string>
+    <string name="btn_next">다음</string>
 
     <string name="main_search_hint">여행 지역, 장소, 해시태그를 검색하세요</string>
 </resources>

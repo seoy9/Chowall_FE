@@ -210,7 +210,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/img_logo_rest"
+        android:id="@+id/img_logo_regis"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
