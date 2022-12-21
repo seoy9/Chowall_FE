@@ -3,8 +3,9 @@ package hong.sy.chowall
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.MenuItem
-import android.view.View
 import androidx.core.widget.addTextChangedListener
 import hong.sy.chowall.databinding.ActivityRegisterBinding
 
@@ -16,9 +17,11 @@ class RegisterActivity : AppCompatActivity() {
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.imgPwCheckbox.setImageBitmap(null)
 
         setToolbar()
         setButtonClickListener()
+        setPasswordCheckBox()
     }
 
     private fun setToolbar() {
@@ -33,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
-        when(id) {
+        when (id) {
             android.R.id.home -> {
                 finish()
                 return true
@@ -47,5 +50,42 @@ class RegisterActivity : AppCompatActivity() {
             val intent = Intent(this, RestrictionsActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun setPasswordCheckBox() {
+        binding.edPwRegis.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {}
+
+            override fun beforeTextChanged(p0: CharSequence?, start: Int, count: Int, after: Int) {
+                binding.imgPwCheckbox.setImageBitmap(null)
+            }
+
+            override fun onTextChanged(p0: CharSequence?, start: Int, count: Int, after: Int) {
+                binding.imgPwCheckbox.setImageBitmap(null)
+            }
+        })
+        binding.edPwCheckRegis.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0 != null) {
+                    when {
+                        p0.isEmpty() -> {
+                            binding.imgPwCheckbox.setImageBitmap(null)
+                        }
+                        p0.isNotEmpty() -> {
+                            if (binding.edPwRegis.text.toString() != ""
+                                && binding.edPwCheckRegis.text.toString() != binding.edPwRegis.text.toString()) {
+                                binding.imgPwCheckbox.setImageBitmap(null)
+                            } else {
+                                binding.imgPwCheckbox.setImageResource(R.drawable.img_pw_check)
+                            }
+                        }
+                    }
+                }
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(p0: CharSequence?, start: Int, count: Int, after: Int) {}
+        })
     }
 }

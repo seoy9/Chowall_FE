@@ -78,28 +78,266 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15251375" />
+        app:layout_constraintGuide_percent="0.10213243" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/tvRegisLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.411111111" />
+        app:layout_constraintGuide_percent="0.4111922" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/tvRegisRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.58888889" />
+        app:layout_constraintGuide_percent="0.5912409" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/tvRegisBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.18247181" />
+        app:layout_constraintGuide_percent="0.13131313" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/nameBoxTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17171717" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/nameBoxBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2345679" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/boxLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06569343" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/boxRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9367397" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/idBoxTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25925925" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/idBoxBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32211" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/emailBoxTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34680134" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/emailBoxBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4074074" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/pwBoxTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43434343" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/pwBoxBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4949495" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/pwCheckBoxTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5218855" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/pwCheckBoxBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5824916" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/nextButtonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6228956" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/nextButtonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6857464" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgNameLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09975669" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgNameRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18248175" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgNameTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18181819" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgNameBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22109988" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgIdTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2704826" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgIdBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31088665" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgEmailTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3580247" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgEmailBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.39842874" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44556677" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48597082" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09489051" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17761557" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwCheckTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53198653" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwCheckBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5735129" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/editTwLeftRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23600973" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/editTwRightRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.756691" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwCheckBoxLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8150852" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwCheckBoxRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8783455" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwCheckBoxTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5375982" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imgPwCheckBoxBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5667789" />
 
     <TextView
         android:id="@+id/textView4"
@@ -120,34 +358,6 @@
         app:layout_constraintStart_toStartOf="@+id/tvRegisLeft"
         app:layout_constraintTop_toTopOf="@+id/tvRegisTop" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nameBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22604717" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nameBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.29141021" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/boxLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.06666667" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/boxRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.93333333" />
-
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="0dp"
@@ -157,20 +367,6 @@
         app:layout_constraintStart_toStartOf="@+id/boxLeft"
         app:layout_constraintTop_toTopOf="@+id/nameBoxTop"
         app:srcCompat="@drawable/gray_round_box" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/idBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.31864481" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/idBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38400784" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -182,20 +378,6 @@
         app:layout_constraintTop_toTopOf="@+id/idBoxTop"
         app:srcCompat="@drawable/gray_round_box" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/emailBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41124244" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/emailBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.47660548" />
-
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="0dp"
@@ -205,20 +387,6 @@
         app:layout_constraintStart_toStartOf="@+id/boxLeft"
         app:layout_constraintTop_toTopOf="@+id/emailBoxTop"
         app:srcCompat="@drawable/gray_round_box" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50384008" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56920312" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -230,20 +398,6 @@
         app:layout_constraintTop_toTopOf="@+id/pwBoxTop"
         app:srcCompat="@drawable/gray_round_box" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwCheckBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.59643771" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwCheckBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66180075" />
-
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="0dp"
@@ -253,61 +407,6 @@
         app:layout_constraintStart_toStartOf="@+id/boxLeft"
         app:layout_constraintTop_toTopOf="@+id/pwCheckBoxTop"
         app:srcCompat="@drawable/gray_round_box" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nextButtonTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70537611" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nextButtonBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77073915" />
-
-    <Button
-        android:id="@+id/btn_next_regis"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/btn_next"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/nextButtonBottom"
-        app:layout_constraintEnd_toStartOf="@+id/boxRight"
-        app:layout_constraintStart_toStartOf="@+id/boxLeft"
-        app:layout_constraintTop_toTopOf="@+id/nextButtonTop" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.18333333" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.23694101" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27779291" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -319,20 +418,6 @@
         app:layout_constraintTop_toTopOf="@+id/imgNameTop"
         app:srcCompat="@drawable/img_name" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgIdTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32953865" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgIdBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.373114" />
-
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="0dp"
@@ -342,20 +427,6 @@
         app:layout_constraintStart_toStartOf="@+id/imgNameLeft"
         app:layout_constraintTop_toTopOf="@+id/imgIdTop"
         app:srcCompat="@drawable/img_id" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgEmailTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42213628" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgEmailBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.46571164" />
 
     <ImageView
         android:id="@+id/imageView19"
@@ -367,34 +438,6 @@
         app:layout_constraintTop_toTopOf="@+id/imgEmailTop"
         app:srcCompat="@drawable/img_email" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51609565" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55967101" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.09444444" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.17777778" />
-
     <ImageView
         android:id="@+id/imageView20"
         android:layout_width="0dp"
@@ -404,20 +447,6 @@
         app:layout_constraintStart_toStartOf="@+id/imgPwLeft"
         app:layout_constraintTop_toTopOf="@+id/imgPwTop"
         app:srcCompat="@drawable/img_pw" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60869328" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65226864" />
 
     <ImageView
         android:id="@+id/imageView21"
@@ -429,28 +458,10 @@
         app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop"
         app:srcCompat="@drawable/img_pw" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/editTwLeftRegis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.23333333" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/editTwRightRegis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
     <EditText
         android:id="@+id/ed_name_regis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="14sp"
-        android:autoSizeMinTextSize="5sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
         android:background="@null"
         android:ems="10"
         android:fontFamily="@font/opensans_bold"
@@ -458,7 +469,7 @@
         android:inputType="textPersonName"
         android:textColor="@color/textColor"
         android:textColorHint="@color/hintColor"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imgNameBottom"
         app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
         app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
@@ -468,10 +479,6 @@
         android:id="@+id/ed_id_regis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="14sp"
-        android:autoSizeMinTextSize="5sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
         android:background="@null"
         android:ems="10"
         android:fontFamily="@font/opensans_bold"
@@ -479,7 +486,7 @@
         android:inputType="textPersonName"
         android:textColor="@color/textColor"
         android:textColorHint="@color/hintColor"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imgIdBottom"
         app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
         app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
@@ -489,10 +496,6 @@
         android:id="@+id/ed_email_regis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="14sp"
-        android:autoSizeMinTextSize="5sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
         android:background="@null"
         android:ems="10"
         android:fontFamily="@font/opensans_bold"
@@ -500,7 +503,7 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/textColor"
         android:textColorHint="@color/hintColor"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imgEmailBottom"
         app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
         app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
@@ -510,10 +513,6 @@
         android:id="@+id/ed_pw_regis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="14sp"
-        android:autoSizeMinTextSize="5sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
         android:background="@null"
         android:ems="10"
         android:fontFamily="@font/opensans_bold"
@@ -521,7 +520,7 @@
         android:inputType="textPassword"
         android:textColor="@color/textColor"
         android:textColorHint="@color/hintColor"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imgPwBottom"
         app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
         app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
@@ -531,10 +530,6 @@
         android:id="@+id/ed_pw_check_regis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="14sp"
-        android:autoSizeMinTextSize="5sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
         android:background="@null"
         android:ems="10"
         android:fontFamily="@font/opensans_bold"
@@ -542,39 +537,11 @@
         android:inputType="textPassword"
         android:textColor="@color/textColor"
         android:textColorHint="@color/hintColor"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imgPwCheckBottom"
         app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
         app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
         app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.811111111" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.877777778" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.61277847" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.64545999" />
 
     <ImageView
         android:id="@+id/img_pw_checkbox"
@@ -585,5 +552,18 @@
         app:layout_constraintStart_toStartOf="@+id/imgPwCheckBoxLeft"
         app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop"
         app:srcCompat="@drawable/img_pw_check" />
+
+    <Button
+    android:id="@+id/btn_next_regis"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:fontFamily="@font/opensans_bold"
+    android:text="@string/btn_next"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/nextButtonBottom"
+    app:layout_constraintEnd_toStartOf="@+id/boxRight"
+    app:layout_constraintStart_toStartOf="@+id/boxLeft"
+    app:layout_constraintTop_toTopOf="@+id/nextButtonTop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,6 @@ import android.graphics.Paint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
@@ -26,10 +25,11 @@ class InitActivity : AppCompatActivity() {
 
         binding = ActivityInitBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         setToolbar()
-        setContentColor()
         setButtonClickListener()
         setTextClickListener()
+        setContentColor()
     }
 
     private fun setToolbar() {
@@ -38,16 +38,6 @@ class InitActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= 30) {	// API 30 에 적용
             WindowCompat.setDecorFitsSystemWindows(window, false)
         }
-    }
-
-    private fun setContentColor() {
-        content = binding.tvRegister
-        val textData = content.text.toString()
-        val builder = SpannableStringBuilder(textData)
-        val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.white))
-        builder.setSpan(colorMainSpan, 0, textData.length-5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        content.text = builder
     }
 
     private fun setButtonClickListener() {
@@ -63,5 +53,15 @@ class InitActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun setContentColor() {
+        content = binding.tvRegister
+        val textData = content.text.toString()
+        val builder = SpannableStringBuilder(textData)
+        val colorHintSpan = ForegroundColorSpan(getResources().getColor(R.color.hintColor))
+        builder.setSpan(colorHintSpan, textData.length-4, textData.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        content.text = builder
     }
 }
