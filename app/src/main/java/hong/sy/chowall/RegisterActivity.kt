@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.MenuItem
-import androidx.core.widget.addTextChangedListener
 import hong.sy.chowall.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {

@@ -1,14 +1,11 @@
 package hong.sy.chowall
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.view.MenuItem
 import android.widget.TextView
-import android.widget.Toolbar
 import hong.sy.chowall.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

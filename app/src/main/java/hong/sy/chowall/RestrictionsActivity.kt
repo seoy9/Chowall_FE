@@ -1,5 +1,6 @@
 package hong.sy.chowall
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -7,7 +8,6 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
-import androidx.core.widget.TextViewCompat
 import hong.sy.chowall.databinding.ActivityRestrictionsBinding
 
 class RestrictionsActivity : AppCompatActivity() {
@@ -25,6 +25,7 @@ class RestrictionsActivity : AppCompatActivity() {
         setContentColor()
         setCheckBoxClickListener()
         setTextClickListener()
+        setButtonClickListener()
     }
 
     private fun setToolbar() {
@@ -207,6 +208,13 @@ class RestrictionsActivity : AppCompatActivity() {
                 checked[3] = false
                 checked[4] = true
             }
+        }
+    }
+
+    fun setButtonClickListener() {
+        binding.btnSignupRest.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

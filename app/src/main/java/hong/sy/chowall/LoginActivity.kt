@@ -8,7 +8,6 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
-import androidx.core.widget.TextViewCompat
 import hong.sy.chowall.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
