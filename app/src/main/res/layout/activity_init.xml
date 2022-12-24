@@ -131,7 +131,7 @@
         app:srcCompat="@drawable/chowall_logo_init" />
 
     <TextView
-        android:id="@+id/tv_init_intro"
+        android:id="@+id/tv_intro_init"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoSizeMaxTextSize="20sp"
