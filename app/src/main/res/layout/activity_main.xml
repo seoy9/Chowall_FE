@@ -273,6 +273,10 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:text="국내 여행 추천 코스"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -284,7 +288,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10px"
+                android:layout_height="8px"
                 android:background="#E6E6E6"
                 app:layout_constraintBottom_toTopOf="@+id/guideline95"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -303,7 +307,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3062px"/>
+                app:layout_constraintGuide_begin="3112px"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline97"
@@ -312,6 +316,13 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="72px" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline105"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="72px" />
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
                 android:layout_width="0dp"
@@ -319,7 +330,7 @@
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 app:layout_constraintBottom_toTopOf="@+id/guideline96"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toStartOf="@+id/guideline97"
                 app:layout_constraintTop_toTopOf="@+id/guideline95" />
 
@@ -328,20 +339,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3140px"/>
+                app:layout_constraintGuide_begin="3190px"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline99"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3228px"/>
+                app:layout_constraintGuide_begin="3278px"/>
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:text="초월 인기 코스"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -352,7 +367,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10px"
+                android:layout_height="8px"
                 android:background="#E6E6E6"
                 app:layout_constraintBottom_toTopOf="@+id/guideline100"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -364,21 +379,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3370px"/>
+                app:layout_constraintGuide_begin="3420px"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3866px"/>
+                app:layout_constraintGuide_begin="3966px"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3976px"/>
+                app:layout_constraintGuide_begin="4076px"/>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager2"
@@ -387,7 +402,7 @@
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 app:layout_constraintBottom_toTopOf="@+id/guideline101"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toStartOf="@+id/guideline97"
                 app:layout_constraintTop_toTopOf="@+id/guideline100" />
 
