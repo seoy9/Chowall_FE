@@ -9,6 +9,8 @@
 
     <string name="regis">회원 정보</string>
 
+
+
     <string name="restrictions_question">님이 여행 시 겪는 제약을 선택해주세요.</string>
     <string name="restrictions_answer1">전동 휠체어 사용자 및 동행자</string>
     <string name="restrictions_answer2">수동 휠체어 사용자 및 동행자</string>
@@ -19,6 +21,7 @@
 
     <string name="btn_login">로그인</string>
     <string name="btn_next">다음</string>
+    <string name="btn_phone_auth">휴대폰 본인인증</string>
 
     <string name="main_search_hint">여행 지역, 장소, 해시태그를 검색하세요</string>
 
