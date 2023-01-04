@@ -58,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setButtonClickListener() {
         binding.btnLoginLogin.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TempMainCardActivity::class.java)
             startActivity(intent)
         }
     }

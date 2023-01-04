@@ -213,7 +213,7 @@ class RestrictionsActivity : AppCompatActivity() {
 
     fun setButtonClickListener() {
         binding.btnSignupRest.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TempMainCardActivity::class.java)
             startActivity(intent)
         }
     }

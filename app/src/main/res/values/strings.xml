@@ -21,4 +21,9 @@
     <string name="btn_next">다음</string>
 
     <string name="main_search_hint">여행 지역, 장소, 해시태그를 검색하세요</string>
+    <string name="main_recommend_course">국내 여행 추천 코스</string>
+    <string name="main_popular_course">초월 인기 코스</string>
+
+    <string name="card_desc_1">풍경 속에 힐링을 담다</string>
+    <string name="card_desc_2">풍경 속에 힐링</string>
 </resources>
