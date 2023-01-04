@@ -1,4 +1,4 @@
-package hong.sy.chowall
+package hong.sy.chowall.signUp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,9 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
+import hong.sy.chowall.MainActivity
+import hong.sy.chowall.R
+import hong.sy.chowall.TempMainCardActivity
 import hong.sy.chowall.databinding.ActivityRestrictionsBinding
 
 class RestrictionsActivity : AppCompatActivity() {
@@ -213,7 +216,7 @@ class RestrictionsActivity : AppCompatActivity() {
 
     fun setButtonClickListener() {
         binding.btnSignupRest.setOnClickListener {
-            val intent = Intent(this, TempMainCardActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

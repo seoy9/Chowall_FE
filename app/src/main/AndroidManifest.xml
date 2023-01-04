@@ -28,15 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".TemporaryActivity"
+            android:name=".signUp.RegisterActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -52,7 +44,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RestrictionsActivity"
+            android:name=".signUp.RestrictionsActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data

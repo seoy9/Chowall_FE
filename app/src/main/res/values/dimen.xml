@@ -2,4 +2,7 @@
 <resources>
     <dimen name="pageMargin">450px</dimen>
     <dimen name="pageWidth">300px</dimen>
+
+    <dimen name="pageMargin2">120dp</dimen>
+    <dimen name="pageWidth2">120dp</dimen>
 </resources>

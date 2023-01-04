@@ -10,6 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -252,14 +253,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="2323px"/>
+                app:layout_constraintGuide_begin="2323px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline94"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="2411px"/>
+                app:layout_constraintGuide_begin="2411px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline5"
@@ -272,11 +273,11 @@
                 android:id="@+id/textView"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="국내 여행 추천 코스"
                 android:autoSizeMaxTextSize="20sp"
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="1sp"
                 android:autoSizeTextType="uniform"
+                android:text="@string/main_recommend_course"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -300,14 +301,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="2566px"/>
+                app:layout_constraintGuide_begin="2566px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline96"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3112px"/>
+                app:layout_constraintGuide_begin="3112px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline97"
@@ -324,7 +325,7 @@
                 app:layout_constraintGuide_end="72px" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager"
+                android:id="@+id/vp_recommend_course"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:clipChildren="false"
@@ -339,24 +340,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3190px"/>
+                app:layout_constraintGuide_begin="3190px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline99"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3278px"/>
+                app:layout_constraintGuide_begin="3278px" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="초월 인기 코스"
                 android:autoSizeMaxTextSize="20sp"
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeStepGranularity="1sp"
                 android:autoSizeTextType="uniform"
+                android:text="@string/main_popular_course"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -379,24 +380,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3420px"/>
+                app:layout_constraintGuide_begin="3420px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="3966px"/>
+                app:layout_constraintGuide_begin="3966px" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="4076px"/>
+                app:layout_constraintGuide_begin="4076px" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager2"
+                android:id="@+id/vp_chowall_course"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:clipChildren="false"

@@ -1,4 +1,4 @@
-package hong.sy.chowall
+package hong.sy.chowall.signUp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.MenuItem
+import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {

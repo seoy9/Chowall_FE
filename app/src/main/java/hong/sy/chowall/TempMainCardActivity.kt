@@ -55,8 +55,8 @@ class TempMainCardActivity : AppCompatActivity() {
         viewPager.setPadding(50, 0, 50, 0)
 
         /* 여백, 너비에 대한 정의 */
-        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
-        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.pageWidth)
+        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin2)
+        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.pageWidth2)
         val screenWidth = resources.displayMetrics.widthPixels // 스마트폰의 너비 길이를 가져옴
         val offsetPx = screenWidth - pageMarginPx - pagerWidth
 

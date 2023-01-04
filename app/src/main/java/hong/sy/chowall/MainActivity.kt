@@ -8,6 +8,7 @@ import android.text.style.ForegroundColorSpan
 import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.databinding.ActivityMainBinding
+import hong.sy.chowall.viewPager.ViewPagerAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         setViewPager()
 
@@ -48,24 +50,24 @@ class MainActivity : AppCompatActivity() {
         val screenWidth = resources.displayMetrics.widthPixels
         val offsetPx = screenWidth - pageMarginPx - pagerWidth
 
-        binding.viewPager.setPageTransformer { page, position ->
+        binding.vpRecommendCourse.setPageTransformer { page, position ->
             page.translationX = position * -offsetPx
         }
 
-        binding.viewPager.offscreenPageLimit = 3
-        binding.viewPager.adapter = ViewPagerAdapter(getList())
-        binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        binding.vpRecommendCourse.offscreenPageLimit = 2
+        binding.vpRecommendCourse.adapter = ViewPagerAdapter(getList())
+        binding.vpRecommendCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        binding.viewPager2.setPageTransformer { page, position ->
+        binding.vpChowallCourse.setPageTransformer { page, position ->
             page.translationX = position * -offsetPx
         }
 
-        binding.viewPager2.offscreenPageLimit = 3
-        binding.viewPager2.adapter = ViewPagerAdapter(getList())
-        binding.viewPager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        binding.vpChowallCourse.offscreenPageLimit = 2
+        binding.vpChowallCourse.adapter = ViewPagerAdapter(getList())
+        binding.vpChowallCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
     }
 
     private fun getList(): ArrayList<Int> {
-        return arrayListOf<Int>(R.drawable.img_course_list, R.drawable.img_course_list_2, R.drawable.img_course_list, R.drawable.img_course_list_2)
+        return arrayListOf<Int>(R.drawable.img_course_list, R.drawable.init_background, R.drawable.img_course_list_2, R.drawable.btn_make_course)
     }
 }

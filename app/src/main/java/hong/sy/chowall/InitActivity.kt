@@ -13,6 +13,7 @@ import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.view.WindowCompat
 import hong.sy.chowall.databinding.ActivityInitBinding
+import hong.sy.chowall.signUp.RegisterActivity
 
 class InitActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInitBinding

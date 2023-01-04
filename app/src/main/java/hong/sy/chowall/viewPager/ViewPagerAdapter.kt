@@ -1,9 +1,10 @@
-package hong.sy.chowall
+package hong.sy.chowall.viewPager
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import hong.sy.chowall.R
 
 class ViewPagerAdapter(list: ArrayList<Int>) : RecyclerView.Adapter<ViewPagerAdapter.PagerViewHolder>() {
     var item = list
@@ -16,7 +17,8 @@ class ViewPagerAdapter(list: ArrayList<Int>) : RecyclerView.Adapter<ViewPagerAda
         holder.i.setImageResource(item[position])
     }
 
-    inner class PagerViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)) {
-        val i : ImageView = itemView.findViewById(R.id.imageView2)
+    inner class PagerViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(
+        R.layout.list_item, parent, false)) {
+        val i : ImageView = itemView.findViewById(R.id.img_course_item)
     }
 }
