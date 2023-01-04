@@ -58,13 +58,13 @@ class MainActivity : AppCompatActivity() {
         binding.vpRecommendCourse.adapter = ViewPagerAdapter(getList())
         binding.vpRecommendCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        binding.vpChowallCourse.setPageTransformer { page, position ->
+        binding.vpPopularCourse.setPageTransformer { page, position ->
             page.translationX = position * -offsetPx
         }
 
-        binding.vpChowallCourse.offscreenPageLimit = 2
-        binding.vpChowallCourse.adapter = ViewPagerAdapter(getList())
-        binding.vpChowallCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        binding.vpPopularCourse.offscreenPageLimit = 2
+        binding.vpPopularCourse.adapter = ViewPagerAdapter(getList())
+        binding.vpPopularCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
     }
 
     private fun getList(): ArrayList<Int> {

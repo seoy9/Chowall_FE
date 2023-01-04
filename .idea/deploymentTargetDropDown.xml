@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\SmartCube\.android\avd\Galaxy_S22_Ultra_API_31.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="R59MB00K4EK" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-01-04T04:56:13.526575900Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-01-04T05:11:49.039966700Z" />
   </component>
 </project>
