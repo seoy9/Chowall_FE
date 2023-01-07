@@ -324,12 +324,10 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_end="72px" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/vp_recommend_course"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recommend_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:layout_constraintBottom_toTopOf="@+id/guideline96"
                 app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toStartOf="@+id/guideline97"
@@ -396,12 +394,10 @@
                 android:orientation="horizontal"
                 app:layout_constraintGuide_begin="4076px" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/vp_popular_course"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:layout_constraintBottom_toTopOf="@+id/guideline101"
                 app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toStartOf="@+id/guideline97"

@@ -10,7 +10,6 @@ import android.view.MenuItem
 import android.widget.TextView
 import hong.sy.chowall.MainActivity
 import hong.sy.chowall.R
-import hong.sy.chowall.TempMainCardActivity
 import hong.sy.chowall.databinding.ActivityRestrictionsBinding
 
 class RestrictionsActivity : AppCompatActivity() {

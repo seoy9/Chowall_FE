@@ -6,6 +6,8 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.databinding.ActivityMainBinding
 import hong.sy.chowall.viewPager.ViewPagerAdapter
@@ -20,11 +22,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        setViewPager()
-
         setToolbar()
         setContentColor()
+        setRecyclerView()
     }
 
     private fun setToolbar() {
@@ -44,30 +44,30 @@ class MainActivity : AppCompatActivity() {
         content.text = builder
     }
 
-    private fun setViewPager() {
-        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
-        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.pageWidth)
-        val screenWidth = resources.displayMetrics.widthPixels
-        val offsetPx = screenWidth - pageMarginPx - pagerWidth
+    private fun setRecyclerView() {
+        val rvRecommend = binding.rvRecommendCourse
+        val rvPopular = binding.rvPopularCourse
 
-        binding.vpRecommendCourse.setPageTransformer { page, position ->
-            page.translationX = position * -offsetPx
-        }
+        rvRecommend.adapter = CourseCardAdapter(getList(), this)
+        rvRecommend.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
 
-        binding.vpRecommendCourse.offscreenPageLimit = 2
-        binding.vpRecommendCourse.adapter = ViewPagerAdapter(getList())
-        binding.vpRecommendCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-        binding.vpPopularCourse.setPageTransformer { page, position ->
-            page.translationX = position * -offsetPx
-        }
-
-        binding.vpPopularCourse.offscreenPageLimit = 2
-        binding.vpPopularCourse.adapter = ViewPagerAdapter(getList())
-        binding.vpPopularCourse.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        rvPopular.adapter = CourseCardAdapter(getList(), this)
+        rvPopular.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
     }
 
-    private fun getList(): ArrayList<Int> {
-        return arrayListOf<Int>(R.drawable.img_course_list, R.drawable.init_background, R.drawable.img_course_list_2, R.drawable.btn_make_course)
+    private fun getList(): ArrayList<CourseCard> {
+        var courseCards = arrayListOf<CourseCard>()
+
+        //image 는 Figma 에서 1.5배 적용해서 저장
+        courseCards.add(CourseCard("card_course_1", "card_desc_1"))
+        courseCards.add(CourseCard("card_course_2", "card_desc_2"))
+        courseCards.add(CourseCard("card_course_1", "card_desc_1"))
+        courseCards.add(CourseCard("card_course_2", "card_desc_2"))
+
+        return courseCards
     }
+
+//    private fun getList(): ArrayList<Int> {
+//        return arrayListOf<Int>(R.drawable.img_course_list, R.drawable.init_background, R.drawable.img_course_list_2, R.drawable.btn_make_course)
+//    }
 }
