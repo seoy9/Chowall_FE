@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import hong.sy.chowall.databinding.CourseCardItemBinding
+import hong.sy.chowall.databinding.ListItemBinding
 
 
 class CourseCardAdapter (private var courseCardList: ArrayList<CourseCard>, var context: Context)
@@ -15,7 +15,7 @@ class CourseCardAdapter (private var courseCardList: ArrayList<CourseCard>, var 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = CourseCardItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -23,12 +23,13 @@ class CourseCardAdapter (private var courseCardList: ArrayList<CourseCard>, var 
         holder.bind(courseCardList[position])
     }
 
-    inner class ViewHolder(private val binding: CourseCardItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(card: CourseCard) {
             val resourceImgId = context.resources.getIdentifier(card.img, "drawable", context.packageName)
             val resourceDescId = context.resources.getIdentifier(card.desc, "string", context.packageName)
-            binding.imgCourseCard.setImageResource(resourceImgId)
-            binding.courseCardDesc.text = context.resources.getString(resourceDescId)
+
+            binding.imgCourseItem.setImageResource(resourceImgId)
+            binding.tvCourseTitleItem.text = context.resources.getString(resourceDescId)
         }
     }
 }

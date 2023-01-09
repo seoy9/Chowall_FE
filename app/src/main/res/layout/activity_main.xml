@@ -326,8 +326,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_recommend_course"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline96"
                 app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toStartOf="@+id/guideline97"
@@ -396,8 +396,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_popular_course"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline101"
                 app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toStartOf="@+id/guideline97"
