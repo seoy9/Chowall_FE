@@ -51,6 +51,9 @@ class MainActivity : AppCompatActivity() {
 
         rvPopular.adapter = CourseCardAdapter(getList(), this)
         rvPopular.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
+
+        rvRecommend.addItemDecoration(HorizontalItemDecorator(40))
+        rvPopular.addItemDecoration(HorizontalItemDecorator(40))
     }
 
     private fun getList(): ArrayList<CourseCard> {
