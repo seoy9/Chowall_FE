@@ -30,6 +30,10 @@ class CourseCardAdapter (private var courseCardList: ArrayList<CourseCard>, var 
 
             binding.imgCourseItem.setImageResource(resourceImgId)
             binding.tvCourseTitleItem.text = context.resources.getString(resourceDescId)
+
+            val screenWidth = context.resources.displayMetrics.heightPixels
+            binding.imageView.layoutParams.width = (screenWidth * 0.163872828).toInt()
+            binding.imageView.layoutParams.height = (screenWidth * 0.16127168).toInt()
         }
     }
 }

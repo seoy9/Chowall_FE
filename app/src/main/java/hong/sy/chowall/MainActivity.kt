@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setToolbar()
+        setScrollViewWidth()
         setContentColor()
         setRecyclerView()
     }
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val ab = supportActionBar!!
         ab.setDisplayShowTitleEnabled(false)
+    }
+
+    private fun setScrollViewWidth() {
+        val screenWidth = resources.displayMetrics.heightPixels
+        binding.scroll.layoutParams.height = (screenWidth * 1.4).toInt()
     }
 
     private fun setContentColor() {
