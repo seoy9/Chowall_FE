@@ -11,7 +11,7 @@ class CourseCardAdapter (private var courseCardList: ArrayList<CourseCard>, var 
     : RecyclerView.Adapter<CourseCardAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
-        return courseCardList?.size ?: 0
+        return courseCardList.size ?: 0
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
