@@ -47,6 +47,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.ssomai:android.scalablelayout:2.1.6'
 
     //RETROFIT
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
