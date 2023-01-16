@@ -8,8 +8,13 @@
     <string name="init_register">계정이 없으신가요? 회원가입</string>
 
     <string name="regis">회원 정보</string>
+    <string name="regis_name_hint">이름</string>
+    <string name="regis_id_hint">아이디</string>
+    <string name="regis_email_hint">이메일</string>
+    <string name="regis_pw_hint">비밀번호</string>
+    <string name="regis_repw_hint">비밀번호 확인</string>
 
-
+    <string name="restrictions_name">이름</string>
     <string name="restrictions_question">님이 여행 시 겪는 제약을 선택해주세요.</string>
     <string name="restrictions_answer1">전동 휠체어 사용자 및 동행자</string>
     <string name="restrictions_answer2">수동 휠체어 사용자 및 동행자</string>
@@ -22,6 +27,9 @@
     <string name="btn_next">다음</string>
     <string name="btn_phone_auth">휴대폰 본인인증</string>
 
+    <string name="login_id_hint">아이디</string>
+    <string name="login_pw_hint">비밀번호</string>
+
     <string name="main_search_hint">여행 지역, 장소, 해시태그를 검색하세요</string>
 
     <string name="main_recommend_course">국내 여행 추천 코스</string>
@@ -29,6 +37,8 @@
 
     <string name="card_desc_1">풍경 속에 힐링을 담다</string>
     <string name="card_desc_2">풍경 속에 힐링</string>
+
+    <string name="recommend_title">초월 코스 추천</string>
 
     <string name="q1">Q1\n어느 지역으로 떠나시나요?</string>
     <string name="q1_search_hint">여행 지역을 검색해주세요.</string>

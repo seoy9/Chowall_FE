@@ -1,410 +1,483 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signUp.RestrictionsActivity">
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.020408163" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.048590865" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline66"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.41666666" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5833333" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.062196307" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.113702625" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_q"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22254616" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_c1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3041788" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3341788"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_c2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.36151603" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39151603" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_c3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41885325" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.44885325"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_c4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.47521865" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50521865"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_c5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5325559" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5625559"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_btn_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.61418855" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_btn_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.67638487" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.06666667" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.93333334" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_left_q"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20833333" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_left_c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.075" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_left_a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.17708333" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_rest"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_bar"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.41666666" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5833333" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32608697" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline73"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8043478" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_rest"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/img_logo_main"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/guideline73"
+                app:layout_constraintEnd_toStartOf="@+id/guideline71"
+                app:layout_constraintStart_toStartOf="@+id/guideline70"
+                app:layout_constraintTop_toTopOf="@+id/guideline72"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/chowall_logo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14.41666666666667"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
-    </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.818181818181818"
+            android:orientation="vertical"></LinearLayout>
 
-    <ImageView
-        android:id="@+id/img_logo_regis"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline50"
-        app:layout_constraintEnd_toStartOf="@+id/guideline67"
-        app:layout_constraintStart_toStartOf="@+id/guideline66"
-        app:layout_constraintTop_toTopOf="@+id/guideline39"
-        app:srcCompat="@drawable/chowall_logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_slogan_rest"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="16sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        android:bufferType="spannable"
-        android:fontFamily="@font/opensans_bold"
-        android:gravity="top"
-        android:text="@string/chowall_slogan"
-        android:textColor="@color/textColor"
-        app:layout_constraintBottom_toTopOf="@+id/guideline29"
-        app:layout_constraintEnd_toStartOf="@+id/guideline28"
-        app:layout_constraintHorizontal_weight="5"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/guideline_content"
-        app:layout_constraintVertical_weight="5" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="16sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/opensans_bold"
-        android:text="이름"
-        android:textColor="@color/main"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_left_a"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/guideline_q" />
+            <TextView
+                android:id="@+id/tv_slogan_rest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6.5"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:bufferType="spannable"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="top"
+                android:text="@string/chowall_slogan"
+                android:textColor="@color/textColor" />
 
-    <TextView
-        android:id="@+id/tv_questioin"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="16sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/opensans_bold"
-        android:gravity="top"
-        android:singleLine="false"
-        android:text="@string/restrictions_question"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_q"
-        app:layout_constraintTop_toTopOf="@+id/guideline_q" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.5"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_a1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/restrictions_answer1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline36"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_a"
-        app:layout_constraintTop_toTopOf="@+id/guideline_c1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.818181818181818"
+            android:orientation="vertical"></LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_a2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/restrictions_answer2"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/guideline33"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_a"
-        app:layout_constraintTop_toTopOf="@+id/guideline_c2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_a3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/restrictions_answer3"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/guideline32"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_a"
-        app:layout_constraintTop_toTopOf="@+id/guideline_c3" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_a4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/restrictions_answer4"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/guideline34"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_a"
-        app:layout_constraintTop_toTopOf="@+id/guideline_c4" />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6875"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_name"
+                android:textColor="@color/main" />
 
-    <TextView
-        android:id="@+id/tv_a5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/restrictions_answer5"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeStepGranularity="1sp"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/guideline35"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_a"
-        app:layout_constraintTop_toTopOf="@+id/guideline_c5" />
+            <TextView
+                android:id="@+id/tv_questioin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11.3125"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="16sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="top"
+                android:singleLine="false"
+                android:text="@string/restrictions_question" />
 
-    <Button
-        android:id="@+id/btn_signup_rest"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/opensans_bold"
-        android:text="@string/restrictions_btn_signup"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_btn_bottom"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/guideline_btn_top" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/btn_a1"
-        android:layout_width="19dp"
-        android:layout_height="19dp"
-        android:background="@drawable/check_box"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_a1"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_c"
-        app:layout_constraintTop_toTopOf="@+id/tv_a1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.863636363636364"
+            android:orientation="vertical"></LinearLayout>
 
-    <ImageButton
-        android:id="@+id/btn_a2"
-        android:layout_width="19dp"
-        android:layout_height="19dp"
-        android:background="@drawable/check_box"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_a2"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_c"
-        app:layout_constraintTop_toTopOf="@+id/tv_a2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/btn_a3"
-        android:layout_width="19dp"
-        android:layout_height="19dp"
-        android:background="@drawable/check_box"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_a3"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_c"
-        app:layout_constraintTop_toTopOf="@+id/tv_a3" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"></LinearLayout>
 
-    <ImageButton
-        android:id="@+id/btn_a4"
-        android:layout_width="19dp"
-        android:layout_height="19dp"
-        android:background="@drawable/check_box"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_a4"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_c"
-        app:layout_constraintTop_toTopOf="@+id/tv_a4" />
+            <ImageButton
+                android:id="@+id/btn_a1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/check_box" />
 
-    <ImageButton
-        android:id="@+id/btn_a5"
-        android:layout_width="19dp"
-        android:layout_height="19dp"
-        android:background="@drawable/check_box"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_a5"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_c"
-        app:layout_constraintTop_toTopOf="@+id/tv_a5" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.055555555555556"
+                android:orientation="horizontal"></LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_a1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10.77777777777778"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_answer1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.666666666666667"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_a2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/check_box" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.055555555555556"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_a2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10.77777777777778"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_answer2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.666666666666667"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_a3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/check_box" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.055555555555556"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_a3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13.61111111111111"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_answer3" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.833333333333333"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_a4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/check_box" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.055555555555556"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_a4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.888888888888889"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_answer4" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.555555555555556"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_a5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/check_box" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.055555555555556"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_a5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.555555555555556"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_answer5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="12.88888888888889"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.863636363636364"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.181818181818182"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <Button
+                android:id="@+id/btn_signup_rest"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/restrictions_btn_signup"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9.909090909090909"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

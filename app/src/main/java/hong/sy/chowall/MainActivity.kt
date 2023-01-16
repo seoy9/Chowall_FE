@@ -1,29 +1,36 @@
 package hong.sy.chowall
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Point
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.view.View
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hong.sy.chowall.databinding.ActivityMainBinding
+import hong.sy.chowall.databinding.MainTBinding
 import hong.sy.chowall.recommend.Recommend_Q1
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+//    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: MainTBinding
     private lateinit var content: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = MainTBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        resizingViewHeight()
         setToolbar()
-        setScrollViewWidth()
         setContentColor()
         setRecyclerView()
 
@@ -33,16 +40,34 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun Context.getDeviceHeight(): Int {
+        val windowManager = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        return if(Build.VERSION.SDK_INT >= 30) {
+            windowManager.currentWindowMetrics.bounds.height()
+        } else {
+            val display = windowManager.defaultDisplay
+            val size = Point()
+            display.getSize(size)
+            size.y
+        }
+    }
+
+    private fun resizeViewHeight(devieceHeight: Int, view: View, height: Double) {
+        val layoutParams = view.layoutParams
+        layoutParams.height = (devieceHeight * height).toInt()
+        view.layoutParams = layoutParams
+    }
+
+    private fun resizingViewHeight() {
+        val deviceHeight = getDeviceHeight()
+        resizeViewHeight(deviceHeight, binding.scroll, 1.23)
+    }
+
     private fun setToolbar() {
         val toolbar = binding.toolbarMain
         setSupportActionBar(toolbar)
         val ab = supportActionBar!!
         ab.setDisplayShowTitleEnabled(false)
-    }
-
-    private fun setScrollViewWidth() {
-        val screenWidth = resources.displayMetrics.heightPixels
-        binding.scroll.layoutParams.height = (screenWidth * 1.4).toInt()
     }
 
     private fun setContentColor() {

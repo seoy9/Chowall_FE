@@ -38,7 +38,8 @@ class RResultAdapter(private var recommendResultList: ArrayList<RResult>, var co
             binding.tvC4ReResultItem.text = context.resources.getString(resourceC4)
 
             val screenWidth = context.resources.displayMetrics.heightPixels
-            binding.layoutReResultItem.layoutParams.height = (screenWidth * 0.27).toInt()
+//            binding.layoutReResultItem.layoutParams.height = (screenWidth * 0.27).toInt()
+            binding.layoutReResultItem.layoutParams.height = (screenWidth * 0.235).toInt()
         }
     }
 }

@@ -64,70 +64,70 @@ class RestrictionsActivity : AppCompatActivity() {
     private fun setCheckBoxClickListener() {
         binding.btnA1.setOnClickListener {
             if(checked[4]) {
-                binding.btnA5.setBackgroundResource(R.drawable.check_box)
+                binding.btnA5.setImageResource(R.drawable.check_box)
                 checked[4] = false
             }
             if(checked[0]) {
-                binding.btnA1.setBackgroundResource(R.drawable.check_box)
+                binding.btnA1.setImageResource(R.drawable.check_box)
                 checked[0] = false
             } else {
-                binding.btnA1.setBackgroundResource(R.drawable.checked_box)
+                binding.btnA1.setImageResource(R.drawable.checked_box)
                 checked[0] = true
             }
         }
 
         binding.btnA2.setOnClickListener {
             if(checked[4]) {
-                binding.btnA5.setBackgroundResource(R.drawable.check_box)
+                binding.btnA5.setImageResource(R.drawable.check_box)
                 checked[4] = false
             }
             if(checked[1]) {
-                binding.btnA2.setBackgroundResource(R.drawable.check_box)
+                binding.btnA2.setImageResource(R.drawable.check_box)
                 checked[1] = false
             } else {
-                binding.btnA2.setBackgroundResource(R.drawable.checked_box)
+                binding.btnA2.setImageResource(R.drawable.checked_box)
                 checked[1] = true
             }
         }
 
         binding.btnA3.setOnClickListener {
             if(checked[4]) {
-                binding.btnA5.setBackgroundResource(R.drawable.check_box)
+                binding.btnA5.setImageResource(R.drawable.check_box)
                 checked[4] = false
             }
             if(checked[2]) {
-                binding.btnA3.setBackgroundResource(R.drawable.check_box)
+                binding.btnA3.setImageResource(R.drawable.check_box)
                 checked[2] = false
             } else {
-                binding.btnA3.setBackgroundResource(R.drawable.checked_box)
+                binding.btnA3.setImageResource(R.drawable.checked_box)
                 checked[2] = true
             }
         }
 
         binding.btnA4.setOnClickListener {
             if(checked[4]) {
-                binding.btnA5.setBackgroundResource(R.drawable.check_box)
+                binding.btnA5.setImageResource(R.drawable.check_box)
                 checked[4] = false
             }
             if(checked[3]) {
-                binding.btnA4.setBackgroundResource(R.drawable.check_box)
+                binding.btnA4.setImageResource(R.drawable.check_box)
                 checked[3] = false
             } else {
-                binding.btnA4.setBackgroundResource(R.drawable.checked_box)
+                binding.btnA4.setImageResource(R.drawable.checked_box)
                 checked[3] = true
             }
         }
 
         binding.btnA5.setOnClickListener {
             if(checked[4]) {
-                binding.btnA5.setBackgroundResource(R.drawable.check_box)
+                binding.btnA5.setImageResource(R.drawable.check_box)
                 checked[4] = false
             } else {
-                binding.btnA1.setBackgroundResource(R.drawable.check_box)
-                binding.btnA2.setBackgroundResource(R.drawable.check_box)
-                binding.btnA3.setBackgroundResource(R.drawable.check_box)
-                binding.btnA4.setBackgroundResource(R.drawable.check_box)
-                binding.btnA5.setBackgroundResource(R.drawable.checked_box)
+                binding.btnA1.setImageResource(R.drawable.check_box)
+                binding.btnA2.setImageResource(R.drawable.check_box)
+                binding.btnA3.setImageResource(R.drawable.check_box)
+                binding.btnA4.setImageResource(R.drawable.check_box)
+                binding.btnA5.setImageResource(R.drawable.checked_box)
                 checked[0] = false
                 checked[1] = false
                 checked[2] = false

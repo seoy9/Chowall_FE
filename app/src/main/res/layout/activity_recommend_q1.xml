@@ -51,7 +51,7 @@ tools:context=".recommend.Recommend_Q1">
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/opensans_bold"
-        android:text="초월 코스 추천"
+        android:text="@string/recommend_title"
         android:textColor="@color/white"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="16dp"
@@ -197,7 +197,10 @@ tools:context=".recommend.Recommend_Q1">
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/search_icon" />
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search_icon" />
 
                 <LinearLayout
                     android:layout_width="0dp"

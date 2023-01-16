@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.41666666" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5833333" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32608697" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline73"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8043478" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/img_logo_main"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/guideline73"
+                app:layout_constraintEnd_toStartOf="@+id/guideline71"
+                app:layout_constraintStart_toStartOf="@+id/guideline70"
+                app:layout_constraintTop_toTopOf="@+id/guideline72"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/chowall_logo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scroll_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11.7692308"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,12 +87,14 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar_main">
 
         <ScrollView
+            android:id="@+id/scroll_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true"
+            android:fillViewport="false"
             android:overScrollMode="never">
 
             <LinearLayout
+                android:id="@+id/scroll_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -62,7 +135,7 @@
                             android:bufferType="spannable"
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="top"
-                            android:text="@string/chowall_slogan"
+                            android:text="장벽을 넘어\n여행의 한계를 초월하다"
                             android:textColor="@color/textColor"
                             android:textStyle="bold"
                             app:autoSizeMaxTextSize="20sp"
@@ -135,7 +208,7 @@
                                         android:background="@null"
                                         android:ems="10"
                                         android:fontFamily="@font/opensans_bold"
-                                        android:hint="@string/main_search_hint"
+                                        android:hint="여행 지역, 장소, 해시태그를 검색하세요"
                                         android:inputType="textPersonName"
                                         android:textColorHint="@color/hintColor"
                                         android:textSize="14sp" />
@@ -151,7 +224,10 @@
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:background="@drawable/search_icon" />
+                                        android:adjustViewBounds="true"
+                                        android:background="@null"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/search_icon" />
 
                                     <LinearLayout
                                         android:layout_width="0dp"
@@ -202,8 +278,10 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="9.5"
-                            android:background="@drawable/btn_recommend"
-                            android:scaleType="center" />
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/btn_recommend" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -216,8 +294,10 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="9.5"
-                            android:background="@drawable/btn_make_course"
-                            android:scaleType="center" />
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/btn_make_course" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -249,8 +329,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="9.5"
-                            android:background="@drawable/btn_report"
-                            android:scaleType="center" />
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/btn_report" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -263,8 +345,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="9.5"
-                            android:background="@drawable/btn_reservation"
-                            android:scaleType="center" />
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/btn_reservation" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -297,13 +381,13 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="4.67857143"
-                            app:autoSizeMaxTextSize="20sp"
-                            app:autoSizeMinTextSize="10sp"
-                            app:autoSizeStepGranularity="1sp"
-                            app:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:autoSizeMinTextSize="10sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="fill_vertical"
-                            android:text="@string/main_recommend_course"
+                            android:text="국내 여행 추천 코스"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -355,8 +439,11 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvRecommendCourse"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="18"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:orientation="horizontal"
+                            tools:listitem="@layout/list_item"
                             android:overScrollMode="never" />
 
                         <LinearLayout
@@ -390,13 +477,13 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="2.73239437"
-                            app:autoSizeMaxTextSize="20sp"
-                            app:autoSizeMinTextSize="10sp"
-                            app:autoSizeStepGranularity="1sp"
-                            app:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:autoSizeMinTextSize="10sp"
+                            android:autoSizeStepGranularity="1sp"
+                            android:autoSizeTextType="uniform"
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="fill_vertical"
-                            android:text="@string/main_popular_course"
+                            android:text="초월 인기 코스"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -446,8 +533,11 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvPopularCourse"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="18"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:orientation="horizontal"
+                            tools:listitem="@layout/list_item"
                             android:overScrollMode="never" />
 
                         <LinearLayout
@@ -470,79 +560,12 @@
         </ScrollView>
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.062196307" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8969874" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline68"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.020408163"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline69"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.048590865"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.41666666"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline71"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5833333"/>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_main"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <ImageView
-        android:id="@+id/img_logo_main"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline69"
-        app:layout_constraintEnd_toStartOf="@+id/guideline71"
-        app:layout_constraintStart_toStartOf="@+id/guideline70"
-        app:layout_constraintTop_toTopOf="@+id/guideline68"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/chowall_logo" />
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1.53846154"
         android:background="@color/bottom_nav"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
@@ -559,5 +582,4 @@
         app:menu="@menu/bottom_menu" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

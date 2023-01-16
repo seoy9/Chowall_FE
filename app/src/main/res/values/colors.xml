@@ -18,4 +18,6 @@
     <color name="bottom_nav">#F5F5F5</color>
 
     <color name="button_init">#99FFFFFF</color>
+
+    <color name="button_init_2">#CCFFFFFF</color>
 </resources>
