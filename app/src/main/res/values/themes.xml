@@ -17,11 +17,6 @@
     <!-- InitActivity theme. -->
     <style name="Theme.Chowall.Init" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- transparent status bar-->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorPrimaryDark">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
         <!-- button color -->
         <item name="colorPrimary">@color/white</item>

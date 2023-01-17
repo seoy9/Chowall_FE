@@ -27,13 +27,13 @@ class InitActivity : AppCompatActivity() {
         binding = ActivityInitBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setToolbar()
+        setStatusBar()
         setButtonClickListener()
         setTextClickListener()
         setContentColor()
     }
 
-    private fun setToolbar() {
+    private fun setStatusBar() {
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         if (Build.VERSION.SDK_INT >= 30) {	// API 30 에 적용
