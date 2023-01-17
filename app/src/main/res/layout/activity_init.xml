@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
             <ImageView
                 android:id="@+id/img_logo_init"
@@ -44,7 +44,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.01729167"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
         </LinearLayout>
 
@@ -65,27 +65,30 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
             <TextView
                 android:id="@+id/tv_intro_init"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2.23529412"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowDy="13"
+                android:shadowRadius="9"
+                android:text="@string/init"
+                android:textColor="@color/hintColor"
                 app:autoSizeMaxTextSize="26sp"
                 app:autoSizeMinTextSize="10sp"
                 app:autoSizeStepGranularity="1sp"
-                app:autoSizeTextType="uniform"
-                android:fontFamily="@font/opensans_bold"
-                android:gravity="center"
-                android:text="@string/init"
-                android:textColor="@color/hintColor" />
+                app:autoSizeTextType="uniform" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
         </LinearLayout>
 
@@ -106,7 +109,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
             <Button
                 android:id="@+id/btn_login_init"
@@ -117,14 +120,17 @@
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/btn_login"
                 android:textColor="@color/textColor"
-                android:textSize="16sp"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
         </LinearLayout>
 
@@ -132,7 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,30 +150,32 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
             <TextView
                 android:id="@+id/tv_register"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2.31137725"
-                app:autoSizeMaxTextSize="20sp"
-                app:autoSizeMinTextSize="10sp"
-                app:autoSizeStepGranularity="1sp"
-                app:autoSizeTextType="uniform"
                 android:bufferType="spannable"
                 android:clickable="true"
                 android:focusable="true"
                 android:fontFamily="@font/opensans_bold"
                 android:gravity="center"
+                android:shadowDy="13"
+                android:shadowRadius="10"
                 android:text="@string/init_register"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
         </LinearLayout>
 
@@ -175,7 +183,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="7.25"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"/>
 
     </LinearLayout>
 

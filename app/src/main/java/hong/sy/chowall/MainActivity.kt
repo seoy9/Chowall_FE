@@ -15,18 +15,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hong.sy.chowall.databinding.ActivityMainBinding
-import hong.sy.chowall.databinding.MainTBinding
 import hong.sy.chowall.recommend.Recommend_Q1
 
 class MainActivity : AppCompatActivity() {
-//    private lateinit var binding: ActivityMainBinding
-    private lateinit var binding: MainTBinding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var content: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = MainTBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         resizingViewHeight()

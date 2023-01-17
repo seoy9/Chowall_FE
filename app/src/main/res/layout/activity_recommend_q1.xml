@@ -92,7 +92,7 @@ tools:context=".recommend.Recommend_Q1">
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.5"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,7 +104,7 @@ tools:context=".recommend.Recommend_Q1">
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal"/>
 
         <TextView
             android:id="@+id/tv_q1"
@@ -126,14 +126,14 @@ tools:context=".recommend.Recommend_Q1">
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5.85"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,7 +145,7 @@ tools:context=".recommend.Recommend_Q1">
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -158,7 +158,7 @@ tools:context=".recommend.Recommend_Q1">
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,7 +170,7 @@ tools:context=".recommend.Recommend_Q1">
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.375"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal"/>
 
                 <EditText
                     android:id="@+id/ed_search_location_q1"
@@ -190,7 +190,7 @@ tools:context=".recommend.Recommend_Q1">
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.15625"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal"/>
 
                 <ImageButton
                     android:id="@+id/btn_search_q1"
@@ -206,7 +206,7 @@ tools:context=".recommend.Recommend_Q1">
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.15625"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal"/>
             </LinearLayout>
 
             <LinearLayout
@@ -222,14 +222,14 @@ tools:context=".recommend.Recommend_Q1">
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -250,7 +250,7 @@ tools:context=".recommend.Recommend_Q1">
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.6"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -262,7 +262,7 @@ tools:context=".recommend.Recommend_Q1">
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.868421052631579"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
 
             <ImageView
                 android:id="@+id/imageView"
@@ -275,7 +275,7 @@ tools:context=".recommend.Recommend_Q1">
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.868421052631579"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal"/>
         </LinearLayout>
 
         <LinearLayout
