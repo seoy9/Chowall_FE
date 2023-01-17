@@ -1,569 +1,714 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".signUp.RegisterActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline72"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.020408163" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline73"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.048590865" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline74"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.41666666" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5833333" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.062196307" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_regis"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.41666666" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5833333" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32608697" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline73"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8043478" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_regis"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/img_logo_main"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/guideline73"
+                app:layout_constraintEnd_toStartOf="@+id/guideline71"
+                app:layout_constraintStart_toStartOf="@+id/guideline70"
+                app:layout_constraintTop_toTopOf="@+id/guideline72"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/chowall_logo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14.41666666666667"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
-    </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:orientation="vertical"></LinearLayout>
 
-    <ImageView
-        android:id="@+id/img_logo_regis"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline73"
-        app:layout_constraintEnd_toStartOf="@+id/guideline75"
-        app:layout_constraintStart_toStartOf="@+id/guideline74"
-        app:layout_constraintTop_toTopOf="@+id/guideline72"
-        app:srcCompat="@drawable/chowall_logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.1"
+            android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.062015504" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.3125"
+                android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/tvRegisTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10213243" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:bufferType="spannable"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:text="@string/regis"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toTopOf="@+id/tvRegisBottom"
+                app:layout_constraintEnd_toStartOf="@+id/tvRegisRight"
+                app:layout_constraintStart_toStartOf="@+id/tvRegisLeft"
+                app:layout_constraintTop_toTopOf="@+id/tvRegisTop" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/tvRegisLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4111922" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.3125"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/tvRegisRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5912409" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:orientation="vertical"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/tvRegisBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.13131313" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nameBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17171717" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nameBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2345679" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="@drawable/gray_round_box"
+                android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/boxLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.06569343" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/boxRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9367397" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.75"
+                    android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/idBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25925925" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/idBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32211" />
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/nameBoxBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/boxRight"
+                        app:layout_constraintStart_toStartOf="@+id/boxLeft"
+                        app:layout_constraintTop_toTopOf="@+id/nameBoxTop"
+                        app:srcCompat="@drawable/img_name" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/emailBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.34680134" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.666666666666667"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/emailBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4074074" />
+                    <EditText
+                        android:id="@+id/ed_name_regis"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="17.08333333333333"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_bold"
+                        android:hint="@string/regis_name_hint"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imgNameBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
+                        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
+                        app:layout_constraintTop_toTopOf="@+id/imgNameTop" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.43434343" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.833333333333333"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4949495" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwCheckBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5218855" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/pwCheckBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5824916" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nextButtonTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6228956" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/nextButtonBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6857464" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.09975669" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="@drawable/gray_round_box"
+                android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.18248175" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.18181819" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.335186214563646"
+                    android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgNameBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22109988" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgIdTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2704826" />
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/idBoxBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/boxRight"
+                        app:layout_constraintStart_toStartOf="@+id/boxLeft"
+                        app:layout_constraintTop_toTopOf="@+id/idBoxTop"
+                        app:srcCompat="@drawable/img_id" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgIdBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.31088665" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.666666666666667"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgEmailTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3580247" />
+                    <EditText
+                        android:id="@+id/ed_id_regis"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="16.16666666666667"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_bold"
+                        android:hint="@string/regis_id_hint"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imgIdBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
+                        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
+                        app:layout_constraintTop_toTopOf="@+id/imgIdTop" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgEmailBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39842874" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.833333333333333"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.44556677" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48597082" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.09489051" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.17761557" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53198653" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5735129" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="@drawable/gray_round_box"
+                android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/editTwLeftRegis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.23600973" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/editTwRightRegis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.756691" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.333333333333333"
+                    android:orientation="horizontal">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.8150852" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.8783455" />
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/emailBoxBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/boxRight"
+                        app:layout_constraintStart_toStartOf="@+id/boxLeft"
+                        app:layout_constraintTop_toTopOf="@+id/emailBoxTop"
+                        app:srcCompat="@drawable/img_email" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5375982" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.666666666666667"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgPwCheckBoxBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5667789" />
+                    <EditText
+                        android:id="@+id/ed_email_regis"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15.855"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_bold"
+                        android:hint="@string/regis_email_hint"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imgEmailBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
+                        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
+                        app:layout_constraintTop_toTopOf="@+id/imgEmailTop" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:autoSizeMaxTextSize="20sp"
-        app:autoSizeMinTextSize="10sp"
-        app:autoSizeStepGranularity="1sp"
-        app:autoSizeTextType="uniform"
-        android:bufferType="spannable"
-        android:fontFamily="@font/opensans_bold"
-        android:gravity="center"
-        android:text="@string/regis"
-        android:textColor="@color/textColor"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvRegisBottom"
-        app:layout_constraintEnd_toStartOf="@+id/tvRegisRight"
-        app:layout_constraintStart_toStartOf="@+id/tvRegisLeft"
-        app:layout_constraintTop_toTopOf="@+id/tvRegisTop" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.833333333333333"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/nameBoxBottom"
-        app:layout_constraintEnd_toStartOf="@+id/boxRight"
-        app:layout_constraintStart_toStartOf="@+id/boxLeft"
-        app:layout_constraintTop_toTopOf="@+id/nameBoxTop"
-        app:srcCompat="@drawable/gray_round_box" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/idBoxBottom"
-        app:layout_constraintEnd_toStartOf="@+id/boxRight"
-        app:layout_constraintStart_toStartOf="@+id/boxLeft"
-        app:layout_constraintTop_toTopOf="@+id/idBoxTop"
-        app:srcCompat="@drawable/gray_round_box" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/emailBoxBottom"
-        app:layout_constraintEnd_toStartOf="@+id/boxRight"
-        app:layout_constraintStart_toStartOf="@+id/boxLeft"
-        app:layout_constraintTop_toTopOf="@+id/emailBoxTop"
-        app:srcCompat="@drawable/gray_round_box" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/pwBoxBottom"
-        app:layout_constraintEnd_toStartOf="@+id/boxRight"
-        app:layout_constraintStart_toStartOf="@+id/boxLeft"
-        app:layout_constraintTop_toTopOf="@+id/pwBoxTop"
-        app:srcCompat="@drawable/gray_round_box" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/pwCheckBoxBottom"
-        app:layout_constraintEnd_toStartOf="@+id/boxRight"
-        app:layout_constraintStart_toStartOf="@+id/boxLeft"
-        app:layout_constraintTop_toTopOf="@+id/pwCheckBoxTop"
-        app:srcCompat="@drawable/gray_round_box" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgNameBottom"
-        app:layout_constraintEnd_toStartOf="@+id/imgNameRight"
-        app:layout_constraintStart_toStartOf="@+id/imgNameLeft"
-        app:layout_constraintTop_toTopOf="@+id/imgNameTop"
-        app:srcCompat="@drawable/img_name" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="@drawable/gray_round_box"
+                android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgIdBottom"
-        app:layout_constraintEnd_toStartOf="@+id/imgNameRight"
-        app:layout_constraintStart_toStartOf="@+id/imgNameLeft"
-        app:layout_constraintTop_toTopOf="@+id/imgIdTop"
-        app:srcCompat="@drawable/img_id" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgEmailBottom"
-        app:layout_constraintEnd_toStartOf="@+id/imgNameRight"
-        app:layout_constraintStart_toStartOf="@+id/imgNameLeft"
-        app:layout_constraintTop_toTopOf="@+id/imgEmailTop"
-        app:srcCompat="@drawable/img_email" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.333333333333333"
+                    android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgPwBottom"
-        app:layout_constraintEnd_toStartOf="@+id/imgPwRight"
-        app:layout_constraintStart_toStartOf="@+id/imgPwLeft"
-        app:layout_constraintTop_toTopOf="@+id/imgPwTop"
-        app:srcCompat="@drawable/img_pw" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgPwCheckBottom"
-        app:layout_constraintEnd_toStartOf="@+id/imgPwRight"
-        app:layout_constraintStart_toStartOf="@+id/imgPwLeft"
-        app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop"
-        app:srcCompat="@drawable/img_pw" />
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/pwBoxBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/boxRight"
+                        app:layout_constraintStart_toStartOf="@+id/boxLeft"
+                        app:layout_constraintTop_toTopOf="@+id/pwBoxTop"
+                        app:srcCompat="@drawable/img_pw" />
 
-    <EditText
-        android:id="@+id/ed_name_regis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="@font/opensans_bold"
-        android:hint="@string/regis_name_hint"
-        android:inputType="textPersonName"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/hintColor"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgNameBottom"
-        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
-        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
-        app:layout_constraintTop_toTopOf="@+id/imgNameTop" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.666666666666667"
+                        android:orientation="horizontal"></LinearLayout>
 
-    <EditText
-        android:id="@+id/ed_id_regis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="@font/opensans_bold"
-        android:hint="@string/regis_id_hint"
-        android:inputType="textPersonName"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/hintColor"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgIdBottom"
-        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
-        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
-        app:layout_constraintTop_toTopOf="@+id/imgIdTop" />
+                    <EditText
+                        android:id="@+id/ed_pw_regis"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15.25"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_bold"
+                        android:hint="@string/regis_pw_hint"
+                        android:inputType="textPassword"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imgPwBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
+                        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
+                        app:layout_constraintTop_toTopOf="@+id/imgPwTop" />
 
-    <EditText
-        android:id="@+id/ed_email_regis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="@font/opensans_bold"
-        android:hint="@string/regis_email_hint"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/hintColor"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgEmailBottom"
-        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
-        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
-        app:layout_constraintTop_toTopOf="@+id/imgEmailTop" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.833333333333333"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
 
-    <EditText
-        android:id="@+id/ed_pw_regis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="@font/opensans_bold"
-        android:hint="@string/regis_pw_hint"
-        android:inputType="textPassword"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/hintColor"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgPwBottom"
-        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
-        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
-        app:layout_constraintTop_toTopOf="@+id/imgPwTop" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
 
-    <EditText
-        android:id="@+id/ed_pw_check_regis"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="@font/opensans_bold"
-        android:hint="@string/regis_repw_hint"
-        android:inputType="textPassword"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/hintColor"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgPwCheckBottom"
-        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
-        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
-        app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
 
-    <ImageView
-        android:id="@+id/img_pw_checkbox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgPwCheckBottom"
-        app:layout_constraintEnd_toStartOf="@+id/imgPwCheckBoxRight"
-        app:layout_constraintStart_toStartOf="@+id/imgPwCheckBoxLeft"
-        app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop"
-        app:srcCompat="@drawable/img_pw_check" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
 
-    <Button
-    android:id="@+id/btn_next_regis"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:fontFamily="@font/opensans_bold"
-    android:text="@string/btn_phone_auth"
-    android:textSize="16sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toTopOf="@+id/nextButtonBottom"
-    app:layout_constraintEnd_toStartOf="@+id/boxRight"
-    app:layout_constraintStart_toStartOf="@+id/boxLeft"
-    app:layout_constraintTop_toTopOf="@+id/nextButtonTop" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="@drawable/gray_round_box"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.03464322647363"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.102378490175801"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/pwCheckBoxBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/boxRight"
+                        app:layout_constraintStart_toStartOf="@+id/boxLeft"
+                        app:layout_constraintTop_toTopOf="@+id/pwCheckBoxTop"
+                        app:srcCompat="@drawable/img_pw" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <EditText
+                        android:id="@+id/ed_pw_check_regis"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15.3"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_bold"
+                        android:hint="@string/regis_repw_hint"
+                        android:inputType="textPassword"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imgPwCheckBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/editTwRightRegis"
+                        app:layout_constraintStart_toStartOf="@+id/editTwLeftRegis"
+                        app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_pw_checkbox"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/imgPwCheckBottom"
+                        app:layout_constraintEnd_toStartOf="@+id/imgPwCheckBoxRight"
+                        app:layout_constraintStart_toStartOf="@+id/imgPwCheckBoxLeft"
+                        app:layout_constraintTop_toTopOf="@+id/imgPwCheckTop"
+                        app:srcCompat="@drawable/img_pw_check" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.2"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next_regis"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:fontFamily="@font/opensans_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/btn_phone_auth"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                android:textStyle="bold"
+                app:cornerRadius="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/nextButtonBottom"
+                app:layout_constraintEnd_toStartOf="@+id/boxRight"
+                app:layout_constraintStart_toStartOf="@+id/boxLeft"
+                app:layout_constraintTop_toTopOf="@+id/nextButtonTop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10.3"
+            android:orientation="vertical"></LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".signUp.RestrictionsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,15 +106,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="6.5"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="16sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
                 android:fontFamily="@font/opensans_bold"
                 android:gravity="top"
                 android:text="@string/chowall_slogan"
-                android:textColor="@color/textColor" />
+                android:textColor="@color/textColor"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -145,10 +146,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.6875"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="16sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/restrictions_name"
                 android:textColor="@color/main" />
@@ -158,10 +159,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="11.3125"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="16sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:gravity="top"
                 android:singleLine="false"
@@ -213,10 +214,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="10.77777777777778"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/restrictions_answer1" />
 
@@ -266,10 +267,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="10.77777777777778"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/restrictions_answer2" />
 
@@ -319,10 +320,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="13.61111111111111"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/restrictions_answer3" />
 
@@ -374,10 +375,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="8.888888888888889"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/restrictions_answer4" />
 
@@ -427,10 +428,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3.555555555555556"
-                android:autoSizeMaxTextSize="20sp"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeStepGranularity="1sp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/restrictions_answer5" />
 
@@ -454,22 +455,32 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal"></LinearLayout>
 
             <Button
                 android:id="@+id/btn_signup_rest"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
                 android:fontFamily="@font/opensans_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:stateListAnimator="@null"
                 android:text="@string/restrictions_btn_signup"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                android:textStyle="bold"
+                app:cornerRadius="5dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal"></LinearLayout>
         </LinearLayout>
 
