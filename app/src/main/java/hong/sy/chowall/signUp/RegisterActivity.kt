@@ -5,9 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.MenuItem
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRegisterBinding
+import hong.sy.chowall.retrofit.DataService
+import hong.sy.chowall.retrofit.RetrofitConnection
+import hong.sy.chowall.retrofit.User
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -48,9 +55,48 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setButtonClickListener() {
         binding.btnNextRegis.setOnClickListener {
+            setUserData()
             val intent = Intent(this, RestrictionsActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun setUser() : User {
+        val user = User()
+        user.id = binding.edIdRegis.text.toString()
+        user.name = binding.edNameRegis.text.toString()
+        user.password = binding.edPwRegis.text.toString()
+        user.email = binding.edEmailRegis.text.toString()
+
+        return user
+    }
+
+    private fun setUserData() {
+        val retrofitAPI = RetrofitConnection.getInstance().create(DataService::class.java)
+
+        retrofitAPI.getRegisterResponse(setUser())
+            .enqueue(object : Callback<String> { // 비동기 방식 통신 메소드
+                override fun onResponse( // 통신에 성공한 경우
+                    call: Call<String>,
+                    response: Response<String>
+                ) {
+                    if (response.isSuccessful) { // 응답 잘 받은 경우
+                        Log.d("Request", "응답 잘 받음")
+                        Log.d("RESPONSE: ", response.body().toString())
+
+                    } else {
+                        // 통신 성공 but 응답 실패
+                        Log.d("Request", "통신 성공 but 응답 실패")
+                        Log.d("RESPONSE", "FAILURE")
+                    }
+                }
+
+                override fun onFailure(call: Call<String>, t: Throwable) {
+                    // 통신에 실패한 경우
+                    Log.d("Request", "통신 실패")
+                    Log.d("CONNECTION FAILURE: ", t.localizedMessage)
+                }
+            })
     }
 
     private fun setPasswordCheckBox() {

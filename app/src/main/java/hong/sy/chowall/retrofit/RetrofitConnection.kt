@@ -5,8 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitConnection {
     companion object {
-        //http://52.78.85.62:9000/addUser
-        private const val BASE_URL = ""
+        //http://52.78.85.62:9000/
+        private const val BASE_URL = "http://52.78.85.62:9000/"
         private var INSTANCE: Retrofit? = null
 
         fun getInstance(): Retrofit {
