@@ -349,7 +349,7 @@
                 app:layout_constraintGuide_begin="1093dp" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tv_re_result_name"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:autoSizeMaxTextSize="20sp"

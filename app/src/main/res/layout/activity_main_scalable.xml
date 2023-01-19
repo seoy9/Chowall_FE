@@ -242,7 +242,7 @@
                     app:scale_base_width="1440">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/tv_re_result_name"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="@string/main_popular_course"

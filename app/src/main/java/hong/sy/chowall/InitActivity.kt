@@ -1,5 +1,6 @@
 package hong.sy.chowall
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Paint
 import android.os.Build
@@ -39,6 +40,15 @@ class InitActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= 30) {	// API 30 에 적용
             WindowCompat.setDecorFitsSystemWindows(window, false)
         }
+//        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+//        binding.root.setPadding(0, statusBarHeight(this), 0, 0)
+
+    }
+
+    private fun statusBarHeight(context: Context): Int {
+        val resourceId = context.resources.getIdentifier("status_bar_height", "dimen", "android")
+
+        return if(resourceId > 0) context.resources.getDimensionPixelSize(resourceId) else 0
     }
 
     private fun setButtonClickListener() {

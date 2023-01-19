@@ -61,7 +61,7 @@
             </androidx.appcompat.widget.Toolbar>
 
             <ImageView
-                android:id="@+id/img_logo_main"
+                android:id="@+id/img_logo_regis"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
@@ -102,7 +102,6 @@
                 android:orientation="horizontal"/>
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -172,7 +171,6 @@
                         android:orientation="horizontal"/>
 
                     <ImageView
-                        android:id="@+id/imageView6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.5"
@@ -273,7 +271,6 @@
                         android:orientation="horizontal"/>
 
                     <ImageView
-                        android:id="@+id/imageView7"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.5"
@@ -375,7 +372,6 @@
                         android:orientation="horizontal"/>
 
                     <ImageView
-                        android:id="@+id/imageView8"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.5"
@@ -477,7 +473,6 @@
                         android:orientation="horizontal"/>
 
                     <ImageView
-                        android:id="@+id/imageView9"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.5"
@@ -579,7 +574,6 @@
                         android:orientation="horizontal"/>
 
                     <ImageView
-                        android:id="@+id/imageView10"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="3"

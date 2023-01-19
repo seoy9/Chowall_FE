@@ -27,13 +27,13 @@ class Recommend_Q1 : AppCompatActivity() {
         setBottomNavigation()
 
         binding.btnSearchQ1.setOnClickListener {
-            val intent = Intent(this, Recommend_Q2::class.java)
-            startActivity(intent)
+            val intent_q2 = Intent(this, Recommend_Q2::class.java)
+            startActivity(intent_q2)
         }
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarMain
+        val toolbar = binding.toolbarReQ1
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -61,11 +61,11 @@ class Recommend_Q1 : AppCompatActivity() {
     }
 
     private fun setBottomNavigation() {
-        binding.bottomNav.setOnItemReselectedListener { item ->
+        binding.bottomNavReQ1.setOnItemReselectedListener { item ->
             when(item.itemId) {
                 R.id.nav_home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    val intent_main = Intent(this, MainActivity::class.java)
+                    startActivity(intent_main)
                     finish()
                 }
             }

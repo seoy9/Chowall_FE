@@ -33,9 +33,14 @@ class MainActivity : AppCompatActivity() {
         setRecyclerView()
 
         binding.btnRecommend.setOnClickListener {
-            val intent = Intent(this, Recommend_Q1::class.java)
-            startActivity(intent)
+            val intent_q1 = Intent(this, Recommend_Q1::class.java)
+            startActivity(intent_q1)
         }
+    }
+
+    private fun resizingViewHeight() {
+        val deviceHeight = getDeviceHeight()
+        resizeViewHeight(deviceHeight, binding.scroll, 1.23)
     }
 
     private fun Context.getDeviceHeight(): Int {
@@ -54,11 +59,6 @@ class MainActivity : AppCompatActivity() {
         val layoutParams = view.layoutParams
         layoutParams.height = (devieceHeight * height).toInt()
         view.layoutParams = layoutParams
-    }
-
-    private fun resizingViewHeight() {
-        val deviceHeight = getDeviceHeight()
-        resizeViewHeight(deviceHeight, binding.scroll, 1.23)
     }
 
     private fun setToolbar() {

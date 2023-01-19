@@ -61,7 +61,7 @@
             </androidx.appcompat.widget.Toolbar>
 
             <ImageView
-                android:id="@+id/img_logo_main"
+                android:id="@+id/img_logo_rest"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
@@ -155,7 +155,6 @@
                 android:textColor="@color/main" />
 
             <TextView
-                android:id="@+id/tv_questioin"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="11.3125"

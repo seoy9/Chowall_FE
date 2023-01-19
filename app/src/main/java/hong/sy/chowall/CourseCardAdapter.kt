@@ -33,12 +33,12 @@ class CourseCardAdapter (private var courseCardList: ArrayList<CourseCard>, var 
 
             val screenWidth = context.resources.displayMetrics.heightPixels
             // scalableLayout 사용 시
-//            binding.imageView.layoutParams.width = (screenWidth * 0.163872828).toInt()
-//            binding.imageView.layoutParams.height = (screenWidth * 0.16127168).toInt()
+//            binding.imgCard.layoutParams.width = (screenWidth * 0.163872828).toInt()
+//            binding.imgCard.layoutParams.height = (screenWidth * 0.16127168).toInt()
 
             // scalableLayout 미사용 시
-            binding.imageView.layoutParams.width = (screenWidth * 0.1556791866).toInt()
-            binding.imageView.layoutParams.height = (screenWidth * 0.153208096).toInt()
+            binding.imgCard.layoutParams.width = (screenWidth * 0.1556791866).toInt()
+            binding.imgCard.layoutParams.height = (screenWidth * 0.153208096).toInt()
         }
     }
 }

@@ -30,8 +30,6 @@ class LoginActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val ab = supportActionBar!!
         ab.setDisplayShowTitleEnabled(false)
-        ab.setDisplayHomeAsUpEnabled(true)
-        ab.setHomeAsUpIndicator(R.drawable.back_icon)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

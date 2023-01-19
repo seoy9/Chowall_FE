@@ -29,7 +29,7 @@ class Recommend_Q4 : AppCompatActivity() {
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarMain
+        val toolbar = binding.toolbarReQ4
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -57,11 +57,11 @@ class Recommend_Q4 : AppCompatActivity() {
     }
 
     private fun setBottomNavigation() {
-        binding.bottomNav.setOnItemReselectedListener { item ->
+        binding.bottomNavReQ4.setOnItemReselectedListener { item ->
             when(item.itemId) {
                 R.id.nav_home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    val intent_main = Intent(this, MainActivity::class.java)
+                    startActivity(intent_main)
                     finish()
                 }
             }
@@ -77,8 +77,8 @@ class Recommend_Q4 : AppCompatActivity() {
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent = Intent(this, Recommend_Result::class.java)
-                startActivity(intent)
+                val intent_result = Intent(this, Recommend_Result::class.java)
+                startActivity(intent_result)
             }
         }
 
@@ -90,8 +90,8 @@ class Recommend_Q4 : AppCompatActivity() {
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent = Intent(this, Recommend_Result::class.java)
-                startActivity(intent)
+                val intent_result = Intent(this, Recommend_Result::class.java)
+                startActivity(intent_result)
             }
         }
 
@@ -103,8 +103,8 @@ class Recommend_Q4 : AppCompatActivity() {
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent = Intent(this, Recommend_Result::class.java)
-                startActivity(intent)
+                val intent_result = Intent(this, Recommend_Result::class.java)
+                startActivity(intent_result)
             }
         }
 
@@ -116,8 +116,8 @@ class Recommend_Q4 : AppCompatActivity() {
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent = Intent(this, Recommend_Result::class.java)
-                startActivity(intent)
+                val intent_result = Intent(this, Recommend_Result::class.java)
+                startActivity(intent_result)
             }
         }
 
@@ -129,8 +129,8 @@ class Recommend_Q4 : AppCompatActivity() {
                 binding.btnCultureQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent = Intent(this, Recommend_Result::class.java)
-                startActivity(intent)
+                val intent_result = Intent(this, Recommend_Result::class.java)
+                startActivity(intent_result)
             }
         }
 
@@ -142,8 +142,8 @@ class Recommend_Q4 : AppCompatActivity() {
                 binding.btnCultureQ4.isChecked = false
                 binding.btnHotplaceQ4.isChecked = false
 
-                val intent = Intent(this, Recommend_Result::class.java)
-                startActivity(intent)
+                val intent_result = Intent(this, Recommend_Result::class.java)
+                startActivity(intent_result)
             }
         }
     }

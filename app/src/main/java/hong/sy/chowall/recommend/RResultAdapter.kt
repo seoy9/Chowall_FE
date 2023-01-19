@@ -37,9 +37,9 @@ class RResultAdapter(private var recommendResultList: ArrayList<RResult>, var co
             binding.tvC3ReResultItem.text = context.resources.getString(resourceC3)
             binding.tvC4ReResultItem.text = context.resources.getString(resourceC4)
 
-            val screenWidth = context.resources.displayMetrics.heightPixels
+            val screenHeight = context.resources.displayMetrics.heightPixels
 //            binding.layoutReResultItem.layoutParams.height = (screenWidth * 0.27).toInt()
-            binding.layoutReResultItem.layoutParams.height = (screenWidth * 0.235).toInt()
+            binding.layoutReResultItem.layoutParams.height = (screenHeight * 0.235).toInt()
         }
     }
 }

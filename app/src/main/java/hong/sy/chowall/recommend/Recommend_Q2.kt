@@ -29,7 +29,7 @@ class Recommend_Q2 : AppCompatActivity() {
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarMain
+        val toolbar = binding.toolbarReQ2
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -57,11 +57,11 @@ class Recommend_Q2 : AppCompatActivity() {
     }
 
     private fun setBottomNavigation() {
-        binding.bottomNav.setOnItemReselectedListener { item ->
+        binding.bottomNavReQ2.setOnItemReselectedListener { item ->
             when(item.itemId) {
                 R.id.nav_home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    val intent_main = Intent(this, MainActivity::class.java)
+                    startActivity(intent_main)
                     finish()
                 }
             }
@@ -69,63 +69,63 @@ class Recommend_Q2 : AppCompatActivity() {
     }
 
     private fun setToggleButtonChecked() {
-        binding.btnAlone.setOnCheckedChangeListener { button, isChecked ->
+        binding.btnAloneQ2.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
-                binding.btnFamily.isChecked = false
-                binding.btnFriend.isChecked = false
-                binding.btnCouple.isChecked = false
-                binding.btnGroup.isChecked = false
+                binding.btnFamilyQ2.isChecked = false
+                binding.btnFriendQ2.isChecked = false
+                binding.btnCoupleQ2.isChecked = false
+                binding.btnGroupQ2.isChecked = false
 
-                val intent = Intent(this, Recommend_Q3::class.java)
-                startActivity(intent)
+                val intent_q3 = Intent(this, Recommend_Q3::class.java)
+                startActivity(intent_q3)
             }
         }
 
-        binding.btnFamily.setOnCheckedChangeListener { button, isChecked ->
+        binding.btnFamilyQ2.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
-                binding.btnAlone.isChecked = false
-                binding.btnFriend.isChecked = false
-                binding.btnCouple.isChecked = false
-                binding.btnGroup.isChecked = false
+                binding.btnAloneQ2.isChecked = false
+                binding.btnFriendQ2.isChecked = false
+                binding.btnCoupleQ2.isChecked = false
+                binding.btnGroupQ2.isChecked = false
 
-                val intent = Intent(this, Recommend_Q3::class.java)
-                startActivity(intent)
+                val intent_q3 = Intent(this, Recommend_Q3::class.java)
+                startActivity(intent_q3)
             }
         }
 
-        binding.btnFriend.setOnCheckedChangeListener { button, isChecked ->
+        binding.btnFriendQ2.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
-                binding.btnAlone.isChecked = false
-                binding.btnFamily.isChecked = false
-                binding.btnCouple.isChecked = false
-                binding.btnGroup.isChecked = false
+                binding.btnAloneQ2.isChecked = false
+                binding.btnFamilyQ2.isChecked = false
+                binding.btnCoupleQ2.isChecked = false
+                binding.btnGroupQ2.isChecked = false
 
-                val intent = Intent(this, Recommend_Q3::class.java)
-                startActivity(intent)
+                val intent_q3 = Intent(this, Recommend_Q3::class.java)
+                startActivity(intent_q3)
             }
         }
 
-        binding.btnCouple.setOnCheckedChangeListener { button, isChecked ->
+        binding.btnCoupleQ2.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
-                binding.btnAlone.isChecked = false
-                binding.btnFamily.isChecked = false
-                binding.btnFriend.isChecked = false
-                binding.btnGroup.isChecked = false
+                binding.btnAloneQ2.isChecked = false
+                binding.btnFamilyQ2.isChecked = false
+                binding.btnFriendQ2.isChecked = false
+                binding.btnGroupQ2.isChecked = false
 
-                val intent = Intent(this, Recommend_Q3::class.java)
-                startActivity(intent)
+                val intent_q3 = Intent(this, Recommend_Q3::class.java)
+                startActivity(intent_q3)
             }
         }
 
-        binding.btnGroup.setOnCheckedChangeListener { button, isChecked ->
+        binding.btnGroupQ2.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
-                binding.btnAlone.isChecked = false
-                binding.btnFamily.isChecked = false
-                binding.btnFriend.isChecked = false
-                binding.btnCouple.isChecked = false
+                binding.btnAloneQ2.isChecked = false
+                binding.btnFamilyQ2.isChecked = false
+                binding.btnFriendQ2.isChecked = false
+                binding.btnCoupleQ2.isChecked = false
 
-                val intent = Intent(this, Recommend_Q3::class.java)
-                startActivity(intent)
+                val intent_q3 = Intent(this, Recommend_Q3::class.java)
+                startActivity(intent_q3)
             }
         }
     }

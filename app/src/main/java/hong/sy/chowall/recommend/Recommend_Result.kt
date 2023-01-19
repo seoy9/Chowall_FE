@@ -24,7 +24,7 @@ class Recommend_Result : AppCompatActivity() {
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarMain
+        val toolbar = binding.toolbarReResult
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -42,11 +42,11 @@ class Recommend_Result : AppCompatActivity() {
     }
 
     private fun setBottomNavigation() {
-        binding.bottomNav.setOnItemReselectedListener { item ->
+        binding.bottomNavReResult.setOnItemReselectedListener { item ->
             when(item.itemId) {
                 R.id.nav_home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    val intent_main = Intent(this, MainActivity::class.java)
+                    startActivity(intent_main)
                     finish()
                 }
             }
@@ -54,7 +54,7 @@ class Recommend_Result : AppCompatActivity() {
     }
 
     private fun setRecyclerView() {
-        val rvResult = binding.rvRecommendResult
+        val rvResult = binding.rvReResult
 
         rvResult.adapter = RResultAdapter(getList(), this)
         rvResult.addItemDecoration(VerticalItemDecorator(100))
