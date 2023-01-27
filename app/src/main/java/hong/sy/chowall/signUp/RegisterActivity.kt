@@ -58,7 +58,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setPaddingTextView() {
         val height = getDeviceHeight()
-        val standardHeight = 3380
+        val standardHeight = 3088
 
         if (height < standardHeight) {
             binding.nameTextviewInputLayout.editText?.setPadding(30, 30, 30, 30)
