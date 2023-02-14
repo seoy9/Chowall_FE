@@ -107,13 +107,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
-                android:orientation="vertical" />
+                android:layout_weight="1.40625"
+                android:orientation="vertical"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="31.66666666666667"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -122,201 +122,21 @@
                     android:layout_weight="1"
                     android:orientation="horizontal" />
 
-                <LinearLayout
+                <ToggleButton
+                    android:id="@+id/btn_day_q3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="16"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/white_top_round_box"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="3.5"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="24.83333333333333"
-                                android:background="@drawable/white_gray_round_box"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:orientation="horizontal" />
-
-                                <TextView
-                                    android:id="@+id/textView2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2.95"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:text="@string/q3_start"
-                                    android:textColor="@color/hintColor"
-                                    android:textStyle="bold"
-                                    app:autoSizeMaxTextSize="16sp"
-                                    app:autoSizeMinTextSize="12sp"
-                                    app:autoSizeStepGranularity="1sp"
-                                    app:autoSizeTextType="uniform" />
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:orientation="horizontal" />
-
-                                <TextView
-                                    android:id="@+id/tv_start_date_q3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2.45"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:text="@string/q3_start_date_ex"
-                                    android:textColor="@color/main"
-                                    app:autoSizeMaxTextSize="16sp"
-                                    app:autoSizeMinTextSize="12sp"
-                                    app:autoSizeStepGranularity="1sp"
-                                    app:autoSizeTextType="uniform" />
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="7.45"
-                                    android:orientation="horizontal" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="3.5"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="24.83333333333333"
-                                android:background="@drawable/white_gray_round_box"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:orientation="horizontal" />
-
-                                <TextView
-                                    android:id="@+id/textView4"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2.95"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:text="@string/q3_end"
-                                    android:textColor="@color/hintColor"
-                                    android:textStyle="bold"
-                                    app:autoSizeMaxTextSize="16sp"
-                                    app:autoSizeMinTextSize="12sp"
-                                    app:autoSizeStepGranularity="1sp"
-                                    app:autoSizeTextType="uniform" />
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:orientation="horizontal" />
-
-                                <TextView
-                                    android:id="@+id/tv_end_date_q3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2.45"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:text="@string/q3_end_date_ex"
-                                    android:textColor="@color/main"
-                                    app:autoSizeMaxTextSize="16sp"
-                                    app:autoSizeMinTextSize="12sp"
-                                    app:autoSizeStepGranularity="1sp"
-                                    app:autoSizeTextType="uniform" />
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="7.45"
-                                    android:orientation="horizontal" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical" />
-                    </LinearLayout>
-
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="match_parent"
-                        android:layout_height="8px"
-                        android:background="#3390D4D4" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3.75"
-                        android:background="@drawable/white_bottom_round_box"
-                        android:orientation="vertical">
-
-                    </LinearLayout>
-                </LinearLayout>
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/q3_btn_day"
+                    android:textOn="@string/q3_btn_day"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -330,51 +150,91 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="vertical" />
+                android:orientation="vertical"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2.333333333333333"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="14.4"
-                    android:orientation="horizontal" />
-
-                <Button
-                    android:id="@+id/btn_choice_q3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.6"
-                    android:fontFamily="@font/opensans_bold"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:stateListAnimator="@null"
-                    android:text="@string/q3_btn_choice"
-                    android:textStyle="bold"
-                    app:autoSizeMaxTextSize="15sp"
-                    app:autoSizeMinTextSize="10sp"
-                    app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform"
-                    app:cornerRadius="5dp" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_1day_q3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/q3_btn_1day"
+                    android:textOn="@string/q3_btn_1day"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1.5"
-                android:orientation="vertical">
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_2day_q3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/q3_btn_2day"
+                    android:textOn="@string/q3_btn_2day"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6.40625"
+                android:orientation="vertical"/>
         </LinearLayout>
 
         <LinearLayout
@@ -431,6 +291,7 @@
         android:background="@color/bottom_nav"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
+        app:itemBackground="@color/bottom_nav"
         app:itemHorizontalTranslationEnabled="false"
         app:itemIconSize="55dp"
         app:itemPaddingBottom="24dp"

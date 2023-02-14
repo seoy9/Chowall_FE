@@ -72,39 +72,24 @@ class Recommend_Q4 : AppCompatActivity() {
         binding.btnRefreshQ4.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
                 binding.btnRestaurantQ4.isChecked = false
-                binding.btnCafeQ4.isChecked = false
                 binding.btnCultureQ4.isChecked = false
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent_result = Intent(this, Recommend_Result::class.java)
-                startActivity(intent_result)
+                val intent_loading = Intent(this, Recommend_Loading::class.java)
+                startActivity(intent_loading)
             }
         }
 
         binding.btnRestaurantQ4.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked) {
                 binding.btnRefreshQ4.isChecked = false
-                binding.btnCafeQ4.isChecked = false
                 binding.btnCultureQ4.isChecked = false
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent_result = Intent(this, Recommend_Result::class.java)
-                startActivity(intent_result)
-            }
-        }
-
-        binding.btnCafeQ4.setOnCheckedChangeListener { button, isChecked ->
-            if(isChecked) {
-                binding.btnRefreshQ4.isChecked = false
-                binding.btnRestaurantQ4.isChecked = false
-                binding.btnCultureQ4.isChecked = false
-                binding.btnHotplaceQ4.isChecked = false
-                binding.btnActivityQ4.isChecked = false
-
-                val intent_result = Intent(this, Recommend_Result::class.java)
-                startActivity(intent_result)
+                val intent_loading = Intent(this, Recommend_Loading::class.java)
+                startActivity(intent_loading)
             }
         }
 
@@ -112,12 +97,11 @@ class Recommend_Q4 : AppCompatActivity() {
             if(isChecked) {
                 binding.btnRefreshQ4.isChecked = false
                 binding.btnRestaurantQ4.isChecked = false
-                binding.btnCafeQ4.isChecked = false
                 binding.btnHotplaceQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent_result = Intent(this, Recommend_Result::class.java)
-                startActivity(intent_result)
+                val intent_loading = Intent(this, Recommend_Loading::class.java)
+                startActivity(intent_loading)
             }
         }
 
@@ -125,12 +109,11 @@ class Recommend_Q4 : AppCompatActivity() {
             if(isChecked) {
                 binding.btnRefreshQ4.isChecked = false
                 binding.btnRestaurantQ4.isChecked = false
-                binding.btnCafeQ4.isChecked = false
                 binding.btnCultureQ4.isChecked = false
                 binding.btnActivityQ4.isChecked = false
 
-                val intent_result = Intent(this, Recommend_Result::class.java)
-                startActivity(intent_result)
+                val intent_loading = Intent(this, Recommend_Loading::class.java)
+                startActivity(intent_loading)
             }
         }
 
@@ -138,12 +121,11 @@ class Recommend_Q4 : AppCompatActivity() {
             if(isChecked) {
                 binding.btnRefreshQ4.isChecked = false
                 binding.btnRestaurantQ4.isChecked = false
-                binding.btnCafeQ4.isChecked = false
                 binding.btnCultureQ4.isChecked = false
                 binding.btnHotplaceQ4.isChecked = false
 
-                val intent_result = Intent(this, Recommend_Result::class.java)
-                startActivity(intent_result)
+                val intent_loading = Intent(this, Recommend_Loading::class.java)
+                startActivity(intent_loading)
             }
         }
     }

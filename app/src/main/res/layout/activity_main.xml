@@ -171,7 +171,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="16"
-                            android:background="@drawable/dark_gray_round_box"
+                            android:background="@drawable/dark_gray_border_white_box"
                             android:orientation="horizontal">
 
                             <LinearLayout
@@ -564,6 +564,7 @@
         android:background="@color/bottom_nav"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
+        app:itemBackground="@color/bottom_nav"
         app:itemHorizontalTranslationEnabled="false"
         app:itemIconSize="55dp"
         app:itemPaddingBottom="24dp"

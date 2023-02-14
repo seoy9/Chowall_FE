@@ -107,13 +107,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2.45"
+                android:layout_weight="1.40625"
                 android:orientation="vertical" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -134,7 +134,7 @@
                     android:textOff="@string/q4_btn_refresh"
                     android:textOn="@string/q4_btn_refresh"
                     android:textStyle="bold"
-                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="10sp"
                     app:autoSizeStepGranularity="1sp"
                     app:autoSizeTextType="uniform" />
@@ -155,7 +155,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -176,7 +176,7 @@
                     android:textOff="@string/q4_btn_restaurant"
                     android:textOn="@string/q4_btn_restaurant"
                     android:textStyle="bold"
-                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="10sp"
                     app:autoSizeStepGranularity="1sp"
                     app:autoSizeTextType="uniform" />
@@ -197,91 +197,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal" />
-
-                <ToggleButton
-                    android:id="@+id/btn_cafe_q4"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="16"
-                    android:background="@drawable/toggle_selector"
-                    android:fontFamily="@font/opensans_bold"
-                    android:stateListAnimator="@null"
-                    android:textColor="@drawable/toggle_text_color"
-                    android:textOff="@string/q4_btn_cafe"
-                    android:textOn="@string/q4_btn_cafe"
-                    android:textStyle="bold"
-                    app:autoSizeMaxTextSize="16sp"
-                    app:autoSizeMinTextSize="10sp"
-                    app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal" />
-
-                <ToggleButton
-                    android:id="@+id/btn_culture_q4"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="16"
-                    android:background="@drawable/toggle_selector"
-                    android:fontFamily="@font/opensans_bold"
-                    android:stateListAnimator="@null"
-                    android:textColor="@drawable/toggle_text_color"
-                    android:textOff="@string/q4_btn_culture"
-                    android:textOn="@string/q4_btn_culture"
-                    android:textStyle="bold"
-                    app:autoSizeMaxTextSize="16sp"
-                    app:autoSizeMinTextSize="10sp"
-                    app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -302,7 +218,7 @@
                     android:textOff="@string/q4_btn_hotplace"
                     android:textOn="@string/q4_btn_hotplace"
                     android:textStyle="bold"
-                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="10sp"
                     app:autoSizeStepGranularity="1sp"
                     app:autoSizeTextType="uniform" />
@@ -323,7 +239,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.666666666666667"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -344,7 +260,7 @@
                     android:textOff="@string/q4_btn_activity"
                     android:textOn="@string/q4_btn_activity"
                     android:textStyle="bold"
-                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
                     app:autoSizeMinTextSize="10sp"
                     app:autoSizeStepGranularity="1sp"
                     app:autoSizeTextType="uniform" />
@@ -359,7 +275,49 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2.45"
+                android:layout_weight="1"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_culture_q4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/q4_btn_culture"
+                    android:textOn="@string/q4_btn_culture"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.40625"
                 android:orientation="vertical" />
         </LinearLayout>
 
@@ -417,6 +375,7 @@
         android:background="@color/bottom_nav"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
+        app:itemBackground="@color/bottom_nav"
         app:itemHorizontalTranslationEnabled="false"
         app:itemIconSize="55dp"
         app:itemPaddingBottom="24dp"

@@ -375,7 +375,7 @@
                 app:autoSizeMinTextSize="10sp"
                 app:autoSizeStepGranularity="2sp"
                 app:autoSizeTextType="uniform"
-                app:cornerRadius="5dp"
+                app:cornerRadius="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline10"
                 app:layout_constraintEnd_toStartOf="@+id/guideline9"
                 app:layout_constraintStart_toStartOf="@+id/guideline6"

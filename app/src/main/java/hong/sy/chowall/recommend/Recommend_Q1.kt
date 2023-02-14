@@ -25,11 +25,7 @@ class Recommend_Q1 : AppCompatActivity() {
         setToolbar()
         setContentColor()
         setBottomNavigation()
-
-        binding.btnSearchQ1.setOnClickListener {
-            val intent_q2 = Intent(this, Recommend_Q2::class.java)
-            startActivity(intent_q2)
-        }
+        setButton()
     }
 
     private fun setToolbar() {
@@ -69,6 +65,18 @@ class Recommend_Q1 : AppCompatActivity() {
                     finish()
                 }
             }
+        }
+    }
+
+    private fun setButton() {
+        binding.btnChuncheonQ1.setOnClickListener {
+            val intent_q2 = Intent(this, Recommend_Q2::class.java)
+            startActivity(intent_q2)
+        }
+
+        binding.btnGangneungQ1.setOnClickListener {
+            val intent_q2 = Intent(this, Recommend_Q2::class.java)
+            startActivity(intent_q2)
         }
     }
 }

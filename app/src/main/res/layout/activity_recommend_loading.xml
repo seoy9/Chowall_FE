@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".recommend.Recommend_Result">
+    tools:context=".recommend.Recommend_Loading">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_re_result"
+            android:id="@+id/toolbar_re_loading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?attr/colorPrimary"
@@ -43,7 +43,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="11.7692308"
+        android:layout_weight="13.30769234"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,161 +53,166 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="20"
-            android:orientation="vertical" />
+            android:layout_weight="13.08333333333333"
+            android:orientation="vertical"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="13"
+            android:layout_weight="2.166666666666667"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal" />
+                android:orientation="horizontal"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="6.7"
-                android:fontFamily="@font/opensans_bold"
-                android:gravity="top"
-                android:text="@string/recommend_result_1"
-                android:textColor="@color/hintColor"
+                android:layout_weight="1.80952380952381"
+                android:gravity="center"
+                android:text="@string/recommend_loading_wait"
                 android:textStyle="bold"
-                app:autoSizeMaxTextSize="30sp"
-                app:autoSizeMinTextSize="15sp"
+                app:autoSizeMaxTextSize="26sp"
+                app:autoSizeMinTextSize="10sp"
                 app:autoSizeStepGranularity="1sp"
                 app:autoSizeTextType="uniform" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="10.3"
-                android:orientation="horizontal" />
+                android:layout_weight="1"
+                android:orientation="horizontal"/>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.75"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.016949152542373" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.033898305084746"
+                android:orientation="horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.666666666666667"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.166666666666667"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.351351351351351"
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:id="@+id/tv_name_re_loading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/recommend_loading_name"
+                android:textColor="@color/main"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="26sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.067567567567568"
+                android:gravity="center"
+                android:text="@string/recommend_ladoing_for"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="26sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.445945945945946"
+                android:orientation="horizontal"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical" />
+            android:orientation="vertical"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="13"
+            android:layout_weight="2.166666666666667"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal" />
+                android:orientation="horizontal"/>
 
             <TextView
-                android:id="@+id/tv_re_result_name"
+                android:id="@+id/tv_search_re_loading"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3.7"
-                android:fontFamily="@font/opensans_bold"
-                android:gravity="center|start"
-                android:text="@string/recommend_result_user"
-                android:textColor="@color/main"
+                android:layout_weight="5.2"
+                android:gravity="center"
+                android:text="@string/recommend_loading_check"
                 android:textStyle="bold"
-                app:autoSizeMaxTextSize="30sp"
-                app:autoSizeMinTextSize="15sp"
-                app:autoSizeStepGranularity="1sp"
-                app:autoSizeTextType="uniform" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="6.05"
-                android:fontFamily="@font/opensans_bold"
-                android:gravity="top"
-                android:text="@string/recommend_result_2"
-                android:textColor="@color/hintColor"
-                android:textStyle="bold"
-                app:autoSizeMaxTextSize="30sp"
-                app:autoSizeMinTextSize="15sp"
+                app:autoSizeMaxTextSize="26sp"
+                app:autoSizeMinTextSize="10sp"
                 app:autoSizeStepGranularity="1sp"
                 app:autoSizeTextType="uniform" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7.25"
-                android:orientation="horizontal" />
+                android:layout_weight="1"
+                android:orientation="horizontal"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="7"
-            android:orientation="vertical" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="252"
-            android:background="#3390D4D4"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.3"
-                    android:orientation="horizontal" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_re_result"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="14"
-                    android:orientation="vertical"
-                    android:overScrollMode="never"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/r_result_item" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.3"
-                    android:orientation="horizontal" />
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_weight="19.75"
+            android:orientation="vertical"/>
     </LinearLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav_re_result"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.53846154"
-        android:background="@color/bottom_nav"
-        android:paddingLeft="23dp"
-        android:paddingRight="23dp"
-        app:itemBackground="@color/bottom_nav"
-        app:itemHorizontalTranslationEnabled="false"
-        app:itemIconSize="55dp"
-        app:itemPaddingBottom="24dp"
-        app:itemPaddingTop="12dp"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar_main"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline53"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottom_menu" />
-
 
 </LinearLayout>

@@ -107,13 +107,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.225"
+                android:layout_weight="1.40625"
                 android:orientation="vertical" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -133,8 +133,10 @@
                     android:textColor="@drawable/toggle_text_color"
                     android:textOff="@string/q2_btn_alone"
                     android:textOn="@string/q2_btn_alone"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -152,7 +154,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -172,8 +174,10 @@
                     android:textColor="@drawable/toggle_text_color"
                     android:textOff="@string/q2_btn_family"
                     android:textOn="@string/q2_btn_family"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -191,7 +195,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -211,8 +215,10 @@
                     android:textColor="@drawable/toggle_text_color"
                     android:textOff="@string/q2_btn_friend"
                     android:textOn="@string/q2_btn_friend"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -230,7 +236,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -250,8 +256,10 @@
                     android:textColor="@drawable/toggle_text_color"
                     android:textOff="@string/q2_btn_couple"
                     android:textOn="@string/q2_btn_couple"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -269,7 +277,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -289,8 +297,10 @@
                     android:textColor="@drawable/toggle_text_color"
                     android:textOff="@string/q2_btn_group"
                     android:textOn="@string/q2_btn_group"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -302,7 +312,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1.225"
+                android:layout_weight="1.40625"
                 android:orientation="vertical" />
         </LinearLayout>
 
@@ -360,6 +370,7 @@
         android:background="@color/bottom_nav"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
+        app:itemBackground="@color/bottom_nav"
         app:itemHorizontalTranslationEnabled="false"
         app:itemIconSize="55dp"
         app:itemPaddingBottom="24dp"

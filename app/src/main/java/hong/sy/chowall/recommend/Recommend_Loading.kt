@@ -8,28 +8,30 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
-import hong.sy.chowall.MainActivity
 import hong.sy.chowall.R
-import hong.sy.chowall.databinding.ActivityRecommendQ3Binding
+import hong.sy.chowall.databinding.ActivityRecommendLoadingBinding
 
-class Recommend_Q3 : AppCompatActivity() {
-    private lateinit var binding: ActivityRecommendQ3Binding
+class Recommend_Loading : AppCompatActivity() {
+    private lateinit var binding: ActivityRecommendLoadingBinding
     private lateinit var content: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityRecommendQ3Binding.inflate(layoutInflater)
+        binding = ActivityRecommendLoadingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setToolbar()
         setContentColor()
-        setBottomNavigation()
-        setButton()
+
+        binding.progressBar.setOnClickListener {
+            val intent_result = Intent(this, Recommend_Result::class.java)
+            startActivity(intent_result)
+        }
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarReQ3
+        val toolbar = binding.toolbarReLoading
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -47,41 +49,12 @@ class Recommend_Q3 : AppCompatActivity() {
     }
 
     private fun setContentColor() {
-        content = binding.tvQ3
+        content = binding.tvSearchReLoading
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
-        builder.setSpan(colorMainSpan, 0, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorMainSpan, 10, 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder
-    }
-
-    private fun setBottomNavigation() {
-        binding.bottomNavReQ3.setOnItemReselectedListener { item ->
-            when(item.itemId) {
-                R.id.nav_home -> {
-                    val intent_main = Intent(this, MainActivity::class.java)
-                    startActivity(intent_main)
-                    finish()
-                }
-            }
-        }
-    }
-
-    private fun setButton() {
-        binding.btnDayQ3.setOnClickListener {
-            val intent_q4 = Intent(this, Recommend_Q4::class.java)
-            startActivity(intent_q4)
-        }
-
-        binding.btn1dayQ3.setOnClickListener {
-            val intent_q4 = Intent(this, Recommend_Q4::class.java)
-            startActivity(intent_q4)
-        }
-
-        binding.btn2dayQ3.setOnClickListener {
-            val intent_q4 = Intent(this, Recommend_Q4::class.java)
-            startActivity(intent_q4)
-        }
     }
 }

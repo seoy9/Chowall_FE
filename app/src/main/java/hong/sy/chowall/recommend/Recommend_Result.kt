@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.core.view.get
 import hong.sy.chowall.MainActivity
 import hong.sy.chowall.R
 import hong.sy.chowall.VerticalItemDecorator

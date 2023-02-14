@@ -26,7 +26,7 @@
     <string name="regis_error_pw_equal">비밀번호가 일치하지 않습니다.</string>
     <string name="regis_error_repw">비밀번호를 재입력해 주십시오.</string>
 
-    <string name="restrictions_name">이름</string>
+    <string name="restrictions_name">성이름름</string>
     <string name="restrictions_question">님이 여행 시 겪는 제약을 선택해주세요.</string>
     <string name="restrictions_answer1">전동 휠체어 사용자 및 동행자</string>
     <string name="restrictions_answer2">수동 휠체어 사용자 및 동행자</string>
@@ -68,17 +68,24 @@
     <string name="q3_btn_choice">선택</string>
     <string name="q3_start_date_ex">22.11.23</string>
     <string name="q3_end_date_ex">22.11.30</string>
+    <string name="q3_btn_day">당일치기</string>
+    <string name="q3_btn_1day">1박</string>
+    <string name="q3_btn_2day">2박</string>
 
     <string name="q4">Q4\n어떤 여행을 선호하시나요?</string>
     <string name="q4_btn_refresh">휴식/힐링</string>
-    <string name="q4_btn_restaurant">맛집</string>
-    <string name="q4_btn_cafe">카페</string>
-    <string name="q4_btn_culture">문화 탐방</string>
+    <string name="q4_btn_restaurant">맛집/카페</string>
     <string name="q4_btn_hotplace">핫플레이스</string>
     <string name="q4_btn_activity">액티비티</string>
+    <string name="q4_btn_culture">문화 탐방</string>
+
+    <string name="recommend_loading_wait">잠시만 기다려주세요</string>
+    <string name="recommend_loading_name">성이름름</string>
+    <string name="recommend_ladoing_for">님을 위한</string>
+    <string name="recommend_loading_check">초월 추천 코스를 조회 중입니다</string>
 
     <string name="recommend_result_1">초월이 추천하는</string>
-    <string name="recommend_result_user">이름</string>
+    <string name="recommend_result_user">성이름름</string>
     <string name="recommend_result_2"> 님을 위한 코스</string>
     <string name="recommend_result_title">속이 뻥 뚫리는 바다와 함께</string>
     <string name="recommend_result_c1">강화도립화목원</string>

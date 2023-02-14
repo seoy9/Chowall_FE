@@ -111,7 +111,26 @@ class RegisterActivity : AppCompatActivity() {
     private fun setUserData() {
         val retrofitAPI = RetrofitConnection.getInstance().create(DataService::class.java)
 
-        retrofitAPI.getRegisterResponse(setUser())
+//        val user = HashMap<String, String>()
+
+//        user.put("id", binding.edIdRegis.text.toString())
+//        user.put("name", binding.edNameRegis.text.toString())
+//        user.put("password", binding.edPwRegis.text.toString())
+//        user.put("email", binding.edEmailRegis.text.toString())
+
+        val id = binding.edIdRegis.text.toString()
+        val name = binding.edNameRegis.text.toString()
+        val password = binding.edPwRegis.text.toString()
+        val email = binding.edEmailRegis.text.toString()
+
+//        user["id"] = id
+//        user["name"] = name
+//        user["password"] = password
+//        user["email"] = email
+
+        val user = mapOf("id" to id, "name" to name, "password" to password, "email" to email)
+
+        retrofitAPI.getRegisterResponse(user)
             .enqueue(object : Callback<String> { // 비동기 방식 통신 메소드
                 override fun onResponse( // 통신에 성공한 경우
                     call: Call<String>,
@@ -123,7 +142,7 @@ class RegisterActivity : AppCompatActivity() {
 
                     } else {
                         // 통신 성공 but 응답 실패
-                        Log.d("Request", "통신 성공 but 응답 실패")
+                        Log.d("Request", "통신 성공 but 응답 실패 ${call.request().toString()}")
                         Log.d("RESPONSE", "FAILURE")
                     }
                 }
