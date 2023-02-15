@@ -22,6 +22,8 @@ class Recommend_Result : AppCompatActivity() {
         setToolbar()
         setBottomNavigation()
         setRecyclerView()
+
+        binding.rvReResult
     }
 
     private fun setToolbar() {

@@ -78,15 +78,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="22.33333333333333"
+                    android:ellipsize="end"
                     android:fontFamily="@font/opensans_bold"
                     android:gravity="center_vertical"
+                    android:maxLines="1"
                     android:text="@string/recommend_result_title"
                     android:textColor="@color/main"
                     android:textStyle="bold"
                     app:autoSizeMaxTextSize="24sp"
                     app:autoSizeMinTextSize="8sp"
                     app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
+                    app:autoSizeTextType="uniform"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -129,15 +131,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="11.09375"
+                    android:ellipsize="end"
                     android:fontFamily="@font/opensans_bold"
                     android:gravity="center_vertical"
+                    android:maxLines="1"
                     android:text="@string/recommend_result_c1"
                     android:textColor="@color/hintColor"
-                    android:textStyle="bold"
                     app:autoSizeMaxTextSize="14sp"
                     app:autoSizeMinTextSize="7sp"
                     app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
+                    app:autoSizeTextType="uniform"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -172,15 +176,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="11.09375"
+                    android:ellipsize="end"
                     android:fontFamily="@font/opensans_bold"
                     android:gravity="center_vertical"
+                    android:maxLines="1"
                     android:text="@string/recommend_result_c2"
                     android:textColor="@color/hintColor"
-                    android:textStyle="bold"
                     app:autoSizeMaxTextSize="14sp"
                     app:autoSizeMinTextSize="7sp"
                     app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
+                    app:autoSizeTextType="uniform"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -215,15 +221,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="11.09375"
+                    android:ellipsize="end"
                     android:fontFamily="@font/opensans_bold"
                     android:gravity="center_vertical"
+                    android:maxLines="1"
                     android:text="@string/recommend_result_c3"
                     android:textColor="@color/hintColor"
-                    android:textStyle="bold"
                     app:autoSizeMaxTextSize="14sp"
                     app:autoSizeMinTextSize="7sp"
                     app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
+                    app:autoSizeTextType="uniform"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -258,15 +266,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="11.09375"
+                    android:ellipsize="end"
                     android:fontFamily="@font/opensans_bold"
                     android:gravity="center_vertical"
+                    android:maxLines="1"
                     android:text="@string/recommend_result_c4"
                     android:textColor="@color/hintColor"
-                    android:textStyle="bold"
                     app:autoSizeMaxTextSize="14sp"
                     app:autoSizeMinTextSize="7sp"
                     app:autoSizeStepGranularity="1sp"
-                    app:autoSizeTextType="uniform" />
+                    app:autoSizeTextType="uniform"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 

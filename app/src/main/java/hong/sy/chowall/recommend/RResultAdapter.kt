@@ -31,11 +31,37 @@ class RResultAdapter(private var recommendResultList: ArrayList<RResult>, var co
             val resourceC4 = context.resources.getIdentifier(result.c4, "string", context.packageName)
 
             binding.imgReResultItem.setImageResource(resourceImgId)
-            binding.tvTitleReResultItem.text = context.resources.getString(resourceTitle)
-            binding.tvC1ReResultItem.text = context.resources.getString(resourceC1)
-            binding.tvC2ReResultItem.text = context.resources.getString(resourceC2)
-            binding.tvC3ReResultItem.text = context.resources.getString(resourceC3)
-            binding.tvC4ReResultItem.text = context.resources.getString(resourceC4)
+
+            var title = context.resources.getString(resourceTitle)
+
+            if(title.length > 16) {
+                title = title.slice(0..13) + "..."
+            }
+
+            binding.tvTitleReResultItem.text = title
+
+            var c1 = context.resources.getString(resourceC1)
+            var c2 = context.resources.getString(resourceC2)
+            var c3 = context.resources.getString(resourceC3)
+            var c4 = context.resources.getString(resourceC4)
+
+            if(c1.length > 7) {
+                c1 = c1.slice(0..5) + "..."
+            }
+            if(c2.length > 7) {
+                c2 = c2.slice(0..5) + "..."
+            }
+            if(c3.length > 7) {
+                c3 = c3.slice(0..5) + "..."
+            }
+            if(c4.length > 7) {
+                c4 = c4.slice(0..5) + "..."
+            }
+
+            binding.tvC1ReResultItem.text = c1
+            binding.tvC2ReResultItem.text = c2
+            binding.tvC3ReResultItem.text = c3
+            binding.tvC4ReResultItem.text = c4
 
             val screenHeight = context.resources.displayMetrics.heightPixels
 //            binding.layoutReResultItem.layoutParams.height = (screenWidth * 0.27).toInt()
