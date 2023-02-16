@@ -128,7 +128,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="6.05"
                 android:fontFamily="@font/opensans_bold"
-                android:gravity="top"
+                android:gravity="center|start"
                 android:text="@string/recommend_result_2"
                 android:textColor="@color/hintColor"
                 android:textStyle="bold"

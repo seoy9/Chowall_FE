@@ -12,11 +12,13 @@ import android.util.Patterns
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.JsonParser
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRegisterBinding
 import hong.sy.chowall.retrofit.DataService
 import hong.sy.chowall.retrofit.RetrofitConnection
 import hong.sy.chowall.retrofit.User
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -128,7 +130,13 @@ class RegisterActivity : AppCompatActivity() {
 //        user["password"] = password
 //        user["email"] = email
 
-        val user = mapOf("id" to id, "name" to name, "password" to password, "email" to email)
+//        val user = mapOf("id" to id, "name" to name, "password" to password, "email" to email)
+
+        val user = JSONObject()
+        user.put("id", id)
+        user.put("name", name)
+        user.put("password", password)
+        user.put("email", email)
 
         retrofitAPI.getRegisterResponse(user)
             .enqueue(object : Callback<String> { // 비동기 방식 통신 메소드
@@ -142,7 +150,7 @@ class RegisterActivity : AppCompatActivity() {
 
                     } else {
                         // 통신 성공 but 응답 실패
-                        Log.d("Request", "통신 성공 but 응답 실패 ${call.request().toString()}")
+                        Log.d("Request", "통신 성공 but 응답 실패 ${call.request().toString()}, ${response.body().toString()}")
                         Log.d("RESPONSE", "FAILURE")
                     }
                 }

@@ -145,27 +145,28 @@
                 android:id="@+id/tv_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.6875"
+                android:layout_weight="2.625"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center|start"
+                android:text="@string/restrictions_name"
+                android:textColor="@color/main"
                 app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="10sp"
                 app:autoSizeStepGranularity="1sp"
-                app:autoSizeTextType="uniform"
-                android:fontFamily="@font/opensans_bold"
-                android:text="@string/restrictions_name"
-                android:textColor="@color/main" />
+                app:autoSizeTextType="uniform" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="11.3125"
+                android:layout_weight="10.375"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/restrictions_question"
                 app:autoSizeMaxTextSize="20sp"
                 app:autoSizeMinTextSize="10sp"
                 app:autoSizeStepGranularity="1sp"
-                app:autoSizeTextType="uniform"
-                android:fontFamily="@font/opensans_bold"
-                android:gravity="top"
-                android:singleLine="false"
-                android:text="@string/restrictions_question" />
+                app:autoSizeTextType="uniform" />
 
             <LinearLayout
                 android:layout_width="0dp"
