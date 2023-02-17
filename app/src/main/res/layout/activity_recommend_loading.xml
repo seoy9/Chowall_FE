@@ -90,40 +90,42 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.75"
-            android:orientation="vertical"/>
+            android:layout_weight="4.208333333333334"
+            android:orientation="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_weight="8"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"/>
+                android:orientation="horizontal" />
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="@style/Widget.AppCompat.ProgressBar"
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progressbar_recommend"
+                style="@style/SpinKitView.Small.FadingCircle"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.016949152542373" />
+                android:layout_gravity="center"
+                android:layout_weight="1.016949152542373"
+                app:SpinKit_Color="@color/main" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.033898305084746"
-                android:orientation="horizontal"/>
+                android:orientation="horizontal" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3.666666666666667"
-            android:orientation="vertical"/>
+            android:layout_weight="4.208333333333334"
+            android:orientation="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"

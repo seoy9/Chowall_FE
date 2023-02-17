@@ -8,6 +8,9 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
+import com.github.ybq.android.spinkit.sprite.Sprite
+import com.github.ybq.android.spinkit.style.DoubleBounce
+import com.github.ybq.android.spinkit.style.FadingCircle
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRecommendLoadingBinding
 
@@ -23,8 +26,9 @@ class Recommend_Loading : AppCompatActivity() {
 
         setToolbar()
         setContentColor()
+        setProgressBar()
 
-        binding.progressBar.setOnClickListener {
+        binding.progressbarRecommend.setOnClickListener {
             val intent_result = Intent(this, Recommend_Result::class.java)
             startActivity(intent_result)
         }
@@ -56,5 +60,11 @@ class Recommend_Loading : AppCompatActivity() {
         builder.setSpan(colorMainSpan, 10, 14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder
+    }
+
+    private fun setProgressBar() {
+        val progressBar = binding.progressbarRecommend
+        val fadingCircle : Sprite = FadingCircle()
+        progressBar.setIndeterminateDrawable(fadingCircle)
     }
 }
