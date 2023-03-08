@@ -55,7 +55,7 @@ class RestrictionsActivity : AppCompatActivity() {
         content = binding.tvSloganRest
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
-        val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
+        val colorMainSpan = ForegroundColorSpan(resources.getColor(R.color.main))
         builder.setSpan(colorMainSpan, textData.length-4, textData.length-2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder

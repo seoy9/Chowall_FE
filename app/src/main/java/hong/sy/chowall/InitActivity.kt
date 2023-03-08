@@ -70,7 +70,7 @@ class InitActivity : AppCompatActivity() {
         content = binding.tvRegister
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
-        val colorHintSpan = ForegroundColorSpan(getResources().getColor(R.color.hintColor))
+        val colorHintSpan = ForegroundColorSpan(resources.getColor(R.color.hintColor))
         builder.setSpan(colorHintSpan, textData.length-4, textData.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder

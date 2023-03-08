@@ -566,7 +566,7 @@
         android:paddingRight="15dp"
         app:itemBackground="@color/bottom_nav"
         app:itemHorizontalTranslationEnabled="false"
-        app:itemIconSize="60dp"
+        app:itemIconSize="@dimen/nav_item_size"
         app:itemPaddingBottom="12dp"
         app:itemPaddingTop="12dp"
         app:labelVisibilityMode="unlabeled"

@@ -50,7 +50,7 @@ class Recommend_Q4 : AppCompatActivity() {
         content = binding.tvQ4
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
-        val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
+        val colorMainSpan = ForegroundColorSpan(resources.getColor(R.color.main))
         builder.setSpan(colorMainSpan, 0, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder

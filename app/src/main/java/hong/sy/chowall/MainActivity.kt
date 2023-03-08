@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Point
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -12,10 +11,12 @@ import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hong.sy.chowall.databinding.ActivityMainBinding
 import hong.sy.chowall.recommend.Recommend_Q1
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,10 +32,17 @@ class MainActivity : AppCompatActivity() {
         setToolbar()
         setContentColor()
         setRecyclerView()
+        setBottomNavItemSize()
 
         binding.btnRecommend.setOnClickListener {
             val intent_q1 = Intent(this, Recommend_Q1::class.java)
             startActivity(intent_q1)
+        }
+    }
+
+    private fun setBottomNavItemSize() {
+        if (getDeviceHeight() >= 3088) {
+            binding.bottomNavMain.itemIconSize = (60 * resources.displayMetrics.density).roundToInt()
         }
     }
 
@@ -55,9 +63,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun resizeViewHeight(devieceHeight: Int, view: View, height: Double) {
+    private fun resizeViewHeight(deviceHeight: Int, view: View, height: Double) {
         val layoutParams = view.layoutParams
-        layoutParams.height = (devieceHeight * height).toInt()
+        layoutParams.height = (deviceHeight * height).toInt()
         view.layoutParams = layoutParams
     }
 
@@ -72,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         content = binding.tvSloganMain
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
-        val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
+        val colorMainSpan = ForegroundColorSpan(resources.getColor(R.color.main))
         builder.setSpan(colorMainSpan, textData.length-4, textData.length-2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         content.text = builder
