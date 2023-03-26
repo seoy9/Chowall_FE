@@ -12,6 +12,8 @@ import android.util.Patterns
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRegisterBinding
@@ -22,6 +24,8 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -98,45 +102,15 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun setUser() : User {
-        val user = User()
-        user.id = binding.edIdRegis.text.toString()
-        user.name = binding.edNameRegis.text.toString()
-        user.password = binding.edPwRegis.text.toString()
-        user.email = binding.edEmailRegis.text.toString()
-
-        return user
-    }
-
     private fun setUserData() {
         val retrofitAPI = RetrofitConnection.getInstance().create(DataService::class.java)
-
-//        val user = HashMap<String, String>()
-
-//        user.put("id", binding.edIdRegis.text.toString())
-//        user.put("name", binding.edNameRegis.text.toString())
-//        user.put("password", binding.edPwRegis.text.toString())
-//        user.put("email", binding.edEmailRegis.text.toString())
 
         val id = binding.edIdRegis.text.toString()
         val name = binding.edNameRegis.text.toString()
         val password = binding.edPwRegis.text.toString()
         val email = binding.edEmailRegis.text.toString()
 
-//        user["id"] = id
-//        user["name"] = name
-//        user["password"] = password
-//        user["email"] = email
-
-//        val user = mapOf("id" to id, "name" to name, "password" to password, "email" to email)
-
-        val user = JSONObject()
-        user.put("id", id)
-        user.put("name", name)
-        user.put("password", password)
-        user.put("email", email)
-
-        retrofitAPI.getRegisterResponse(user)
+        retrofitAPI.getRegisterResponse(User(id, name, password, email))
             .enqueue(object : Callback<String> { // 비동기 방식 통신 메소드
                 override fun onResponse( // 통신에 성공한 경우
                     call: Call<String>,
@@ -144,11 +118,11 @@ class RegisterActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful) { // 응답 잘 받은 경우
                         Log.d("Request", "응답 잘 받음")
-                        Log.d("RESPONSE: ", response.body().toString())
+                        Log.d("RESPONSE: ", "통신 응답 ${response.body().toString()}")
 
                     } else {
                         // 통신 성공 but 응답 실패
-                        Log.d("Request", "통신 성공 but 응답 실패 ${call.request().toString()}, ${response.body().toString()}")
+                        Log.d("Request", "통신 성공 but 응답 실패, ${call.request().toString()}, ${response.body().toString()}")
                         Log.d("RESPONSE", "FAILURE")
                     }
                 }
