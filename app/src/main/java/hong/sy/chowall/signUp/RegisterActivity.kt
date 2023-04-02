@@ -12,20 +12,14 @@ import android.util.Patterns
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonParser
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRegisterBinding
 import hong.sy.chowall.retrofit.DataService
 import hong.sy.chowall.retrofit.RetrofitConnection
 import hong.sy.chowall.retrofit.User
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -110,19 +104,24 @@ class RegisterActivity : AppCompatActivity() {
         val password = binding.edPwRegis.text.toString()
         val email = binding.edEmailRegis.text.toString()
 
-        retrofitAPI.getRegisterResponse(User(id, name, password, email))
+        retrofitAPI.getAddUser(User(id, name, password, email))
             .enqueue(object : Callback<String> { // 비동기 방식 통신 메소드
                 override fun onResponse( // 통신에 성공한 경우
                     call: Call<String>,
                     response: Response<String>
                 ) {
                     if (response.isSuccessful) { // 응답 잘 받은 경우
-                        Log.d("Request", "응답 잘 받음")
+                        Log.d("Request", "통신 및 응답 잘 받음")
                         Log.d("RESPONSE: ", "통신 응답 ${response.body().toString()}")
 
                     } else {
-                        // 통신 성공 but 응답 실패
-                        Log.d("Request", "통신 성공 but 응답 실패, ${call.request().toString()}, ${response.body().toString()}")
+                        // 통신 성공 but 응답 실패 > 결국 통신 실패임
+                        Log.d(
+                            "Request",
+                            "통신 성공 but 응답 실패, ${call.request().toString()}, ${
+                                response.body().toString()
+                            }"
+                        )
                         Log.d("RESPONSE", "FAILURE")
                     }
                 }
@@ -130,7 +129,41 @@ class RegisterActivity : AppCompatActivity() {
                 override fun onFailure(call: Call<String>, t: Throwable) {
                     // 통신에 실패한 경우
                     Log.d("Request", "통신 실패")
-                    Log.d("CONNECTION FAILURE: ", t.localizedMessage)
+                    Log.d("CONNECTION FAILURE: ", t.message.toString())
+                    //Log.d("CONNECTION FAILURE: ", t.localizedMessage)
+                }
+            })
+
+        // 확인을 위해서 임시로 setUserData() 함수에 넣어놨습니다.
+        // 로그값 확인 후, 제대로 넘어오면 따로 함수로 빼면 될 것 같아요.
+        // Log 검색은 '통신'으로 하시면 addUser, getId 모두 검색됩니다.
+        // -> 모든 로그에 통신 적어둠, "통신 실패" 이유만 따로 검색하면 됨.
+        retrofitAPI.getCheckId(User(id, name, password, email))
+            .enqueue(object : Callback<String> { // 비동기 방식 통신 메소드
+                override fun onResponse( // 통신에 성공한 경우
+                    call: Call<String>,
+                    response: Response<String>
+                ) {
+                    if (response.isSuccessful) { // 응답 잘 받은 경우
+                        Log.d("Request", "id 응답 잘 받음")
+                        Log.d("RESPONSE: ", "id 통신 응답 ${response.body().toString()}")
+
+                    } else {
+                        // 통신 성공 but 응답 실패 > 결국 통신 실패임
+                        Log.d(
+                            "Request",
+                            "id 통신 성공 but 응답 실패, ${call.request().toString()}, ${
+                                response.body().toString()
+                            }"
+                        )
+                        Log.d("RESPONSE", "FAILURE")
+                    }
+                }
+
+                override fun onFailure(call: Call<String>, t: Throwable) {
+                    // 통신에 실패한 경우
+                    Log.d("Request", "id 통신 실패")
+                    Log.d("CONNECTION FAILURE: ", t.message.toString())
                 }
             })
     }

@@ -1,10 +1,12 @@
 package hong.sy.chowall.retrofit
 
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.http.*
 
 interface DataService {
     @POST("user/addUser")
-    fun getRegisterResponse(@Body user : User) : Call<String>
+    fun getAddUser(@Body user : User) : Call<String>
+
+    @POST("user/getId")
+    fun getCheckId(@Body user : User) : Call<String>
 }
