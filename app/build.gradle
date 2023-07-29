@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'hong.sy.chowall'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "hong.sy.chowall"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -56,4 +56,10 @@ dependencies {
 
     //ProgressBar
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    //Indicater
+    implementation 'com.tbuonomo:dotsindicator:4.3'
+
+    //Glid(Image)
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 }

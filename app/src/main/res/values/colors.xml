@@ -9,6 +9,18 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FFFF0000</color>
 
+    <color name="basic_txt_color">#888888</color>
+
+    <color name="main_txt_color">#DE666666</color>
+    <color name="main_btn_color">#A8FFFFFF</color>
+
+    <color name="rec_mint_background">#3390D4D4</color>
+
+    <color name="list_mint_background">#EBF4F4</color>
+
+    <color name="list_item_name_color">#67ABAC</color>
+
+    <color name="rec_result_img_black">#80000000</color>
 
     <color name="main">#90D4D4</color>
     <color name="textColor">#666666</color>
@@ -16,8 +28,6 @@
     <color name="hintColor">#888888</color>
 
     <color name="bottom_nav">#F5F5F5</color>
-
-    <color name="button_init">#99FFFFFF</color>
 
     <color name="button_init_2">#CCFFFFFF</color>
 </resources>

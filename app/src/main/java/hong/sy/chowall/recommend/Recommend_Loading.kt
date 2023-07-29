@@ -11,10 +11,11 @@ import android.widget.TextView
 import com.github.ybq.android.spinkit.sprite.Sprite
 import com.github.ybq.android.spinkit.style.DoubleBounce
 import com.github.ybq.android.spinkit.style.FadingCircle
+import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRecommendLoadingBinding
 
-class Recommend_Loading : AppCompatActivity() {
+class Recommend_Loading : HideSoftKey() {
     private lateinit var binding: ActivityRecommendLoadingBinding
     private lateinit var content: TextView
 
@@ -25,21 +26,22 @@ class Recommend_Loading : AppCompatActivity() {
         setContentView(binding.root)
 
         setToolbar()
-        setContentColor()
+        setContentColor1()
+        setContentColor2()
         setProgressBar()
 
         binding.progressbarRecommend.setOnClickListener {
             val intent_result = Intent(this, Recommend_Result::class.java)
             startActivity(intent_result)
+            overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
         }
     }
 
     private fun setToolbar() {
         val toolbar = binding.toolbarReLoading
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.setDisplayShowTitleEnabled(false)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -52,8 +54,18 @@ class Recommend_Loading : AppCompatActivity() {
         }
     }
 
-    private fun setContentColor() {
-        content = binding.tvSearchReLoading
+    private fun setContentColor1() {
+        content = binding.tvRecLoadingFor
+        val textData = content.text.toString()
+        val builder = SpannableStringBuilder(textData)
+        val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))
+        builder.setSpan(colorMainSpan, 0, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        content.text = builder
+    }
+
+    private fun setContentColor2() {
+        content = binding.tvRecLoadingSearch
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorMainSpan = ForegroundColorSpan(getResources().getColor(R.color.main))

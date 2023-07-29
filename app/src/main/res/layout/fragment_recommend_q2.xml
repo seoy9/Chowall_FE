@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recommend.RecommendQ2Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.25"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_rec_q2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11.15"
+                android:bufferType="spannable"
+                android:gravity="top"
+                android:text="@string/rec_q2_txt"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="@color/basic_txt_color"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.85"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="28.625"
+            android:background="@color/rec_mint_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.7142"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q2_alone"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q2_alone"
+                    android:textOn="@string/rec_q2_alone" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q2_family"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q2_family"
+                    android:textOn="@string/rec_q2_family" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q2_friend"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q2_friend"
+                    android:textOn="@string/rec_q2_friend" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q2_lover"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q2_lover"
+                    android:textOn="@string/rec_q2_lover" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13.75"
+                    android:orientation="horizontal" />
+
+                <ImageButton
+                    android:id="@+id/btn_rec_q2_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.25"
+                    android:adjustViewBounds="true"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_rec_non_next" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.3214"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

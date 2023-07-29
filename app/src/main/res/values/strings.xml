@@ -1,6 +1,51 @@
 <resources>
     <string name="app_name">Chowall</string>
 
+    <string name="main_text">지금 초월과 함께\n자유로운 여행을 시작하세요!</string>
+    <string name="main_btn_recommend">나만의 여행 코스 추천받기</string>
+    <string name="main_btn_lists">배리어프리 여행 장소보기</string>
+
+    <string name="rec_title">초월 코스 추천</string>
+
+    <string name="rec_q1_txt">Q1\n어느 지역으로 떠나시나요?</string>
+    <string name="rec_q1_chun">춘천</string>
+    <string name="rec_q1_gang">강릉</string>
+    <string name="rec_q1_jeon">전주</string>
+
+    <string name="rec_q2_txt">Q2\n누구와 함께 떠나시나요?</string>
+    <string name="rec_q2_alone">혼자서</string>
+    <string name="rec_q2_family">가족과</string>
+    <string name="rec_q2_friend">친구와</string>
+    <string name="rec_q2_lover">연인과</string>
+
+    <string name="rec_q3_txt">Q3\n어떤 일정으로 떠나시나요?</string>
+    <string name="rec_q3_day">당일치기</string>
+    <string name="rec_q3_1night">1박</string>
+    <string name="rec_q3_2night">2박 이상</string>
+
+    <string name="rec_q4_txt">Q4\n어떤 여행을 선호하시나요?</string>
+    <string name="rec_q4_refresh">휴식/힐링</string>
+    <string name="rec_q4_food">맛집/카페</string>
+    <string name="rec_q4_hot">핫 플레이스</string>
+    <string name="rec_q4_activity">액티비티</string>
+
+    <string name="rec_loading_wait">잠시만 기다려주세요</string>
+    <string name="rec_loading_for">당신을 위한</string>
+    <string name="rec_loading_search">초월 추천 코스를 조회 중입니다</string>
+
+    <string name="rec_result_txt">초월이 추천하는\n당신을 위한 여행코스</string>
+
+    <string name="list_title">검색 결과</string>
+    <string name="list_txt">배리어프리 여행 장소</string>
+    <string name="list_chun">춘천</string>
+    <string name="list_gang">강릉</string>
+    <string name="list_jeon">전주</string>
+
+    <string name="list_item_name">라모스버거</string>
+    <string name="list_item_address">강원 춘천시 옛경춘로 835</string>
+    <string name="list_item_phone">0507-1402-0006</string>
+    <string name="list_item_time">금 11:00-22:00 / 금 제외 11:00-21:00</string>
+    <string name="list_item_break_time">(브레이크타임 15:00-16:00)</string>
 
     <string name="chowall_slogan">장벽을 넘어\n여행의 한계를 초월하다</string>
 
@@ -92,4 +137,6 @@
     <string name="recommend_result_c2">비포선셋</string>
     <string name="recommend_result_c3">소양강스카이워크</string>
     <string name="recommend_result_c4">산토리니</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recommend.RecommendQ4Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.25"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_rec_q4"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11.15"
+                android:bufferType="spannable"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="top"
+                android:text="@string/rec_q4_txt"
+                android:textColor="@color/basic_txt_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.85"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="28.625"
+            android:background="@color/rec_mint_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.7142"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q4_refresh"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q4_refresh"
+                    android:textOn="@string/rec_q4_refresh" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q4_food"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q4_food"
+                    android:textOn="@string/rec_q4_food" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q4_hot"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q4_hot"
+                    android:textOn="@string/rec_q4_hot" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0869"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+
+                <ToggleButton
+                    android:id="@+id/btn_rec_q4_activity"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:background="@drawable/toggle_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:stateListAnimator="@null"
+                    android:textColor="@drawable/toggle_text_color"
+                    android:textOff="@string/rec_q4_activity"
+                    android:textOn="@string/rec_q4_activity" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1428"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="12.5"
+                    android:orientation="horizontal" />
+
+                <ImageButton
+                    android:id="@+id/btn_rec_q4_result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:adjustViewBounds="true"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_rec_non_result" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.3214"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

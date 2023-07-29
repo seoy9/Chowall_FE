@@ -3,15 +3,24 @@ package hong.sy.chowall.recommend
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
-import androidx.core.view.get
+import android.widget.TextView
+import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.MainActivity
 import hong.sy.chowall.R
 import hong.sy.chowall.VerticalItemDecorator
 import hong.sy.chowall.databinding.ActivityRecommendResultBinding
+import hong.sy.chowall.list.ListAdapter
+import hong.sy.chowall.list.ListData
 
-class Recommend_Result : AppCompatActivity() {
+class Recommend_Result : HideSoftKey() {
     private lateinit var binding: ActivityRecommendResultBinding
+    private lateinit var content: TextView
+    private lateinit var resultAdapter: ResultAdapter
+    val datas = mutableListOf<ResultData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +29,12 @@ class Recommend_Result : AppCompatActivity() {
         setContentView(binding.root)
 
         setToolbar()
-        setBottomNavigation()
-        setRecyclerView()
-
-        binding.rvReResult
+        setContentColor()
+        initRecycler()
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarReResult
+        val toolbar = binding.toolbarRecResult
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -37,40 +44,41 @@ class Recommend_Result : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             android.R.id.home -> {
-                finish()
-                return true
-            }
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
-
-    private fun setBottomNavigation() {
-        binding.bottomNavReResult.setOnItemReselectedListener { item ->
-            when(item.itemId) {
-                R.id.nav_home -> {
-                    val intent_main = Intent(this, MainActivity::class.java)
-                    startActivity(intent_main)
-                    finish()
-                }
+                val intent_main = Intent(this, MainActivity::class.java)
+                intent_main.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent_main)
+                overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
             }
         }
+        return super.onOptionsItemSelected(item)
     }
 
-    private fun setRecyclerView() {
-        val rvResult = binding.rvReResult
+    private fun setContentColor() {
+        content = binding.tvRecResult
+        val textData = content.text.toString()
+        val builder = SpannableStringBuilder(textData)
+        val colorMainSpan = ForegroundColorSpan(resources.getColor(R.color.main))
+        builder.setSpan(colorMainSpan, 0, 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        rvResult.adapter = RResultAdapter(getList(), this)
-        rvResult.addItemDecoration(VerticalItemDecorator(100))
+        content.text = builder
     }
 
-    private fun getList(): ArrayList<RResult> {
-        val list = arrayListOf<RResult>()
+    private fun initRecycler() {
+        resultAdapter = ResultAdapter(this)
+        binding.rvRecResult.adapter = resultAdapter
+        binding.rvRecResult.addItemDecoration(VerticalItemDecorator(70))
+//        binding.rvList.addItemDecoration(HorizontalItemDecorator(18))
 
-        list.add(RResult("img_recommend_result", "recommend_result_title", "recommend_result_c1", "recommend_result_c2", "recommend_result_c3", "recommend_result_c4"))
-        list.add(RResult("img_recommend_result", "recommend_result_title", "recommend_result_c1", "recommend_result_c2", "recommend_result_c3", "recommend_result_c4"))
-        list.add(RResult("img_recommend_result", "recommend_result_title", "recommend_result_c1", "recommend_result_c2", "recommend_result_c3", "recommend_result_c4"))
-        list.add(RResult("img_recommend_result", "recommend_result_title", "recommend_result_c1", "recommend_result_c2", "recommend_result_c3", "recommend_result_c4"))
+        datas.apply {
+            add(ResultData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
+            add(ResultData(img = R.drawable.ex_img_list, name = "델모니코스", address = "강원도 춘천시 동면 순환대로 1154-106", phone = "033-252-0999", time = "11:00-22:00" ))
+            add(ResultData(img = R.drawable.ex_img_list, name = "남부닭갈비", address = "강원도 춘천시 공지로 357", phone = "033-243-9966", time = "매일 17:00-22:00" ))
+            add(ResultData(img = R.drawable.ex_img_list, name = "라모스버거", address = "강원도 춘천시 옛경춘로 835", phone = "0507-1402-0006", time = "매일 11:00-22:00", breakTime = "(브레이크타임 15:00-16:00)" ))
+            add(ResultData(img = R.drawable.ex_img_list, name = "온더가든", address = "강원도 춘천시 남산면 종자리로 21", phone = "033-262-9339", time = "매일 10:00-22:00" ))
+            add(ResultData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
+        }
 
-        return list
+        resultAdapter.datas = datas
+        resultAdapter.notifyDataSetChanged()
     }
 }
