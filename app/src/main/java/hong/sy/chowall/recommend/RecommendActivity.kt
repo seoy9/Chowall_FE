@@ -17,7 +17,7 @@ class RecommendActivity : HideSoftKey() {
         binding = ActivityRecommendBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.recQViewPager.adapter = ViewPagerAdapter(this)
+        binding.recQViewPager.adapter = RecViewPagerAdapter(this)
         binding.recQViewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         binding.recIndicator.attachTo(binding.recQViewPager)

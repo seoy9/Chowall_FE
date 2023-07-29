@@ -1,7 +1,6 @@
 package hong.sy.chowall.recommend
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -13,13 +12,11 @@ import hong.sy.chowall.MainActivity
 import hong.sy.chowall.R
 import hong.sy.chowall.VerticalItemDecorator
 import hong.sy.chowall.databinding.ActivityRecommendResultBinding
-import hong.sy.chowall.list.ListAdapter
-import hong.sy.chowall.list.ListData
 
 class Recommend_Result : HideSoftKey() {
     private lateinit var binding: ActivityRecommendResultBinding
     private lateinit var content: TextView
-    private lateinit var resultAdapter: ResultAdapter
+    private lateinit var resultAdapter: ResultRecyclerAdapter
     val datas = mutableListOf<ResultData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,10 +61,9 @@ class Recommend_Result : HideSoftKey() {
     }
 
     private fun initRecycler() {
-        resultAdapter = ResultAdapter(this)
+        resultAdapter = ResultRecyclerAdapter(this)
         binding.rvRecResult.adapter = resultAdapter
         binding.rvRecResult.addItemDecoration(VerticalItemDecorator(70))
-//        binding.rvList.addItemDecoration(HorizontalItemDecorator(18))
 
         datas.apply {
             add(ResultData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))

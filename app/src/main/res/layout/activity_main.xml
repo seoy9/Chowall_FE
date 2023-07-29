@@ -67,7 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.9315"
-            android:fontFamily="@font/opensans_bold"
+            android:fontFamily="@font/pretendard_bold"
             android:gravity="center"
             android:text="@string/main_text"
             android:textColor="@color/main_txt_color"
@@ -106,16 +106,15 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="16"
-            android:text="@string/main_btn_recommend"
             android:background="@drawable/btn_round"
-            android:fontFamily="@font/opensans_bold"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="@string/main_btn_recommend"
             android:textColor="@color/basic_txt_color"
+            android:textStyle="bold"
             app:autoSizeMaxTextSize="16sp"
             app:autoSizeMinTextSize="10sp"
             app:autoSizeStepGranularity="2sp"
-            app:autoSizeTextType="uniform"
-            android:textStyle="bold"
-            />
+            app:autoSizeTextType="uniform" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -147,16 +146,15 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="16"
-            android:text="@string/main_btn_lists"
             android:background="@drawable/btn_round"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="@string/main_btn_lists"
             android:textColor="@color/basic_txt_color"
-            android:fontFamily="@font/opensans_bold"
+            android:textStyle="bold"
             app:autoSizeMaxTextSize="16sp"
             app:autoSizeMinTextSize="10sp"
             app:autoSizeStepGranularity="2sp"
-            app:autoSizeTextType="uniform"
-            android:textStyle="bold"
-            />
+            app:autoSizeTextType="uniform" />
 
         <LinearLayout
             android:layout_width="0dp"

@@ -9,9 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import hong.sy.chowall.R
-import org.w3c.dom.Text
 
-class ListAdapter(private val context: Context) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<ListRecyclerAdapter.ViewHolder>() {
 
     var datas = mutableListOf<ListData>()
 
@@ -30,8 +29,11 @@ class ListAdapter(private val context: Context) : RecyclerView.Adapter<ListAdapt
 
         private val imgList: ImageView = itemView.findViewById(R.id.img_list)
         private val tvName: TextView = itemView.findViewById(R.id.tv_list_name)
+        private val imgAddress: ImageView = itemView.findViewById(R.id.img_list_address)
         private val tvAddress: TextView = itemView.findViewById(R.id.tv_list_address)
+        private val imgPhone: ImageView = itemView.findViewById(R.id.img_list_phone)
         private val tvPhone: TextView = itemView.findViewById(R.id.tv_list_phone)
+        private val imgTime: ImageView = itemView.findViewById(R.id.img_list_time)
         private val tvTime: TextView = itemView.findViewById(R.id.tv_list_time)
         private val tvBreakTime: TextView = itemView.findViewById(R.id.tv_list_break_time)
 
@@ -39,8 +41,20 @@ class ListAdapter(private val context: Context) : RecyclerView.Adapter<ListAdapt
             Glide.with(itemView).load(item.img).into(imgList)
 //            imgList.setImageResource(item.img)
             tvName.text = item.name
+
+            if(item.address == "") {
+                imgAddress.visibility = View.INVISIBLE
+            }
             tvAddress.text = item.address
+
+            if(item.phone == "") {
+                imgPhone.visibility = View.INVISIBLE
+            }
             tvPhone.text = item.phone
+
+            if(item.time == "") {
+                imgTime.visibility = View.INVISIBLE
+            }
             tvTime.text = item.time
             tvBreakTime.text = item.breakTime
         }

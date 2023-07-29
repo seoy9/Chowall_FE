@@ -1,8 +1,5 @@
 package hong.sy.chowall
 
-import android.content.Context
-import android.content.Intent
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 

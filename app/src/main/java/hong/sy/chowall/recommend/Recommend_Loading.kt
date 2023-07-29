@@ -1,7 +1,6 @@
 package hong.sy.chowall.recommend
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -9,7 +8,6 @@ import android.text.style.ForegroundColorSpan
 import android.view.MenuItem
 import android.widget.TextView
 import com.github.ybq.android.spinkit.sprite.Sprite
-import com.github.ybq.android.spinkit.style.DoubleBounce
 import com.github.ybq.android.spinkit.style.FadingCircle
 import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R

@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="18dp"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardCornerRadius="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,77 +33,75 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.52"
-                    android:orientation="vertical"/>
+                    android:layout_weight="2.8461"
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="7.6666"
+                    android:layout_weight="14.1025"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="4.92"
-                        android:orientation="horizontal"/>
+                        android:layout_weight="3.2533"
+                        android:orientation="horizontal" />
 
                     <TextView
                         android:id="@+id/tv_list_name"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="43"
-                        android:fontFamily="@font/opensans_bold"
-                        android:gravity="start|center_vertical"
+                        android:layout_weight="43.3333"
+                        android:fontFamily="@font/pretendard_bold"
                         android:text="@string/list_item_name"
                         android:textColor="@color/list_item_name_color"
-                        android:textStyle="bold"
                         app:autoSizeMaxTextSize="20sp"
-                        app:autoSizeMinTextSize="1sp"
+                        app:autoSizeMinTextSize="16sp"
                         app:autoSizeStepGranularity="1sp"
                         app:autoSizeTextType="uniform" />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"/>
-
-                    <ImageView
-                        android:id="@+id/img_list_icon_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="8.3333"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/icon_companion" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"/>
-
-                    <ImageView
-                        android:id="@+id/img_list_icon_2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="8.3333"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/icon_companion" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"/>
+                        android:layout_weight="5.3333"
+                        android:orientation="horizontal" />
 
                     <ImageView
                         android:id="@+id/img_list_icon_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="8.3333"
+                        android:layout_weight="7.3333"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/icon_parking" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" />
+
+                    <ImageView
+                        android:id="@+id/img_list_icon_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7.3333"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/icon_lift" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" />
+
+                    <ImageView
+                        android:id="@+id/img_list_icon_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7.3333"
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"
                         app:srcCompat="@drawable/icon_companion" />
@@ -118,124 +109,154 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1.6"
-                        android:orientation="horizontal"/>
+                        android:layout_weight="1.6666"
+                        android:orientation="horizontal" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"/>
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="7.6666"
+                    android:layout_weight="27.5641"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="3.0235"
-                        android:orientation="vertical">
+                        android:layout_weight="3.3103"
+                        android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="3.3333"
-                            android:orientation="horizontal">
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.44"
+                            android:orientation="horizontal" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3.77"
-                                android:orientation="horizontal"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:orientation="vertical" />
 
                             <ImageView
                                 android:id="@+id/img_list_address"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2.5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="20.8333"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
                                 app:srcCompat="@drawable/icon_address" />
 
                             <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"/>
-
-                            <TextView
-                                android:id="@+id/tv_list_address"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="35.42"
-                                android:fontFamily="@font/opensans_regular"
-                                android:gravity="start|center_vertical"
-                                android:text="@string/list_item_address"
-                                android:textColor="@color/black"
-                                app:autoSizeMaxTextSize="15sp"
-                                app:autoSizeMinTextSize="1sp"
-                                app:autoSizeStepGranularity="1sp"
-                                app:autoSizeTextType="uniform" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="3.3333"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3.77"
-                                android:orientation="horizontal"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10.4166"
+                                android:orientation="vertical" />
 
                             <ImageView
                                 android:id="@+id/img_list_phone"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2.5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="20.8333"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
                                 app:srcCompat="@drawable/icon_phone" />
 
                             <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="10.4166"
+                                android:orientation="vertical" />
+
+                            <ImageView
+                                android:id="@+id/img_list_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="20.8333"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/icon_time" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:orientation="horizontal"/>
+                                android:orientation="vertical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="38.75"
+                            android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tv_list_phone"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="35.42"
-                                android:fontFamily="@font/opensans_regular"
-                                android:gravity="start|center_vertical"
-                                android:text="@string/list_item_phone"
+                                android:id="@+id/tv_list_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="6.5"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="@string/list_item_address"
                                 android:textColor="@color/black"
                                 app:autoSizeMaxTextSize="15sp"
-                                app:autoSizeMinTextSize="1sp"
+                                app:autoSizeMinTextSize="9.5sp"
                                 app:autoSizeStepGranularity="1sp"
                                 app:autoSizeTextType="uniform" />
 
                             <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:orientation="horizontal"/>
+                                android:orientation="vertical" />
+
+                            <TextView
+                                android:id="@+id/tv_list_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="6.5"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="@string/list_item_phone"
+                                android:textColor="@color/black"
+                                app:autoSizeMaxTextSize="15sp"
+                                app:autoSizeMinTextSize="10sp"
+                                app:autoSizeStepGranularity="1sp"
+                                app:autoSizeTextType="uniform" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical" />
+
+                            <TextView
+                                android:id="@+id/tv_list_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="6.5"
+                                android:fontFamily="@font/pretendard_regular"
+                                android:text="@string/list_item_time"
+                                android:textColor="@color/black"
+                                app:autoSizeMaxTextSize="15sp"
+                                app:autoSizeMinTextSize="10sp"
+                                app:autoSizeStepGranularity="1sp"
+                                app:autoSizeTextType="uniform" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -245,135 +266,116 @@
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/img_list_icon_5"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8.3333"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/icon_companion" />
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="horizontal"/>
 
-                        <ImageView
-                            android:id="@+id/img_list_icon_4"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8.3333"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/icon_companion" />
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="1.6"
-                            android:orientation="horizontal"/>
+                            android:layout_weight="26"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="15.2777"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_list_icon_5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7.3333"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/icon_lift" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal" />
+
+                                <ImageView
+                                    android:id="@+id/img_list_icon_4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7.3333"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/icon_companion" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6666"
+                                    android:orientation="horizontal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="14.9722"
+                                android:orientation="vertical" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2820"
                     android:orientation="vertical"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="3.3333"
+                    android:layout_weight="8.3333"
                     android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3.77"
-                        android:orientation="horizontal"/>
-
-                    <ImageView
-                        android:id="@+id/img_list_time"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.5"
-                        app:srcCompat="@drawable/icon_time" />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:orientation="horizontal"/>
-
-                    <TextView
-                        android:id="@+id/tv_list_time"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="49.67"
-                        android:fontFamily="@font/opensans_regular"
-                        android:gravity="start|center_vertical"
-                        android:text="@string/list_item_time"
-                        android:textColor="@color/black"
-                        app:autoSizeMaxTextSize="15sp"
-                        app:autoSizeMinTextSize="1sp"
-                        app:autoSizeStepGranularity="1sp"
-                        app:autoSizeTextType="uniform" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.2"
-                        android:orientation="horizontal"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0"
-                    android:orientation="vertical" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3.3333"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
                         android:orientation="horizontal"/>
 
                     <TextView
                         android:id="@+id/tv_list_break_time"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="3"
-                        android:fontFamily="@font/opensans_regular"
-                        android:gravity="start|top"
+                        android:layout_weight="6.5235"
+                        android:fontFamily="@font/pretendard_regular"
                         android:text="@string/list_item_break_time"
                         android:textColor="@color/black"
                         app:autoSizeMaxTextSize="15sp"
-                        app:autoSizeMinTextSize="1sp"
+                        app:autoSizeMinTextSize="10sp"
                         app:autoSizeStepGranularity="1sp"
-                        app:autoSizeTextType="uniform" />
+                        app:autoSizeTextType="uniform"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_weight="2.2727"
                         android:orientation="horizontal"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.3333"
+                    android:layout_weight="2.5641"
                     android:orientation="vertical"/>
+
             </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

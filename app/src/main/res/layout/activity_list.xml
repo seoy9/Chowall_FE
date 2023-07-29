@@ -10,7 +10,7 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="3.8834"
+      android:layout_weight="6.5425"
       android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -29,7 +29,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:fontFamily="@font/opensans_bold"
+          android:fontFamily="@font/pretendard_bold"
           android:text="@string/list_title"
           android:textColor="@color/white"
           android:textSize="16sp"
@@ -43,69 +43,30 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1"
-      android:orientation="vertical"/>
+      android:layout_weight="1.0956"
+      android:orientation="vertical" />
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="2.0226"
+      android:layout_weight="4.1114"
       android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="18.7777"
-        android:text="@string/list_txt"
-        android:fontFamily="@font/opensans_bold"
-        android:textColor="@color/basic_txt_color"
-        android:textStyle="bold"
-        app:autoSizeMaxTextSize="20sp"
-        app:autoSizeMinTextSize="10sp"
-        app:autoSizeStepGranularity="1sp"
-        app:autoSizeTextType="uniform"/>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="20.2222"
-        android:orientation="horizontal"/>
-  </LinearLayout>
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="1.2944"
-      android:orientation="vertical"/>
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="2.4571"
-      android:orientation="horizontal">
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"/>
+        android:layout_weight="1.1875"
+        android:orientation="horizontal" />
 
     <ToggleButton
         android:id="@+id/btn_list_chun"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="8.3544"
+        android:layout_weight="4.6993"
         android:background="@drawable/toggle_list_selector"
-        android:fontFamily="@font/opensans_bold"
-        android:stateListAnimator="@null"
         android:checked="true"
+        android:fontFamily="@font/pretendard_bold"
+        android:stateListAnimator="@null"
         android:textColor="@drawable/toggle_list_text_color"
         android:textOff="@string/list_chun"
         android:textOn="@string/list_chun"
@@ -117,16 +78,16 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1.7288"
-        android:orientation="horizontal"/>
+        android:layout_weight="1"
+        android:orientation="horizontal" />
 
     <ToggleButton
         android:id="@+id/btn_list_gang"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="8.3544"
+        android:layout_weight="4.6993"
         android:background="@drawable/toggle_list_selector"
-        android:fontFamily="@font/opensans_bold"
+        android:fontFamily="@font/pretendard_bold"
         android:stateListAnimator="@null"
         android:textColor="@drawable/toggle_list_text_color"
         android:textOff="@string/list_gang"
@@ -139,16 +100,16 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1.7288"
-        android:orientation="horizontal"/>
+        android:layout_weight="1"
+        android:orientation="horizontal" />
 
     <ToggleButton
         android:id="@+id/btn_list_jeon"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="8.3544"
+        android:layout_weight="4.6993"
         android:background="@drawable/toggle_list_selector"
-        android:fontFamily="@font/opensans_bold"
+        android:fontFamily="@font/pretendard_bold"
         android:stateListAnimator="@null"
         android:textColor="@drawable/toggle_list_text_color"
         android:textOff="@string/list_jeon"
@@ -161,20 +122,20 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="10.4777"
-        android:orientation="horizontal"/>
+        android:layout_weight="5.2137"
+        android:orientation="horizontal" />
   </LinearLayout>
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="1.2645"
-      android:orientation="vertical"/>
+      android:layout_weight="1"
+      android:orientation="vertical" />
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_weight="47.8964"
+      android:layout_weight="84.4036"
       android:background="@color/list_mint_background"
       android:orientation="horizontal">
 
@@ -182,25 +143,19 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_list"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/list_viewpager"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="16.9473"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_item_recycler" />
+        android:layout_height="match_parent"
+        android:layout_weight="16.9473" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal" />
 
   </LinearLayout>
 

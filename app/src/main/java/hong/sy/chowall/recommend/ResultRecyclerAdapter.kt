@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import hong.sy.chowall.R
 
-class ResultAdapter(private val context: Context) : RecyclerView.Adapter<ResultAdapter.ViewHolder>() {
+class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<ResultRecyclerAdapter.ViewHolder>() {
 
     var datas = mutableListOf<ResultData>()
 

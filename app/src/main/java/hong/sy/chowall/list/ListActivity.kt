@@ -1,17 +1,14 @@
 package hong.sy.chowall.list
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
+import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityListBinding
+import hong.sy.chowall.recommend.RecViewPagerAdapter
 
 class ListActivity : HideSoftKey() {
     private lateinit var binding: ActivityListBinding
-    private lateinit var listAdapter: ListAdapter
-    val datas = mutableListOf<ListData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +16,15 @@ class ListActivity : HideSoftKey() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.listViewpager.adapter = ListViewPagerAdapter(this)
+        binding.listViewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+//        binding.listViewpager.run {
+//            isUserInputEnabled = false
+//        }
+
         setToolbar()
         setButton()
-        initRecycler()
     }
 
     private fun setToolbar() {
@@ -35,9 +38,6 @@ class ListActivity : HideSoftKey() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             android.R.id.home -> {
-//                val intent_main = Intent(this, MainActivity::class.java)
-//                intent_main.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//                startActivity(intent_main)
                 finish()
                 overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
             }
@@ -46,44 +46,53 @@ class ListActivity : HideSoftKey() {
     }
 
     private fun setButton() {
-        binding.btnListChun.setOnCheckedChangeListener { button, isChecked ->
+        val btnChun = binding.btnListChun
+        val btnGang = binding.btnListGang
+        val btnJeon = binding.btnListJeon
+
+        btnChun.setOnCheckedChangeListener { button, isChecked ->
             if (isChecked) {
-                binding.btnListGang.isChecked = false
-                binding.btnListJeon.isChecked = false
+                binding.listViewpager.currentItem = 0
+
+                btnGang.isChecked = false
+                btnJeon.isChecked = false
             }
         }
 
-        binding.btnListGang.setOnCheckedChangeListener { button, isChecked ->
+        btnGang.setOnCheckedChangeListener { button, isChecked ->
             if (isChecked) {
-                binding.btnListChun.isChecked = false
-                binding.btnListJeon.isChecked = false
+                binding.listViewpager.currentItem = 1
+
+                btnChun.isChecked = false
+                btnJeon.isChecked = false
             }
         }
 
-        binding.btnListJeon.setOnCheckedChangeListener { button, isChecked ->
+        btnJeon.setOnCheckedChangeListener { button, isChecked ->
             if (isChecked) {
-                binding.btnListChun.isChecked = false
-                binding.btnListGang.isChecked = false
+                binding.listViewpager.currentItem = 2
+
+                btnChun.isChecked = false
+                btnGang.isChecked = false
             }
         }
-    }
 
-    private fun initRecycler() {
-        listAdapter = ListAdapter(this)
-        binding.rvList.adapter = listAdapter
-        binding.rvList.addItemDecoration(VerticalItemDecorator(70))
-//        binding.rvList.addItemDecoration(HorizontalItemDecorator(18))
-
-        datas.apply {
-            add(ListData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "델모니코스", address = "강원도 춘천시 동면 순환대로 1154-106", phone = "033-252-0999", time = "11:00-22:00" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "남부닭갈비", address = "강원도 춘천시 공지로 357", phone = "033-243-9966", time = "매일 17:00-22:00" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "라모스버거", address = "강원도 춘천시 옛경춘로 835", phone = "0507-1402-0006", time = "매일 11:00-22:00", breakTime = "(브레이크타임 15:00-16:00)" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "온더가든", address = "강원도 춘천시 남산면 종자리로 21", phone = "033-262-9339", time = "매일 10:00-22:00" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
+        btnChun.setOnClickListener {
+            if(!btnChun.isChecked) {
+                btnChun.isChecked = true
+            }
         }
 
-        listAdapter.datas = datas
-        listAdapter.notifyDataSetChanged()
+        btnGang.setOnClickListener {
+            if(!btnGang.isChecked) {
+                btnGang.isChecked = true
+            }
+        }
+
+        btnJeon.setOnClickListener {
+            if(!btnJeon.isChecked) {
+                btnJeon.isChecked = true
+            }
+        }
     }
 }

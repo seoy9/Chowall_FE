@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="pageMargin">130dp</dimen>
-    <dimen name="pageWidth">120dp</dimen>
-
-    <dimen name="pageMargin2">120dp</dimen>
-    <dimen name="pageWidth2">120dp</dimen>
-</resources>
