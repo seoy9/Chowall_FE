@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import hong.sy.chowall.HideSoftKey
-import hong.sy.chowall.MainActivity
-import hong.sy.chowall.R
-import hong.sy.chowall.VerticalItemDecorator
+import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityRecommendResultBinding
 
 class Recommend_Result : HideSoftKey() {
@@ -30,6 +28,11 @@ class Recommend_Result : HideSoftKey() {
         initRecycler()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return true
+    }
+
     private fun setToolbar() {
         val toolbar = binding.toolbarRecResult
         setSupportActionBar(toolbar)
@@ -45,6 +48,9 @@ class Recommend_Result : HideSoftKey() {
                 intent_main.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent_main)
                 overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
+            }
+            R.id.toolbar_pic_info -> {
+                InfoDialog(this).show()
             }
         }
         return super.onOptionsItemSelected(item)

@@ -47,4 +47,13 @@
     <string name="list_item_phone">0507-1402-0006</string>
     <string name="list_item_time">금 11:00-22:00 / 금 제외 11:00-21:00</string>
     <string name="list_item_break_time">(브레이크타임 15:00-16:00)</string>
+    
+    <string name="info_title">픽토그램 도움말</string>
+    <string name="info_runway">출입구에 경사로가 있거나 턱이 없어요.</string>
+    <string name="info_restroom">장애인 화장실이 있어요.</string>
+    <string name="info_parking">장애인 주차장이 있어요.</string>
+    <string name="info_lift">엘리베이터가 있어요.</string>
+    <string name="info_companion">휠체어를 보조할 사람이 있으면 좋아요.\n(높은 경사, 낮은 턱, 돌길 등)</string>
+    <string name="info_rental">휠체어 대여가 가능해요.</string>
+    <string name="info_btn_txt">닫기</string>
 </resources>

@@ -1,7 +1,13 @@
 package hong.sy.chowall.list
 
+import android.app.AlertDialog
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
+import android.widget.Button
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityListBinding
@@ -19,12 +25,13 @@ class ListActivity : HideSoftKey() {
         binding.listViewpager.adapter = ListViewPagerAdapter(this)
         binding.listViewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-//        binding.listViewpager.run {
-//            isUserInputEnabled = false
-//        }
-
         setToolbar()
         setButton()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return true
     }
 
     private fun setToolbar() {
@@ -40,6 +47,9 @@ class ListActivity : HideSoftKey() {
             android.R.id.home -> {
                 finish()
                 overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
+            }
+            R.id.toolbar_pic_info -> {
+                InfoDialog(this).show()
             }
         }
         return super.onOptionsItemSelected(item)

@@ -21,4 +21,6 @@
     <color name="rec_result_img_black">#80000000</color>
 
     <color name="main">#90D4D4</color>
+
+    <color name="info_btn_txt_color">#666666</color>
 </resources>

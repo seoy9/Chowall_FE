@@ -1,7 +1,7 @@
 package hong.sy.chowall.list
 
 data class ListData(
-    val img : Int,
+    val img : Int = -1,
     val name : String,
     val address : String = "",
     val phone : String = "",

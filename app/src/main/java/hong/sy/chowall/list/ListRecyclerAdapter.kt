@@ -38,8 +38,12 @@ class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<L
         private val tvBreakTime: TextView = itemView.findViewById(R.id.tv_list_break_time)
 
         fun bind(item: ListData) {
-            Glide.with(itemView).load(item.img).into(imgList)
-//            imgList.setImageResource(item.img)
+            Glide.with(itemView)
+                .load(item.img)
+                .error(R.drawable.img_basic_list)
+                .fallback(R.drawable.img_basic_list)
+                .into(imgList)
+
             tvName.text = item.name
 
             if(item.address == "") {
