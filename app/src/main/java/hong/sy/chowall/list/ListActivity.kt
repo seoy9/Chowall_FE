@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityListBinding
 import hong.sy.chowall.recommend.RecViewPagerAdapter
+import kotlinx.coroutines.*
 
 class ListActivity : HideSoftKey() {
     private lateinit var binding: ActivityListBinding
@@ -60,7 +61,7 @@ class ListActivity : HideSoftKey() {
         val btnGang = binding.btnListGang
         val btnJeon = binding.btnListJeon
 
-        btnChun.setOnCheckedChangeListener { button, isChecked ->
+        btnChun.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 binding.listViewpager.currentItem = 0
 
@@ -69,7 +70,7 @@ class ListActivity : HideSoftKey() {
             }
         }
 
-        btnGang.setOnCheckedChangeListener { button, isChecked ->
+        btnGang.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 binding.listViewpager.currentItem = 1
 
@@ -78,7 +79,7 @@ class ListActivity : HideSoftKey() {
             }
         }
 
-        btnJeon.setOnCheckedChangeListener { button, isChecked ->
+        btnJeon.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 binding.listViewpager.currentItem = 2
 

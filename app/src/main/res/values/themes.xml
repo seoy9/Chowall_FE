@@ -32,4 +32,10 @@
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
     </style>
+    <style name="Theme.Chowall.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Chowall.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Chowall.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

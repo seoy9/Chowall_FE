@@ -47,7 +47,7 @@
     <string name="list_item_phone">0507-1402-0006</string>
     <string name="list_item_time">금 11:00-22:00 / 금 제외 11:00-21:00</string>
     <string name="list_item_break_time">(브레이크타임 15:00-16:00)</string>
-    
+
     <string name="info_title">픽토그램 도움말</string>
     <string name="info_runway">출입구에 경사로가 있거나 턱이 없어요.</string>
     <string name="info_restroom">장애인 화장실이 있어요.</string>
@@ -56,4 +56,13 @@
     <string name="info_companion">휠체어를 보조할 사람이 있으면 좋아요.\n(높은 경사, 낮은 턱, 돌길 등)</string>
     <string name="info_rental">휠체어 대여가 가능해요.</string>
     <string name="info_btn_txt">닫기</string>
+    <string name="title_activity_list_loading">ListLoadingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

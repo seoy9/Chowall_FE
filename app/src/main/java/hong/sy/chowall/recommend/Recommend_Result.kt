@@ -1,21 +1,35 @@
 package hong.sy.chowall.recommend
 
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.media.Image
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityRecommendResultBinding
+import hong.sy.chowall.retrofit.*
+import kotlinx.coroutines.*
+import okhttp3.ResponseBody
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Response
+import javax.security.auth.callback.Callback
 
 class Recommend_Result : HideSoftKey() {
     private lateinit var binding: ActivityRecommendResultBinding
     private lateinit var content: TextView
     private lateinit var resultAdapter: ResultRecyclerAdapter
-    val datas = mutableListOf<ResultData>()
+    private var datas = arrayListOf<ResultData>()
+    private var city : String = ""
+    private var companion : Int = 0
+    private var days : Int = 0
+    private var type : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +37,15 @@ class Recommend_Result : HideSoftKey() {
         binding = ActivityRecommendResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setToolbar()
-        setContentColor()
-        initRecycler()
+        CoroutineScope(Dispatchers.Main).launch {
+            CoroutineScope(Dispatchers.IO).async {
+                datas = intent.getSerializableExtra("datas") as ArrayList<ResultData>
+            }.await()
+
+            setToolbar()
+            setContentColor()
+            initRecycler()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -70,15 +90,6 @@ class Recommend_Result : HideSoftKey() {
         resultAdapter = ResultRecyclerAdapter(this)
         binding.rvRecResult.adapter = resultAdapter
         binding.rvRecResult.addItemDecoration(VerticalItemDecorator(70))
-
-        datas.apply {
-            add(ResultData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
-            add(ResultData(img = R.drawable.ex_img_list, name = "델모니코스", address = "강원도 춘천시 동면 순환대로 1154-106", phone = "033-252-0999", time = "11:00-22:00" ))
-            add(ResultData(img = R.drawable.ex_img_list, name = "남부닭갈비", address = "강원도 춘천시 공지로 357", phone = "033-243-9966", time = "매일 17:00-22:00" ))
-            add(ResultData(img = R.drawable.ex_img_list, name = "라모스버거", address = "강원도 춘천시 옛경춘로 835", phone = "0507-1402-0006", time = "매일 11:00-22:00", breakTime = "(브레이크타임 15:00-16:00)" ))
-            add(ResultData(img = R.drawable.ex_img_list, name = "온더가든", address = "강원도 춘천시 남산면 종자리로 21", phone = "033-262-9339", time = "매일 10:00-22:00" ))
-            add(ResultData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
-        }
 
         resultAdapter.datas = datas
         resultAdapter.notifyDataSetChanged()

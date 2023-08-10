@@ -16,6 +16,7 @@ class RecommendQ1Fragment : Fragment() {
     private var _binding: FragmentRecommendQ1Binding? = null
     private lateinit var content: TextView
     private val binding get() = _binding!!
+    private var city = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,9 +49,11 @@ class RecommendQ1Fragment : Fragment() {
                 binding.btnRecQ1Jeon.isChecked = false
                 binding.btnRecQ1Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ1Next.isSelected = true
+                city = "춘천시"
             } else {
                 binding.btnRecQ1Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ1Next.isSelected = false
+                city = ""
             }
         }
 
@@ -60,9 +63,11 @@ class RecommendQ1Fragment : Fragment() {
                 binding.btnRecQ1Jeon.isChecked = false
                 binding.btnRecQ1Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ1Next.isSelected = true
+                city = "강릉시"
             } else {
                 binding.btnRecQ1Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ1Next.isSelected = false
+                city = ""
             }
         }
 
@@ -72,16 +77,18 @@ class RecommendQ1Fragment : Fragment() {
                 binding.btnRecQ1Gang.isChecked = false
                 binding.btnRecQ1Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ1Next.isSelected = true
+                city = "전주시"
             } else {
                 binding.btnRecQ1Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ1Next.isSelected = false
+                city = ""
             }
         }
 
         binding.btnRecQ1Next.setOnClickListener {
             if(binding.btnRecQ1Next.isSelected) {
                 val rActivity = activity as RecommendActivity
-                rActivity.changeFragment(1)
+                rActivity.changeFragment(1, city)
             }
         }
     }

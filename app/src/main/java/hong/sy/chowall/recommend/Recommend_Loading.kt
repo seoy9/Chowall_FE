@@ -1,21 +1,46 @@
 package hong.sy.chowall.recommend
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.Looper.loop
+import android.provider.MediaStore
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.github.ybq.android.spinkit.sprite.Sprite
 import com.github.ybq.android.spinkit.style.FadingCircle
 import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRecommendLoadingBinding
+import hong.sy.chowall.retrofit.ImageService
+import hong.sy.chowall.retrofit.RecommendResponse
+import hong.sy.chowall.retrofit.RecommendService
+import hong.sy.chowall.retrofit.RetrofitConnection
+import kotlinx.coroutines.*
+import okhttp3.ResponseBody
+import retrofit2.Call
+import retrofit2.Response
+import java.io.ByteArrayOutputStream
+import java.security.AccessController.getContext
 
 class Recommend_Loading : HideSoftKey() {
     private lateinit var binding: ActivityRecommendLoadingBinding
     private lateinit var content: TextView
+    private var city : String = ""
+    private var companion : Int = 0
+    private var days : Int = 0
+    private var type : Int = 0
+    private var datas = arrayListOf<ResultData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +53,25 @@ class Recommend_Loading : HideSoftKey() {
         setContentColor2()
         setProgressBar()
 
-        binding.progressbarRecommend.setOnClickListener {
-            val intent_result = Intent(this, Recommend_Result::class.java)
+        city = intent.getStringExtra("city").toString()
+        companion = intent.getIntExtra("companion", 0)
+        days = intent.getIntExtra("days", 0)
+        type = intent.getIntExtra("type", 0)
+
+
+        CoroutineScope(Dispatchers.Main).launch {
+            CoroutineScope(Dispatchers.IO).async {
+                getRecommendList()
+                delay(2000)
+            }.join()
+
+            CoroutineScope(Dispatchers.IO).async {
+                getResultImage()
+                delay(5000)
+            }.join()
+
+            val intent_result = Intent(this@Recommend_Loading, Recommend_Result::class.java)
+            intent_result.putExtra("datas", ArrayList<ResultData>(datas))
             startActivity(intent_result)
             overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
         }
@@ -76,5 +118,116 @@ class Recommend_Loading : HideSoftKey() {
         val progressBar = binding.progressbarRecommend
         val fadingCircle : Sprite = FadingCircle()
         progressBar.setIndeterminateDrawable(fadingCircle)
+    }
+
+    fun getRecommendList() {
+        val retrofitAPI = RetrofitConnection.getInstance().create(RecommendService::class.java)
+
+        retrofitAPI.getRecommendList(
+            city, companion, days, type
+        ).enqueue(object : retrofit2.Callback<RecommendResponse> {
+            override fun onResponse(
+                call: Call<RecommendResponse>,
+                response: Response<RecommendResponse>
+            ) {
+                if(response.isSuccessful) {
+                    response.body()?.let { getResultList(it) }
+                } else {
+                    Log.d("레트로핏", response.toString())
+                    Log.d("레트로핏", "추천 업데이트 실패")
+                }
+            }
+
+            override fun onFailure(call: Call<RecommendResponse>, t: Throwable) {
+                t.printStackTrace()
+                Log.d("레트로핏", "추천 업데이트 실패 onFailure")
+            }
+        })
+    }
+
+    private fun getResultList(list : RecommendResponse) {
+        for(it in list.data.touristAttractionDtos) {
+            val str = it.toString().replace("{", "").replace("}", "")
+            val objects = str.split(",")
+
+            val attractionId = objects[0].split("=").get(1).replace(".0", "").toInt()
+            val name = isNull(objects[1].split("=").get(1))
+            val address = isNull(objects[2].split("=").get(1))
+            val number = isNull(objects[3].split("=").get(1))
+            val openingHours = isNull(objects[4].split("=").get(1))
+            val breakTime = isNull(objects[5].split("=").get(1))
+            val hasRamp = objects[6].split("=").get(1).toBoolean()
+            val hasToilet = objects[7].split("=").get(1).toBoolean()
+            val hasParking = objects[8].split("=").get(1).toBoolean()
+            val hasLift = objects[9].split("=").get(1).toBoolean()
+            val companionRequired = objects[10].split("=").get(1).toBoolean()
+            val hasWheelchair = objects[11].split("=").get(1).toBoolean()
+            val attractionType = isNull(objects[12].split("=").get(1))
+            val imgId = objects[13].split("=").get(1).replace(".0", "").toInt()
+            val url = isNull(objects[14].split("=").get(1))
+
+            val data = ResultData(attractionId, name, address, number, openingHours, breakTime, hasRamp, hasToilet, hasParking, hasLift, companionRequired, hasWheelchair, attractionType, imgId, url)
+
+            Log.d("레트로핏", "${data}")
+
+            datas.add(data)
+        }
+    }
+
+    private fun isNull(i : String) : String {
+        if(i == "null") {
+            return ""
+        }
+        return i
+    }
+
+    private fun getResultImage() {
+        val retrofitAPI = RetrofitConnection.getInstance().create(ImageService::class.java)
+
+        for(item in datas) {
+            if (item.imgId != -1) {
+                retrofitAPI.getImage(
+                    item.imgId
+                ).enqueue(object : retrofit2.Callback<ResponseBody> {
+                    override fun onResponse(
+                        call: Call<ResponseBody>,
+                        response: Response<ResponseBody>
+                    ) {
+                        if (response.isSuccessful) {
+                            response.body()?.let {
+                                val bitmap = BitmapFactory.decodeStream(response.body()!!.byteStream())
+                                val uri = getImageUri(this@Recommend_Loading, bitmap)
+                                item.imgUri = uri
+                            }
+                        } else {
+                            Log.d("레트로핏", response.toString())
+                            Log.d("레트로핏", "추천 이미지 업데이트 실패")
+                        }
+                    }
+
+                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                        t.printStackTrace()
+                        Log.d("레트로핏", "추천 이미지 업데이트 실패 onFailure")
+                    }
+                })
+            }
+        }
+    }
+
+    private fun getImageUri(inContext: Context, inImage: Bitmap): String {
+        val bytes = ByteArrayOutputStream()
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+        var path = MediaStore.Images.Media.insertImage(
+            inContext.contentResolver,
+            inImage,
+            "Title",
+            null
+        )
+
+        if(path == null) {
+            path = ""
+        }
+
+        return path
     }
 }

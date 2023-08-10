@@ -16,6 +16,7 @@ class RecommendQ3Fragment : Fragment() {
     private var _binding: FragmentRecommendQ3Binding? = null
     private lateinit var content: TextView
     private val binding get() = _binding!!
+    private var days = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,9 +49,11 @@ class RecommendQ3Fragment : Fragment() {
                 binding.btnRecQ32night.isChecked = false
                 binding.btnRecQ3Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ3Next.isSelected = true
+                days = 1
             } else {
                 binding.btnRecQ3Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ3Next.isSelected = false
+                days = 0
             }
         }
 
@@ -60,9 +63,11 @@ class RecommendQ3Fragment : Fragment() {
                 binding.btnRecQ32night.isChecked = false
                 binding.btnRecQ3Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ3Next.isSelected = true
+                days = 2
             } else {
                 binding.btnRecQ3Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ3Next.isSelected = false
+                days = 0
             }
         }
 
@@ -72,16 +77,18 @@ class RecommendQ3Fragment : Fragment() {
                 binding.btnRecQ31night.isChecked = false
                 binding.btnRecQ3Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ3Next.isSelected = true
+                days = 3
             } else {
                 binding.btnRecQ3Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ3Next.isSelected = false
+                days = 0
             }
         }
 
         binding.btnRecQ3Next.setOnClickListener {
             if(binding.btnRecQ3Next.isSelected) {
                 val rActivity = activity as RecommendActivity
-                rActivity.changeFragment(3)
+                rActivity.changeFragment(3, days)
             }
         }
     }

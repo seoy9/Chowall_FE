@@ -1,13 +1,20 @@
 package hong.sy.chowall.list
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import hong.sy.chowall.R
 import hong.sy.chowall.VerticalItemDecorator
 import hong.sy.chowall.databinding.FragmentListJeonBinding
+import hong.sy.chowall.retrofit.*
+import kotlinx.coroutines.*
+import okhttp3.ResponseBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ListJeonFragment : Fragment() {
     private var _binding: FragmentListJeonBinding? = null
@@ -24,7 +31,119 @@ class ListJeonFragment : Fragment() {
 
         initRecycler()
 
+        CoroutineScope(Dispatchers.Main).launch {
+            CoroutineScope(Dispatchers.IO).async {
+                getSearchJeonList()
+            }.await()
+
+            CoroutineScope(Dispatchers.IO).async {
+                getJeonImage()
+            }.await()
+
+            listAdapter.notifyDataSetChanged()
+        }
+
         return view
+    }
+
+    private fun getSearchJeonList() {
+        val retrofitAPI = RetrofitConnection.getInstance().create(SearchService::class.java)
+
+        retrofitAPI.getSearchList(
+            0, 10, "city", "전주시"
+        ).enqueue(object : Callback<SearchResponse> {
+            override fun onResponse(
+                call: Call<SearchResponse>,
+                response: Response<SearchResponse>
+            ) {
+                if(response.isSuccessful) {
+                    response.body()?.let { searchList(it) }
+                    Log.d("레트로핏 전주", "전주 업데이트 성공")
+                } else {
+                    Log.d("레트로핏 전주", "전주 업데이트 실패")
+                }
+            }
+
+            override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
+                t.printStackTrace()
+                Log.d("레트로핏 전주", "전주 업데이트 실패 onFailure")
+            }
+        })
+    }
+
+    private fun searchList(resultData : SearchResponse) {
+        val retrofitAPI = RetrofitConnection.getInstance().create(TouristAttractionSingleService::class.java)
+
+        for(it in resultData.data.content) {
+            retrofitAPI.getTouristAttractionsingleData(it.id).enqueue(object : Callback<TouristAttractionSingleResponse> {
+                override fun onResponse(
+                    call: Call<TouristAttractionSingleResponse>,
+                    response: Response<TouristAttractionSingleResponse>
+                ) {
+                    if (response.isSuccessful) {
+                        response.body()?.let { getJeonList(it) }
+                        Log.d("레트로핏 전주2", "업데이트 성공")
+                    } else {
+                        Log.d("레트로핏 전주2", "업데이트 실패")
+                    }
+                }
+
+                override fun onFailure(call: Call<TouristAttractionSingleResponse>, t: Throwable) {
+                    t.printStackTrace()
+                    Log.d("레트로핏 전주2", "업데이트 실패 onFailure")
+                }
+            })
+        }
+    }
+
+    private fun getJeonList(list : TouristAttractionSingleResponse) {
+        val data = ListData(list.data.attractionId, isNull(list.data.name), isNull(list.data.address),
+            isNull(list.data.number), isNull(list.data.openingHours), isNull(list.data.breakTime), list.data.hasRamp,
+            list.data.hasToilet, list.data.hasParking, list.data.hasLift, list.data.companionRequired,
+            list.data.hasWheelchair, isNull(list.data.attractionType), list.data.imgId, isNull(list.data.url))
+
+        Log.d("레트로핏 전주3", "${data}")
+
+        datas.add(data)
+    }
+
+    private fun isNull(i : String) : String {
+        if(i == null) {
+            return ""
+        }
+        return i
+    }
+
+    private fun getJeonImage() {
+        val retrofitAPI = RetrofitConnection.getInstance().create(ImageService::class.java)
+
+        for(item in datas) {
+            if (item.imgId != -1) {
+                retrofitAPI.getImage(
+                    item.imgId
+                ).enqueue(object : retrofit2.Callback<ResponseBody> {
+                    override fun onResponse(
+                        call: Call<ResponseBody>,
+                        response: Response<ResponseBody>
+                    ) {
+                        if (response.isSuccessful) {
+                            response.body()?.let {
+                                val bitmap = BitmapFactory.decodeStream(response.body()!!.byteStream())
+                                item.imgBitmap = bitmap
+                            }
+                        } else {
+                            Log.d("레트로핏 전주4", response.toString())
+                            Log.d("레트로핏 전주4", "추천 이미지 업데이트 실패")
+                        }
+                    }
+
+                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                        t.printStackTrace()
+                        Log.d("레트로핏 전주4", "추천 이미지 업데이트 실패 onFailure")
+                    }
+                })
+            }
+        }
     }
 
     private fun initRecycler() {
@@ -32,14 +151,6 @@ class ListJeonFragment : Fragment() {
         binding.rvListJeon.adapter = listAdapter
         binding.rvListJeon.addItemDecoration(VerticalItemDecorator(70))
 
-        datas.apply {
-            add(ListData(img = R.drawable.ex_img_list, name = "곰배령3", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "델모니코스", address = "강원도 춘천시 동면 순환대로 1154-106", phone = "033-252-0999", time = "11:00-22:00" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "남부닭갈비", address = "강원도 춘천시 공지로 357", phone = "033-243-9966", time = "매일 17:00-22:00" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "라모스버거", address = "강원도 춘천시 옛경춘로 835", phone = "0507-1402-0006", time = "매일 11:00-22:00", breakTime = "(브레이크타임 15:00-16:00)" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "온더가든", address = "강원도 춘천시 남산면 종자리로 21", phone = "033-262-9339", time = "매일 10:00-22:00" ))
-            add(ListData(img = R.drawable.ex_img_list, name = "곰배령", address = "강원도 춘천시 춘천로 1층", phone = "033-255-5500", time = "매일 11:30-20:20", breakTime = "(브레이크타임 15:00-16:00)" ))
-        }
 
         listAdapter.datas = datas
         listAdapter.notifyDataSetChanged()

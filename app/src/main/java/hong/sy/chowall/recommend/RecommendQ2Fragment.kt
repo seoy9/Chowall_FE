@@ -16,6 +16,7 @@ class RecommendQ2Fragment : Fragment() {
     private var _binding: FragmentRecommendQ2Binding? = null
     private lateinit var content: TextView
     private val binding get() = _binding!!
+    private var companion = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,9 +50,11 @@ class RecommendQ2Fragment : Fragment() {
                 binding.btnRecQ2Lover.isChecked = false
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ2Next.isSelected = true
+                companion = 1
             } else {
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ2Next.isSelected = false
+                companion = 0
             }
         }
 
@@ -62,9 +65,11 @@ class RecommendQ2Fragment : Fragment() {
                 binding.btnRecQ2Lover.isChecked = false
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ2Next.isSelected = true
+                companion = 2
             } else {
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ2Next.isSelected = false
+                companion = 0
             }
         }
 
@@ -75,9 +80,11 @@ class RecommendQ2Fragment : Fragment() {
                 binding.btnRecQ2Lover.isChecked = false
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ2Next.isSelected = true
+                companion = 3
             } else {
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ2Next.isSelected = false
+                companion = 0
             }
         }
 
@@ -88,16 +95,18 @@ class RecommendQ2Fragment : Fragment() {
                 binding.btnRecQ2Friend.isChecked = false
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_next)
                 binding.btnRecQ2Next.isSelected = true
+                companion = 4
             } else {
                 binding.btnRecQ2Next.setImageResource(R.drawable.btn_rec_non_next)
                 binding.btnRecQ2Next.isSelected = false
+                companion = 0
             }
         }
 
         binding.btnRecQ2Next.setOnClickListener {
             if(binding.btnRecQ2Next.isSelected) {
                 val rActivity = activity as RecommendActivity
-                rActivity.changeFragment(2)
+                rActivity.changeFragment(2, companion)
             }
         }
     }

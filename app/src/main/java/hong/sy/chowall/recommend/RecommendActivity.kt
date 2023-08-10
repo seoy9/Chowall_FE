@@ -3,6 +3,7 @@ package hong.sy.chowall.recommend
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R
@@ -10,6 +11,10 @@ import hong.sy.chowall.databinding.ActivityRecommendBinding
 
 class RecommendActivity : HideSoftKey() {
     private lateinit var binding: ActivityRecommendBinding
+    private var city = ""
+    private var companion = 0
+    private var days = 0
+    private var type = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,19 +65,30 @@ class RecommendActivity : HideSoftKey() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun changeFragment(index: Int) {
+    fun changeFragment(index: Int, data : Any) {
         when(index) {
             1 -> {
                 binding.recQViewPager.currentItem = 1
+                city = data.toString()
             }
             2 -> {
                 binding.recQViewPager.currentItem = 2
+                companion = data.toString().toInt()
             }
             3 -> {
                 binding.recQViewPager.currentItem = 3
+                days = data.toString().toInt()
             }
             4 -> {
+                type = data.toString().toInt()
+
+                Toast.makeText(this, "${city} ${companion} ${days} ${type}", Toast.LENGTH_SHORT).show()
+
                 val intent_loading = Intent(this, Recommend_Loading::class.java)
+                intent_loading.putExtra("city", city)
+                intent_loading.putExtra("companion", companion)
+                intent_loading.putExtra("days", days)
+                intent_loading.putExtra("type", type)
                 startActivity(intent_loading)
                 overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
             }

@@ -16,6 +16,7 @@ class RecommendQ4Fragment : Fragment() {
     private var _binding: FragmentRecommendQ4Binding? = null
     private lateinit var content: TextView
     private val binding get() = _binding!!
+    private var type = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,9 +50,11 @@ class RecommendQ4Fragment : Fragment() {
                 binding.btnRecQ4Activity.isChecked = false
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_result)
                 binding.btnRecQ4Result.isSelected = true
+                type = 1
             } else {
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_non_result)
                 binding.btnRecQ4Result.isSelected = false
+                type = 0
             }
         }
 
@@ -62,9 +65,11 @@ class RecommendQ4Fragment : Fragment() {
                 binding.btnRecQ4Activity.isChecked = false
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_result)
                 binding.btnRecQ4Result.isSelected = true
+                type = 2
             } else {
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_non_result)
                 binding.btnRecQ4Result.isSelected = false
+                type = 0
             }
         }
 
@@ -75,9 +80,11 @@ class RecommendQ4Fragment : Fragment() {
                 binding.btnRecQ4Activity.isChecked = false
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_result)
                 binding.btnRecQ4Result.isSelected = true
+                type = 3
             } else {
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_non_result)
                 binding.btnRecQ4Result.isSelected = false
+                type = 0
             }
         }
 
@@ -88,16 +95,18 @@ class RecommendQ4Fragment : Fragment() {
                 binding.btnRecQ4Hot.isChecked = false
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_result)
                 binding.btnRecQ4Result.isSelected = true
+                type = 4
             } else {
                 binding.btnRecQ4Result.setImageResource(R.drawable.btn_rec_non_result)
                 binding.btnRecQ4Result.isSelected = false
+                type = 0
             }
         }
 
         binding.btnRecQ4Result.setOnClickListener {
             if(binding.btnRecQ4Result.isSelected) {
                 val rActivity = activity as RecommendActivity
-                rActivity.changeFragment(4)
+                rActivity.changeFragment(4, type)
             }
         }
     }
