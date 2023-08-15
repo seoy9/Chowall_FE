@@ -1,8 +1,7 @@
-package hong.sy.chowall.recommend
+package hong.sy.chowall.list
 
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.media.Image
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -11,31 +10,35 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import hong.sy.chowall.*
+import androidx.viewpager2.widget.ViewPager2
+import hong.sy.chowall.InfoDialog
+import hong.sy.chowall.MainActivity
+import hong.sy.chowall.R
+import hong.sy.chowall.VerticalItemDecorator
+import hong.sy.chowall.databinding.ActivityListResultBinding
 import hong.sy.chowall.databinding.ActivityRecommendResultBinding
-import hong.sy.chowall.retrofit.*
-import kotlinx.coroutines.*
-import okhttp3.ResponseBody
-import org.json.JSONObject
-import retrofit2.Call
-import retrofit2.Response
-import javax.security.auth.callback.Callback
+import hong.sy.chowall.recommend.ResultData
+import hong.sy.chowall.recommend.ResultRecyclerAdapter
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
-class Recommend_Result : HideSoftKey() {
-    private lateinit var binding: ActivityRecommendResultBinding
+class ListResultActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityListResultBinding
     private lateinit var content: TextView
-    private lateinit var resultAdapter: ResultRecyclerAdapter
-    private var datas = arrayListOf<ResultData>()
+    private lateinit var resultAdapter: ListRecyclerAdapter
+    private var datas = arrayListOf<ListData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityRecommendResultBinding.inflate(layoutInflater)
+        binding = ActivityListResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         CoroutineScope(Dispatchers.Main).launch {
             CoroutineScope(Dispatchers.IO).async {
-                datas = intent.getSerializableExtra("datas") as ArrayList<ResultData>
+                datas = intent.getSerializableExtra("datas") as ArrayList<ListData>
             }.await()
 
             setToolbar()
@@ -50,7 +53,7 @@ class Recommend_Result : HideSoftKey() {
     }
 
     private fun setToolbar() {
-        val toolbar = binding.toolbarRecResult
+        val toolbar = binding.toolbarListResult
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -73,7 +76,7 @@ class Recommend_Result : HideSoftKey() {
     }
 
     private fun setContentColor() {
-        content = binding.tvRecResult
+        content = binding.tvListResult
         val textData = content.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorMainSpan = ForegroundColorSpan(resources.getColor(R.color.main))
@@ -83,9 +86,9 @@ class Recommend_Result : HideSoftKey() {
     }
 
     private fun initRecycler() {
-        resultAdapter = ResultRecyclerAdapter(this)
-        binding.rvRecResult.adapter = resultAdapter
-        binding.rvRecResult.addItemDecoration(VerticalItemDecorator(70))
+        resultAdapter = ListRecyclerAdapter(this)
+        binding.rvListResult.adapter = resultAdapter
+        binding.rvListResult.addItemDecoration(VerticalItemDecorator(70))
 
         resultAdapter.datas = datas
         resultAdapter.notifyDataSetChanged()

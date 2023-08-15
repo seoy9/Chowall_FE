@@ -8,14 +8,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import hong.sy.chowall.Module.GlideApp
 import hong.sy.chowall.R
-import hong.sy.chowall.retrofit.SearchResponse
-import hong.sy.chowall.retrofit.TouristAttractionSingleResponse
 
 class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<ListRecyclerAdapter.ViewHolder>() {
 
-    var datas = mutableListOf<ListData>()
+    var datas = arrayListOf<ListData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item_recycler,parent,false)
@@ -47,8 +45,9 @@ class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<L
         private var imgIconList = arrayListOf<Boolean>(false, false, false, false, false)
 
         fun bind(item: ListData) {
-            Glide.with(itemView)
-                .load(item.imgBitmap)
+            GlideApp.with(itemView)
+                .load(Uri.parse("http://13.124.235.200:8080/image/${item.imgId}"))
+                .centerCrop()
                 .error(R.drawable.img_basic_list)
                 .fallback(R.drawable.img_basic_list)
                 .into(imgList)
@@ -71,12 +70,12 @@ class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<L
             tvTime.text = item.openingHours
             tvBreakTime.text = item.breakTime
 
-            setIcon(item.hasRamp, R.drawable.icon_runway)
-            setIcon(item.hasToilet, R.drawable.icon_restroom)
-            setIcon(item.hasParking, R.drawable.icon_parking)
-            setIcon(item.hasLift, R.drawable.icon_lift)
-            setIcon(item.hasWheelchair, R.drawable.icon_rental)
-            setIcon(item.companionRequired, R.drawable.icon_companion)
+            item.hasRamp?.let { setIcon(it, R.drawable.icon_runway) }
+            item.hasToilet?.let { setIcon(it, R.drawable.icon_restroom) }
+            item.hasParking?.let { setIcon(it, R.drawable.icon_parking) }
+            item.hasLift?.let { setIcon(it, R.drawable.icon_lift) }
+            item.hasWheelchair?.let { setIcon(it, R.drawable.icon_rental) }
+            item.companionRequired?.let { setIcon(it, R.drawable.icon_companion) }
 
             checkEmpty()
         }

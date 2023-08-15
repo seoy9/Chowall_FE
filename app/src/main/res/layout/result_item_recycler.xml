@@ -32,7 +32,7 @@
                 <ImageView
                     android:id="@+id/img_result_where"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/icon_restaurant" />

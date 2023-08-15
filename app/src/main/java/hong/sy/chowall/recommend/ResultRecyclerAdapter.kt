@@ -3,6 +3,7 @@ package hong.sy.chowall.recommend
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestBuilder
+import hong.sy.chowall.Module.GlideApp
 import hong.sy.chowall.R
 import hong.sy.chowall.retrofit.ImageService
 import hong.sy.chowall.retrofit.RetrofitConnection
@@ -60,8 +63,9 @@ class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter
         private var imgIconList = arrayListOf<Boolean>(false, false, false, false, false)
 
         fun bind(item: ResultData) {
-            Glide.with(itemView)
-                .load(Uri.parse(item.imgUri))
+            GlideApp.with(itemView)
+                .load(Uri.parse("http://13.124.235.200:8080/image/${item.imgId}"))
+                .centerCrop()
                 .error(R.drawable.img_basic_list)
                 .fallback(R.drawable.img_basic_list)
                 .into(imgResult)

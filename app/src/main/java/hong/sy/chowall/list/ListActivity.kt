@@ -12,10 +12,14 @@ import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityListBinding
 import hong.sy.chowall.recommend.RecViewPagerAdapter
+import hong.sy.chowall.recommend.ResultData
 import kotlinx.coroutines.*
 
 class ListActivity : HideSoftKey() {
     private lateinit var binding: ActivityListBinding
+    private var chunDatas = arrayListOf<ListData>()
+    private var gangDatas = arrayListOf<ListData>()
+    private var jeonDatas = arrayListOf<ListData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +27,21 @@ class ListActivity : HideSoftKey() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.listViewpager.adapter = ListViewPagerAdapter(this)
-        binding.listViewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
         setToolbar()
         setButton()
+
+        CoroutineScope(Dispatchers.Main).launch {
+            CoroutineScope(Dispatchers.IO).async {
+                chunDatas = intent.getSerializableExtra("chunDatas") as ArrayList<ListData>
+                gangDatas = intent.getSerializableExtra("gangDatas") as ArrayList<ListData>
+                jeonDatas = intent.getSerializableExtra("jeonDatas") as ArrayList<ListData>
+            }.await()
+
+            binding.listViewpager.adapter = ListViewPagerAdapter(this@ListActivity, chunDatas, gangDatas, jeonDatas)
+            binding.listViewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+            setToolbar()
+            setButton()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

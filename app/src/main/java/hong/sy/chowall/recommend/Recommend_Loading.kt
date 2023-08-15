@@ -67,7 +67,7 @@ class Recommend_Loading : HideSoftKey() {
 
             CoroutineScope(Dispatchers.IO).async {
                 getResultImage()
-                delay(5000)
+                delay(3000)
             }.join()
 
             val intent_result = Intent(this@Recommend_Loading, Recommend_Result::class.java)
@@ -220,7 +220,7 @@ class Recommend_Loading : HideSoftKey() {
         var path = MediaStore.Images.Media.insertImage(
             inContext.contentResolver,
             inImage,
-            "Title",
+            "Img_${System.currentTimeMillis()}",
             null
         )
 

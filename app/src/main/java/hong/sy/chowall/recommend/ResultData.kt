@@ -1,12 +1,6 @@
 package hong.sy.chowall.recommend
 
-import android.graphics.Bitmap
-import android.net.Uri
-import android.os.Parcel
-import android.os.Parcelable
-import androidx.versionedparcelable.ParcelField
 import com.google.gson.annotations.SerializedName
-import java.io.InputStream
 
 data class ResultData(
     @SerializedName("attractionId") val attractionId : Int,

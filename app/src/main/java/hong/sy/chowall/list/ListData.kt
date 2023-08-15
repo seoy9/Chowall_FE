@@ -1,22 +1,21 @@
 package hong.sy.chowall.list
 
-import android.graphics.Bitmap
+import com.google.gson.annotations.SerializedName
 
 data class ListData(
-    val attractionId : Int,
-    val name : String,
-    val address : String,
-    val number : String = "",
-    val openingHours : String = "",
-    val breakTime : String = "",
-    val hasRamp : Boolean,
-    val hasToilet : Boolean,
-    val hasParking : Boolean,
-    val hasLift : Boolean,
-    val companionRequired : Boolean,
-    val hasWheelchair : Boolean,
-    val attractionType : String,
-    val imgId : Int = -1,
-    val url  : String?,
-    var imgBitmap: Bitmap? = null
-)
+    @SerializedName("attractionId") val attractionId : Int,
+    @SerializedName("name") val name : String,
+    @SerializedName("address") val address : String,
+    @SerializedName("number") val number : String = "",
+    @SerializedName("openingHours") val openingHours : String = "",
+    @SerializedName("breakTime") val breakTime : String = "",
+    @SerializedName("hasRamp") val hasRamp : Boolean,
+    @SerializedName("hasToilet") val hasToilet : Boolean,
+    @SerializedName("hasParking") val hasParking : Boolean,
+    @SerializedName("hasLift") val hasLift : Boolean,
+    @SerializedName("companionRequired") val companionRequired : Boolean,
+    @SerializedName("hasWheelchair") val hasWheelchair : Boolean,
+    @SerializedName("attractionType") val attractionType : String,
+    @SerializedName("imgId") val imgId : Int = -1,
+    @SerializedName("url") val url  : String?
+) : java.io.Serializable
