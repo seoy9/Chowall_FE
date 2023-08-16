@@ -31,11 +31,15 @@
     <string name="rec_q4_hot">핫 플레이스</string>
     <string name="rec_q4_activity">액티비티</string>
 
-    <string name="rec_loading_wait">잠시만 기다려주세요</string>
+    <string name="loading_wait">잠시만 기다려주세요</string>
+
     <string name="rec_loading_for">당신을 위한</string>
     <string name="rec_loading_search">초월 추천 코스를 조회 중입니다</string>
 
     <string name="rec_result_txt">초월이 추천하는\n당신을 위한 여행코스</string>
+
+    <string name="list_loading_what">배리어프리 여행 장소를</string>
+    <string name="list_loading_load">불러오고 있습니다.</string>
 
     <string name="list_title">배리어프리 여행 장소</string>
     <string name="list_chun">춘천</string>
@@ -57,12 +61,5 @@
     <string name="info_rental">휠체어 대여가 가능해요.</string>
     <string name="info_btn_txt">닫기</string>
     <string name="title_activity_list_loading">ListLoadingActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

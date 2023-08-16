@@ -65,11 +65,6 @@ class Recommend_Loading : HideSoftKey() {
                 delay(2000)
             }.join()
 
-            CoroutineScope(Dispatchers.IO).async {
-                getResultImage()
-                delay(3000)
-            }.join()
-
             val intent_result = Intent(this@Recommend_Loading, Recommend_Result::class.java)
             intent_result.putExtra("datas", ArrayList<ResultData>(datas))
             startActivity(intent_result)
@@ -179,55 +174,5 @@ class Recommend_Loading : HideSoftKey() {
             return ""
         }
         return i
-    }
-
-    private fun getResultImage() {
-        val retrofitAPI = RetrofitConnection.getInstance().create(ImageService::class.java)
-
-        for(item in datas) {
-            if (item.imgId != -1) {
-                retrofitAPI.getImage(
-                    item.imgId
-                ).enqueue(object : retrofit2.Callback<ResponseBody> {
-                    override fun onResponse(
-                        call: Call<ResponseBody>,
-                        response: Response<ResponseBody>
-                    ) {
-                        if (response.isSuccessful) {
-                            response.body()?.let {
-                                val bitmap = BitmapFactory.decodeStream(response.body()!!.byteStream())
-                                val uri = getImageUri(this@Recommend_Loading, bitmap)
-                                item.imgUri = uri
-                            }
-                        } else {
-                            Log.d("레트로핏", response.toString())
-                            Log.d("레트로핏", "추천 이미지 업데이트 실패")
-                        }
-                    }
-
-                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                        t.printStackTrace()
-                        Log.d("레트로핏", "추천 이미지 업데이트 실패 onFailure")
-                    }
-                })
-            }
-        }
-    }
-
-    private fun getImageUri(inContext: Context, inImage: Bitmap): String {
-        val bytes = ByteArrayOutputStream()
-        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-        var path = MediaStore.Images.Media.insertImage(
-            inContext.contentResolver,
-            inImage,
-            "Img_${System.currentTimeMillis()}",
-            null
-        )
-
-        if(path == null) {
-            path = ""
-        }
-
-        return path
     }
 }

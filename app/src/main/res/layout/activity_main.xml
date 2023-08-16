@@ -103,6 +103,7 @@
 
         <Button
             android:id="@+id/btn_main_rec"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="16"
@@ -154,7 +155,8 @@
             app:autoSizeMaxTextSize="16sp"
             app:autoSizeMinTextSize="10sp"
             app:autoSizeStepGranularity="2sp"
-            app:autoSizeTextType="uniform" />
+            app:autoSizeTextType="uniform"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
 
         <LinearLayout
             android:layout_width="0dp"

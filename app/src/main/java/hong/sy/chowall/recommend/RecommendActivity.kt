@@ -82,8 +82,6 @@ class RecommendActivity : HideSoftKey() {
             4 -> {
                 type = data.toString().toInt()
 
-                Toast.makeText(this, "${city} ${companion} ${days} ${type}", Toast.LENGTH_SHORT).show()
-
                 val intent_loading = Intent(this, Recommend_Loading::class.java)
                 intent_loading.putExtra("city", city)
                 intent_loading.putExtra("companion", companion)

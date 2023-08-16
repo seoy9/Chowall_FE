@@ -1,6 +1,7 @@
 package hong.sy.chowall.recommend
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
@@ -63,9 +64,15 @@ class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter
         private var imgIconList = arrayListOf<Boolean>(false, false, false, false, false)
 
         fun bind(item: ResultData) {
+            itemView.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
+                context.startActivity(intent)
+            }
+
             GlideApp.with(itemView)
-                .load(Uri.parse("http://13.124.235.200:8080/image/${item.imgId}"))
+                .load("http://13.124.235.200:8080/image/${item.imgId}")
                 .centerCrop()
+                .placeholder(R.drawable.img_basic_list)
                 .error(R.drawable.img_basic_list)
                 .fallback(R.drawable.img_basic_list)
                 .into(imgResult)
@@ -82,11 +89,7 @@ class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter
             }
             tvPhone.text = item.number
 
-            if(item.openingHours == "") {
-                imgTime.visibility = View.INVISIBLE
-            }
-            tvTime.text = item.openingHours
-            tvBreakTime.text = item.breakTime
+            checkHour(item.openingHours, item.breakTime)
 
             when(item.attractionType) {
                 "식당" -> {
@@ -111,6 +114,28 @@ class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter
             setIcon(item.companionRequired, R.drawable.icon_companion)
 
             checkEmpty()
+        }
+
+        fun checkHour(opening: String, breakTime: String) {
+            if (opening == "") {
+                imgTime.visibility = View.INVISIBLE
+            } else {
+                imgTime.visibility = View.VISIBLE
+            }
+
+            if(opening.contains("\n") == true) {
+                if(breakTime == "") {
+                    val temp = opening.split("\n")
+                    tvTime.text = temp.get(0)
+                    tvBreakTime.text = temp.get(1)
+                } else {
+                    tvTime.text = opening
+                    tvBreakTime.text = breakTime
+                }
+            } else {
+                tvTime.text = opening
+                tvBreakTime.text = breakTime
+            }
         }
 
         fun setIcon(isHave: Boolean, resource: Int) {

@@ -1,7 +1,9 @@
 package hong.sy.chowall.list
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
@@ -27,9 +29,6 @@ class ListActivity : HideSoftKey() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setToolbar()
-        setButton()
-
         CoroutineScope(Dispatchers.Main).launch {
             CoroutineScope(Dispatchers.IO).async {
                 chunDatas = intent.getSerializableExtra("chunDatas") as ArrayList<ListData>
@@ -37,8 +36,18 @@ class ListActivity : HideSoftKey() {
                 jeonDatas = intent.getSerializableExtra("jeonDatas") as ArrayList<ListData>
             }.await()
 
-            binding.listViewpager.adapter = ListViewPagerAdapter(this@ListActivity, chunDatas, gangDatas, jeonDatas)
+            Log.d("레트로핏 목록", "${chunDatas.size}")
+            Log.d("레트로핏 목록", "${gangDatas.size}")
+            Log.d("레트로핏 목록", "${jeonDatas.size}")
+
+            val pagerAdapter = ListViewPagerAdapter(this@ListActivity)
+            pagerAdapter.addFragment(ListChunFragment(chunDatas))
+            pagerAdapter.addFragment(ListGangFragment(gangDatas))
+            pagerAdapter.addFragment(ListJeonFragment(jeonDatas))
+
+            binding.listViewpager.adapter = pagerAdapter
             binding.listViewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
             setToolbar()
             setButton()
         }
@@ -60,7 +69,9 @@ class ListActivity : HideSoftKey() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             android.R.id.home -> {
-                finish()
+                val intent_main = Intent(this, MainActivity::class.java)
+                intent_main.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent_main)
                 overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out )
             }
             R.id.toolbar_pic_info -> {

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -9,7 +8,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,13 +48,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2.8461"
+                    android:layout_weight="5.7307"
                     android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="14.1025"
+                    android:layout_weight="20.1923"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -68,7 +69,6 @@
                         android:layout_height="match_parent"
                         android:layout_weight="43.3333"
                         android:fontFamily="@font/pretendard_bold"
-                        android:text="@string/list_item_name"
                         android:textColor="@color/list_item_name_color"
                         app:autoSizeMaxTextSize="20sp"
                         app:autoSizeMinTextSize="16sp"
@@ -136,7 +136,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="27.5641"
+                    android:layout_weight="26.9230"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -160,14 +160,14 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:orientation="vertical" />
 
                             <ImageView
                                 android:id="@+id/img_result_address"
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
-                                android:layout_weight="20.8333"
+                                android:layout_weight="10.4166"
                                 android:adjustViewBounds="true"
                                 android:scaleType="fitCenter"
                                 app:srcCompat="@drawable/icon_address" />
@@ -175,14 +175,14 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="10.4166"
+                                android:layout_weight="5.25"
                                 android:orientation="vertical" />
 
                             <ImageView
                                 android:id="@+id/img_result_phone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
-                                android:layout_weight="20.8333"
+                                android:layout_weight="10.4166"
                                 android:adjustViewBounds="true"
                                 android:scaleType="fitCenter"
                                 app:srcCompat="@drawable/icon_phone" />
@@ -190,23 +190,9 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="10.4166"
+                                android:layout_weight="2.0833"
                                 android:orientation="vertical" />
 
-                            <ImageView
-                                android:id="@+id/img_result_time"
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
-                                android:layout_weight="20.8333"
-                                android:adjustViewBounds="true"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/icon_time" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="vertical" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -227,7 +213,6 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="6.5"
                                 android:fontFamily="@font/pretendard_regular"
-                                android:text="@string/list_item_address"
                                 android:textColor="@color/black"
                                 app:autoSizeMaxTextSize="15sp"
                                 app:autoSizeMinTextSize="9.5sp"
@@ -246,31 +231,12 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="6.5"
                                 android:fontFamily="@font/pretendard_regular"
-                                android:text="@string/list_item_phone"
                                 android:textColor="@color/black"
                                 app:autoSizeMaxTextSize="15sp"
                                 app:autoSizeMinTextSize="10sp"
                                 app:autoSizeStepGranularity="1sp"
                                 app:autoSizeTextType="uniform" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="vertical" />
-
-                            <TextView
-                                android:id="@+id/tv_result_time"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="6.5"
-                                android:fontFamily="@font/pretendard_regular"
-                                android:text="@string/list_item_time"
-                                android:textColor="@color/black"
-                                app:autoSizeMaxTextSize="15sp"
-                                app:autoSizeMinTextSize="10sp"
-                                app:autoSizeStepGranularity="1sp"
-                                app:autoSizeTextType="uniform" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -284,7 +250,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="horizontal"/>
+                            android:orientation="horizontal" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -296,12 +262,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:orientation="vertical"/>
+                                android:orientation="vertical" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="15.2777"
+                                android:layout_weight="11.2244"
                                 android:orientation="horizontal">
 
                                 <ImageView
@@ -338,7 +304,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="14.9722"
+                                android:layout_weight="2.0612"
                                 android:orientation="vertical" />
                         </LinearLayout>
                     </LinearLayout>
@@ -347,50 +313,115 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.2820"
-                    android:orientation="vertical"/>
+                    android:layout_weight="0.25"
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="8.3333"
+                    android:layout_weight="12.5"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"/>
-
-                    <TextView
-                        android:id="@+id/tv_result_break_time"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="6.5235"
-                        android:fontFamily="@font/pretendard_regular"
-                        android:text="@string/list_item_break_time"
-                        android:textColor="@color/black"
-                        app:autoSizeMaxTextSize="15sp"
-                        app:autoSizeMinTextSize="10sp"
-                        app:autoSizeStepGranularity="1sp"
-                        app:autoSizeTextType="uniform"/>
+                        android:layout_weight="2.44"
+                        android:orientation="horizontal" />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="2.2727"
-                        android:orientation="horizontal"/>
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <ImageView
+                            android:id="@+id/img_result_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/icon_time" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/tv_result_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="51"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textColor="@color/black"
+                        app:autoSizeMaxTextSize="15sp"
+                        app:autoSizeMinTextSize="10sp"
+                        app:autoSizeStepGranularity="1sp"
+                        app:autoSizeTextType="uniform" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25"
+                        android:orientation="horizontal" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2.5641"
-                    android:orientation="vertical"/>
+                    android:layout_weight="0.25"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4.752"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/tv_result_break_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40.8"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textColor="@color/black"
+                        app:autoSizeMaxTextSize="15sp"
+                        app:autoSizeMinTextSize="10sp"
+                        app:autoSizeStepGranularity="1sp"
+                        app:autoSizeTextType="uniform" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.8461"
+                    android:orientation="vertical" />
 
             </LinearLayout>
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>

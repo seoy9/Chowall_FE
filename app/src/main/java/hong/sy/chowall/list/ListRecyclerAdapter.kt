@@ -1,6 +1,7 @@
 package hong.sy.chowall.list
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +11,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hong.sy.chowall.Module.GlideApp
 import hong.sy.chowall.R
+import hong.sy.chowall.recommend.ResultData
 
-class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<ListRecyclerAdapter.ViewHolder>() {
+class ListRecyclerAdapter(private val context: Context, private val listData: ArrayList<ListData>) : RecyclerView.Adapter<ListRecyclerAdapter.ViewHolder>() {
 
-    var datas = arrayListOf<ListData>()
+    var datas = listData
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item_recycler,parent,false)
@@ -45,9 +47,15 @@ class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<L
         private var imgIconList = arrayListOf<Boolean>(false, false, false, false, false)
 
         fun bind(item: ListData) {
+            itemView.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
+                context.startActivity(intent)
+            }
+
             GlideApp.with(itemView)
-                .load(Uri.parse("http://13.124.235.200:8080/image/${item.imgId}"))
+                .load("http://13.124.235.200:8080/image/${item.imgId}")
                 .centerCrop()
+                .placeholder(R.drawable.img_basic_list)
                 .error(R.drawable.img_basic_list)
                 .fallback(R.drawable.img_basic_list)
                 .into(imgList)
@@ -56,28 +64,52 @@ class ListRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<L
 
             if (item.address == "") {
                 imgAddress.visibility = View.INVISIBLE
+            } else {
+                imgAddress.visibility = View.VISIBLE
             }
             tvAddress.text = item.address
 
             if (item.number == "") {
                 imgPhone.visibility = View.INVISIBLE
+            } else {
+                imgPhone.visibility = View.VISIBLE
             }
             tvPhone.text = item.number
 
-            if (item.openingHours == "") {
-                imgTime.visibility = View.INVISIBLE
-            }
-            tvTime.text = item.openingHours
-            tvBreakTime.text = item.breakTime
+//            tvTime.text = item.openingHours
+//            tvBreakTime.text = item.breakTime
+            checkHour(item.openingHours, item.breakTime)
 
-            item.hasRamp?.let { setIcon(it, R.drawable.icon_runway) }
-            item.hasToilet?.let { setIcon(it, R.drawable.icon_restroom) }
-            item.hasParking?.let { setIcon(it, R.drawable.icon_parking) }
-            item.hasLift?.let { setIcon(it, R.drawable.icon_lift) }
-            item.hasWheelchair?.let { setIcon(it, R.drawable.icon_rental) }
-            item.companionRequired?.let { setIcon(it, R.drawable.icon_companion) }
+            item.hasRamp.let { setIcon(it, R.drawable.icon_runway) }
+            item.hasToilet.let { setIcon(it, R.drawable.icon_restroom) }
+            item.hasParking.let { setIcon(it, R.drawable.icon_parking) }
+            item.hasLift.let { setIcon(it, R.drawable.icon_lift) }
+            item.hasWheelchair.let { setIcon(it, R.drawable.icon_rental) }
+            item.companionRequired.let { setIcon(it, R.drawable.icon_companion) }
 
             checkEmpty()
+        }
+
+        fun checkHour(opening: String, breakTime: String) {
+            if (opening == "") {
+                imgTime.visibility = View.INVISIBLE
+            } else {
+                imgTime.visibility = View.VISIBLE
+            }
+
+            if(opening.contains("\n") == true) {
+                if(breakTime == "") {
+                    val temp = opening.split("\n")
+                    tvTime.text = temp.get(0)
+                    tvBreakTime.text = temp.get(1)
+                } else {
+                    tvTime.text = opening
+                    tvBreakTime.text = breakTime
+                }
+            } else {
+                tvTime.text = opening
+                tvBreakTime.text = breakTime
+            }
         }
 
         fun setIcon(isHave: Boolean, resource: Int) {
