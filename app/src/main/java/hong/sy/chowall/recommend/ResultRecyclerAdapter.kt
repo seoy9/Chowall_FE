@@ -2,32 +2,15 @@ package hong.sy.chowall.recommend
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.drawable.Drawable
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestBuilder
 import hong.sy.chowall.Module.GlideApp
 import hong.sy.chowall.R
-import hong.sy.chowall.retrofit.ImageService
-import hong.sy.chowall.retrofit.RetrofitConnection
-import hong.sy.chowall.retrofit.SearchResponse
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import java.io.InputStream
 
 class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<ResultRecyclerAdapter.ViewHolder>() {
 

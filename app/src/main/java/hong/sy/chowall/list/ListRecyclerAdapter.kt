@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hong.sy.chowall.Module.GlideApp
 import hong.sy.chowall.R
-import hong.sy.chowall.recommend.ResultData
 
 class ListRecyclerAdapter(private val context: Context, private val listData: ArrayList<ListData>) : RecyclerView.Adapter<ListRecyclerAdapter.ViewHolder>() {
 

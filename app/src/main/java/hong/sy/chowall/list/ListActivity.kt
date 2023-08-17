@@ -1,20 +1,13 @@
 package hong.sy.chowall.list
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
-import android.view.Window
-import android.widget.Button
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityListBinding
-import hong.sy.chowall.recommend.RecViewPagerAdapter
-import hong.sy.chowall.recommend.ResultData
 import kotlinx.coroutines.*
 
 class ListActivity : HideSoftKey() {

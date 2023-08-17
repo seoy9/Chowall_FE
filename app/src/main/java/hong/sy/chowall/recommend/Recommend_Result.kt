@@ -1,25 +1,16 @@
 package hong.sy.chowall.recommend
 
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.media.Image
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import hong.sy.chowall.*
 import hong.sy.chowall.databinding.ActivityRecommendResultBinding
-import hong.sy.chowall.retrofit.*
 import kotlinx.coroutines.*
-import okhttp3.ResponseBody
-import org.json.JSONObject
-import retrofit2.Call
-import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class Recommend_Result : HideSoftKey() {
     private lateinit var binding: ActivityRecommendResultBinding

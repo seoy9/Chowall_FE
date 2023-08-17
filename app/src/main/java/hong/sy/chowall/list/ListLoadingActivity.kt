@@ -1,7 +1,6 @@
 package hong.sy.chowall.list
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -11,6 +10,7 @@ import android.view.MenuItem
 import android.widget.TextView
 import com.github.ybq.android.spinkit.sprite.Sprite
 import com.github.ybq.android.spinkit.style.FadingCircle
+import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityListLoadingBinding
 import hong.sy.chowall.retrofit.*
@@ -19,7 +19,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ListLoadingActivity : AppCompatActivity() {
+class ListLoadingActivity : HideSoftKey() {
     private lateinit var binding: ActivityListLoadingBinding
     private lateinit var content: TextView
     private val chunDatas = mutableListOf<ListData>()
@@ -107,7 +107,6 @@ class ListLoadingActivity : AppCompatActivity() {
                     response.body()?.let { searchList(it, datas, where) }
                     Log.d("레트로핏 ${where}", "${where} 업데이트 성공")
                 } else {
-                    Log.d("레트로핏 ${where}", response.toString())
                     Log.d("레트로핏 ${where}", "${where} 업데이트 실패")
                 }
             }
@@ -150,8 +149,6 @@ class ListLoadingActivity : AppCompatActivity() {
             isNull(list.data.number), isNull(list.data.openingHours), isNull(list.data.breakTime), list.data.hasRamp,
             list.data.hasToilet, list.data.hasParking, list.data.hasLift, list.data.companionRequired,
             list.data.hasWheelchair, isNull(list.data.attractionType), list.data.imgId, isNull(list.data.url))
-
-        Log.d("레트로핏 ${where}3", "${data}")
 
         datas.add(data)
     }

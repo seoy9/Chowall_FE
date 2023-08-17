@@ -1,37 +1,24 @@
 package hong.sy.chowall.recommend
 
-import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.os.Looper.loop
-import android.provider.MediaStore
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.github.ybq.android.spinkit.sprite.Sprite
 import com.github.ybq.android.spinkit.style.FadingCircle
 import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R
 import hong.sy.chowall.databinding.ActivityRecommendLoadingBinding
-import hong.sy.chowall.retrofit.ImageService
 import hong.sy.chowall.retrofit.RecommendResponse
 import hong.sy.chowall.retrofit.RecommendService
 import hong.sy.chowall.retrofit.RetrofitConnection
 import kotlinx.coroutines.*
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
-import java.io.ByteArrayOutputStream
-import java.security.AccessController.getContext
 
 class Recommend_Loading : HideSoftKey() {
     private lateinit var binding: ActivityRecommendLoadingBinding
@@ -162,8 +149,6 @@ class Recommend_Loading : HideSoftKey() {
             val url = isNull(objects[14].split("=").get(1))
 
             val data = ResultData(attractionId, name, address, number, openingHours, breakTime, hasRamp, hasToilet, hasParking, hasLift, companionRequired, hasWheelchair, attractionType, imgId, url)
-
-            Log.d("레트로핏", "${data}")
 
             datas.add(data)
         }

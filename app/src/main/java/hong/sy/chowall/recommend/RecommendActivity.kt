@@ -3,7 +3,6 @@ package hong.sy.chowall.recommend
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import hong.sy.chowall.HideSoftKey
 import hong.sy.chowall.R
