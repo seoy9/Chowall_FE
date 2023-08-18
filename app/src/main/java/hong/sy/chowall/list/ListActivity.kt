@@ -43,6 +43,7 @@ class ListActivity : HideSoftKey() {
 
             setToolbar()
             setButton()
+            setViewpager()
         }
     }
 
@@ -122,6 +123,38 @@ class ListActivity : HideSoftKey() {
             if(!btnJeon.isChecked) {
                 btnJeon.isChecked = true
             }
+        }
+    }
+
+    fun setViewpager() {
+        binding.listViewpager.apply {
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    val btnChun = binding.btnListChun
+                    val btnGang = binding.btnListGang
+                    val btnJeon = binding.btnListJeon
+
+                    super.onPageSelected(position)
+
+                    when(position) {
+                        0 -> {
+                            btnChun.isChecked = true
+                            btnGang.isChecked = false
+                            btnJeon.isChecked = false
+                        }
+                        1 -> {
+                            btnChun.isChecked = false
+                            btnGang.isChecked = true
+                            btnJeon.isChecked = false
+                        }
+                        2 -> {
+                            btnChun.isChecked = false
+                            btnGang.isChecked = false
+                            btnJeon.isChecked = true
+                        }
+                    }
+                }
+            })
         }
     }
 }

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import hong.sy.chowall.Module.GlideApp
 import hong.sy.chowall.R
@@ -48,8 +49,12 @@ class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter
 
         fun bind(item: ResultData) {
             itemView.setOnClickListener {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
-                context.startActivity(intent)
+                if(item.url == "") {
+                    Toast.makeText(context, "네이버 페이지가 없습니다.", Toast.LENGTH_SHORT).show()
+                } else {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
+                    context.startActivity(intent)
+                }
             }
 
             GlideApp.with(itemView)

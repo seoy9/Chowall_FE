@@ -148,7 +148,8 @@
         android:id="@+id/list_viewpager"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="16.9473" />
+        android:layout_weight="16.9473"
+        android:overScrollMode="never" />
 
     <LinearLayout
         android:layout_width="0dp"
