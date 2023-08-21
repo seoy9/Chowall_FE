@@ -17,5 +17,5 @@ data class ListData(
     @SerializedName("hasWheelchair") val hasWheelchair : Boolean,
     @SerializedName("attractionType") val attractionType : String,
     @SerializedName("imgId") val imgId : Int = -1,
-    @SerializedName("url") val url  : String?
+    @SerializedName("url") val url  : String
 ) : java.io.Serializable

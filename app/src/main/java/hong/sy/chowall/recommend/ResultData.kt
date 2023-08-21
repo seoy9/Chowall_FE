@@ -17,6 +17,5 @@ data class ResultData(
     @SerializedName("hasWheelchair") val hasWheelchair : Boolean,
     @SerializedName("attractionType") val attractionType : String,
     @SerializedName("imgId") val imgId : Int = -1,
-    @SerializedName("url") val url  : String?,
-    @SerializedName("imgUri") var imgUri : String = ""
+    @SerializedName("url") val url  : String
 ) : java.io.Serializable

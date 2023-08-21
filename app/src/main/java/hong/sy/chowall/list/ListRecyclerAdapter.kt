@@ -48,7 +48,7 @@ class ListRecyclerAdapter(private val context: Context, private val listData: Ar
 
         fun bind(item: ListData) {
             itemView.setOnClickListener {
-                if(item.url == "") {
+                if(item.url == "" || item.url.contains("http") == false) {
                     Toast.makeText(context, "네이버 페이지가 없습니다.", Toast.LENGTH_SHORT).show()
                 } else {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))

@@ -49,7 +49,7 @@ class ResultRecyclerAdapter(private val context: Context) : RecyclerView.Adapter
 
         fun bind(item: ResultData) {
             itemView.setOnClickListener {
-                if(item.url == "") {
+                if(item.url == "" || item.url.contains("http") == false) {
                     Toast.makeText(context, "네이버 페이지가 없습니다.", Toast.LENGTH_SHORT).show()
                 } else {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
