@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'hong.sy.chowall'
+    namespace 'com.ddwu.chowall'
     compileSdk 33
 
     defaultConfig {
-        applicationId "hong.sy.chowall"
+        applicationId "com.ddwu.chowall"
         minSdk 21
         targetSdk 33
         versionCode 1
